@@ -1,0 +1,22 @@
+From 9655fad3d414f04b9ac0f5384deda131cce65d59 Mon Sep 17 00:00:00 2001
+From: Alan Griffiths <alan@octopull.co.uk>
+Date: Mon, 19 Oct 2020 11:40:43 +0100
+Subject: [PATCH] Instantiate parameterized test suite
+ DisplayOrientationSetting
+
+---
+ tests/acceptance-tests/test_new_display_configuration.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+--- a/tests/acceptance-tests/test_new_display_configuration.cpp
++++ b/tests/acceptance-tests/test_new_display_configuration.cpp
+@@ -543,6 +543,9 @@
+ INSTANTIATE_TEST_SUITE_P(DisplayConfiguration, DisplayPowerSetting,
+     Values(mir_power_mode_on, mir_power_mode_standby, mir_power_mode_suspend, mir_power_mode_off));
+ 
++INSTANTIATE_TEST_SUITE_P(DisplayConfiguration, DisplayOrientationSetting,
++    Values(mir_orientation_normal, mir_orientation_left, mir_orientation_inverted, mir_orientation_right));
++
+ INSTANTIATE_TEST_SUITE_P(DisplayConfiguration, DisplayFormatSetting,
+     ValuesIn(formats));
+ 

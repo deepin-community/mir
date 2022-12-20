@@ -1,0 +1,11 @@
+usr/bin/mir_stress
+usr/bin/mir_performance_tests
+usr/bin/mir-smoke-test-runner
+usr/bin/mir_platform_graphics_test_harness
+usr/lib/*/mir/tools/libmirclientlttng.so
+usr/lib/*/mir/tools/libmirserverlttng.so
+usr/bin/mir_demo_client_*
+usr/bin/mir_demo_server
+usr/lib/*/mir/server-platform/graphics-dummy.so
+usr/lib/*/mir/server-platform/input-stub.so
+usr/lib/*/mir/client-platform/dummy.so

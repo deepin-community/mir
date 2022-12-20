@@ -1,0 +1,8 @@
+# SymbolsHelper-Confirmed: 1.7 amd64
+libmircookie.so.2 libmircookie2 #MINVER#
+* Build-Depends-Package: libmircookie-dev
+ MIR_COOKIE_2@MIR_COOKIE_2 1.7
+ _ZN3mir6cookie9Authority11create_fromERKSt6vectorIhSaIhEE@MIR_COOKIE_2 1.7
+ _ZN3mir6cookie9Authority13create_savingERSt6vectorIhSaIhEE@MIR_COOKIE_2 1.7
+ _ZN3mir6cookie9Authority19optimal_secret_sizeEv@MIR_COOKIE_2 1.7
+ _ZN3mir6cookie9Authority6createEv@MIR_COOKIE_2 1.7

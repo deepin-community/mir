@@ -1,0 +1,22 @@
+.TH mir_platform_graphics_test_harness "1" "April 2020" "1.8.0" "Mir Display Server Test Suite"
+
+.SH NAME
+mir_platform_graphics_test_harness \- Run basic tests against a Mir platform implementation
+
+.SH SYNOPSIS
+.B mir_platform_graphics_test_harness
+[\fI\,<PLATFORM_DSO>\/\fR]
+
+.SH DESCRIPTION
+This program can be used to load a Mir platform module and run a basic smoke test \-
+check that it probes correctly, that it can swap display buffers, and that it can
+provide a GL context.
+
+This is primarily useful to people developing a new Mir platform.
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

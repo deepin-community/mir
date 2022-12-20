@@ -1,0 +1,9 @@
+Document: mir-doc
+Title: Mir Documentation
+Author: Canonical Ltd.
+Abstract: This document describes the Mir API
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/mir-doc/html/index.html
+Files: /usr/share/doc/mir-doc/html/*

@@ -1,0 +1,12 @@
+# upstream is informed about the man pages
+mir source: maintainer-manual-page debian/man/man1/*.1
+
+# tolerate long lines in these files
+mir source: very-long-line-length-in-source-file CMakeLists.txt line 410 is 731 characters long (>512)
+mir source: very-long-line-length-in-source-file benchmarks/frame-uniformity/README.txt line 3 is 597 characters long (>512)
+mir source: very-long-line-length-in-source-file tests/mir_test_framework/udev-recordings/bluetooth-magic-trackpad.umockdev line 218 is 764 characters long (>512)
+mir source: very-long-line-length-in-source-file tests/mir_test_framework/udev-recordings/joystick-detection.umockdev line 347 is 764 characters long (>512)
+mir source: very-long-line-length-in-source-file tests/mir_test_framework/udev-recordings/standard-drm-devices.umockdev line 134 is 996 characters long (>512)
+mir source: very-long-line-length-in-source-file tests/mir_test_framework/udev-recordings/standard-drm-render-nodes.umockdev line 192 is 996 characters long (>512)
+mir source: very-long-line-length-in-source-file tests/mir_test_framework/udev-recordings/usb-keyboard.umockdev line 240 is 764 characters long (>512)
+mir source: very-long-line-length-in-source-file tests/mir_test_framework/udev-recordings/usb-mouse.umockdev line 236 is 764 characters long (>512)

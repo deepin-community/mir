@@ -1,0 +1,261 @@
+mir (1.8.0+dfsg1-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:01:26 +0800
+
+mir (1.8.0+dfsg1-19) unstable; urgency=medium
+
+  [ Marius Gripsgard ]
+  * debian/patches:
+    + Add 0006_Fix-FTBFS-when-building-with-gcc-11.patch,
+      0007_Fix-more-missing-includes-for-GCC-11.patch and
+      0008_Fix-more-missing-includes-for-GCC-11.patch. Fix FTBFS when building
+      with gcc 11. (Closes: 984239).
+
+  [ Mike Gabriel ]
+  * debian/control:
+    + Bump Standards-Version: to 4.6.0. No changes needed.
+  * debian/patches:
+    + Comply with patch naming scheme. (See d/p/README).
+    + Mark Debian-specific patches as such.
+    + Add 0009_use-python3.patch. 'python' is not a valid shebang interpreter
+      anymore.
+  * debian/control:
+    + Shorten synopsis of libmirwayland* bin:pkgs.
+    + Add to R (mir-doc): python3 and python3-pil (for png2header.py script in
+      examples/ folder).
+  * debian/source/lintian-overrides:
+    + Ignore several very-long-line-lengh-in-source-file reports. Thanks
+      lintian, but these are ok.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 11 Nov 2021 09:35:39 +0100
+
+mir (1.8.0+dfsg1-18) unstable; urgency=medium
+
+  * debian/rules:
+    + Run unit tests, but ignore test failures for now, they tend to be flaky
+      on some architectures. (Closes: #987909).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 10 May 2021 10:35:42 +0200
+
+mir (1.8.0+dfsg1-17) unstable; urgency=medium
+
+  * debian/watch:
+    + Fix Github watch URL and switch to format version 4.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 29 Apr 2021 14:35:55 +0200
+
+mir (1.8.0+dfsg1-16) unstable; urgency=medium
+
+  * debian/control:
+    + Add missing D (libmircore-dev): libmircore1 (same binary version).
+      (Closes: #985503).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 30 Mar 2021 09:59:45 +0200
+
+mir (1.8.0+dfsg1-15) unstable; urgency=medium
+
+  * debian/libmiral3.symbols:
+    + Update symbols for mip64el and ppc64.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 20 Dec 2020 20:58:00 +0100
+
+mir (1.8.0+dfsg1-14) unstable; urgency=medium
+
+  * debian/*.symbols:
+    + Update for mips64el and ppc64 architectures.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 19 Dec 2020 17:01:46 +0100
+
+mir (1.8.0+dfsg1-13) unstable; urgency=medium
+
+  [ Mike Gabriel ]
+  * debian/control:
+    + Drop line-wrappings in some SYNOPSIS fields, improve some LONG_DESCRIPTION
+      fields. (Closes: #977270).
+
+  [ Christopher James Halse Rogers ]
+  * debian/man/*:
+    + Update a few man pages
+
+  [ Alexander Volkov ]
+  * debian/{control,rules}:
+    + Don't build tests when noinsttest profile is enabled
+
+  [ Adrian Bunk ]
+  * debian/rules:
+    + Disable LTO also on mips64el and ppc64
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 17 Dec 2020 11:18:07 +0100
+
+mir (1.8.0+dfsg1-12) unstable; urgency=medium
+
+  * debian/patches:
+    + Add 0004_Add-missing-include.patch and 0005_Fix-compiler-errors.patch.
+      Fixes FTBFS after Boost 1.74 transition. (Closes: #977227).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 12 Dec 2020 20:14:00 +0100
+
+mir (1.8.0+dfsg1-11) unstable; urgency=medium
+
+  * debian/patch:
+    + Add 0001_Fix-Rawhide-FTBFS.patch (cherry-picked from upstream). Fix FTBFS
+      against latest Mesa. (Closes: #973088).
+    + Add 0002_Delete-obsolete-gmock-hack.patch. Drop obsolete GMock hack
+      (causing an FTBFS against recent GMock versions).
+    + Add 0003_Instantiate-parameterized-test-suite-DisplayOrientat.patch.
+      Instantiate parameterized test suite DisplayOrientationSetting. Fix
+      test failure against recent GMock.
+    + Update patch headers of patches 1001 and 1002.
+  * debian/*.symbols:
+    + Update for building on arch:alpha.
+  * debian/rules:
+    + Set MIR_ENABLE_WLCS_TESTS option to off. As recommended by upstream for
+      wlcs 1.2.0 and older mir 1.8.0.
+    + Add include directive for buildflags.mk.
+  * debian/mir-test-tools.install:
+    + Drop miral_wlcs_integration.so. Not being built with
+      -DMIR_ENABLE_WLCS_TESTS=off.
+  * debian/control:
+    + Bump Standards-Version: to 4.5.1. No changes needed.
+  * debian/lib*.lintian-overrides:
+    + Drop files. All shared lib bin:pkgs now have .symbols files.
+  * debian/mirtest-dev.lintian-overrides:
+    + Drop file. Contains unknown lintian tag
+      pkg-config-references-unknown-shared-library.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 07 Dec 2020 08:30:23 +0100
+
+mir (1.8.0+dfsg1-10) unstable; urgency=medium
+
+  * debian/libmiral3.symbols:
+    + One more slight adaptation for s390x builds.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 27 Sep 2020 20:25:49 +0200
+
+mir (1.8.0+dfsg1-9) unstable; urgency=medium
+
+  * debian/*.symbols:
+    + Update symbols files using pkgkde-symbolshelper script (next iteration).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 26 Sep 2020 23:19:50 +0200
+
+mir (1.8.0+dfsg1-8) unstable; urgency=medium
+
+  * debian/patches:
+    + Add 2001_dont-dpkg-gensymbols-by-upstream.patch. Don't touch
+      debian/*.symbols files during build via upstream's CMakeLists.txt
+      configuration.
+  * debian/libmiral3.symbols:
+    + Fix upstream version numbers. The libmiral3 bin:pkg's version is different
+      from source:Version.
+    + Mark three symbols as MISSING since libmiral3 bin:pkg verison 2.9.
+      (Closes: #970232).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 15 Sep 2020 09:16:29 +0000
+
+mir (1.8.0+dfsg1-7) unstable; urgency=medium
+
+  * debian/*.symbols:
+    + Update symbols files using pkgkde-symbolshelper script (next iteration).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 14 Sep 2020 21:58:47 +0200
+
+mir (1.8.0+dfsg1-6) unstable; urgency=medium
+
+  * debian/control:
+    + Make sure, we don't build on non-Linux architectures. (Two bin:pkgs were
+      still arch:any instead of arch:linux-any).
+  * debian/*.symbols:
+    + Update symbols files using pkgkde-symbolshelper script.
+  * debian/rules:
+    + Disable unit tests on mispel and riscv64. They simply take to long on
+      these architectures and encounter a googletest timeout (600s).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 11 Sep 2020 12:22:58 +0200
+
+mir (1.8.0+dfsg1-5) unstable; urgency=medium
+
+  * debian/control:
+    + Add UBports team to Uploaders: field.
+    + Add B-D pkg-kde-tools.
+  * debian/rules:
+    + Set -DMIR_USE_LD=ld configure flag.
+    + Enable pkgkde_symbolshelper DH add-on.
+  * debian/*.symbols:
+    + Create/update symbols files with pkgkde_symbolshelper tool.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 10 Sep 2020 08:45:06 +0200
+
+mir (1.8.0+dfsg1-4) unstable; urgency=medium
+
+  * debian/rules:
+    + Binary-only builds require Doxygen run still, so requiring
+      override_dh_auto_build-indep for override_dh_auto_build-arch.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 18 Jul 2020 00:47:56 +0000
+
+mir (1.8.0+dfsg1-3) unstable; urgency=medium
+
+  * debian/patches:
+    + Add 1002_arch-indep-only-install-target.patch. Fully support
+      arch-indep-only builds (esp. the install target).
+  * debian/rules:
+    + Don't run unit tests on arch-indep-only builds.
+    + Define an arch-indep-only dh_auto_install override target.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 17 Jul 2020 21:47:46 +0200
+
+mir (1.8.0+dfsg1-2) unstable; urgency=medium
+
+  * d/changelog:
+    + Fix changelog entry under debian/patches for previous upload stanza.
+  * debian/mir-demos.lintian-overrides:
+    + Override desktop-command-not-in-package for miral-shell.desktop.
+  * debian/rules:
+    + Ignore missing doc files on binary-only builds. Fixes FTBFS for
+      'dpkg-buildpackage -B' builds.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 17 Jul 2020 15:30:18 +0000
+
+mir (1.8.0+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #965019).
+  * debian/copyright:
+    + Update auto-generated copyright.in file.
+    + Update copyright attributions.
+  * debian/patches:
+    + Drop 0001_Correct-logic-to-locate-gmock-when-gtest-has-package.patch.
+      Applied upstream.
+    + Rebase 2001_dfsg-disable-shared-libraries-tests.patch.
+  * debian/{control,libmirplatform*.install}:
+    + Bump SOVERSION (17 -> 18).
+  * debian/control:
+    + Bump Standards-Version: to 4.5.0. No changes needed.
+    + Bump DH compat level to version 13.
+    + Add to R (miral-demos): qtwayland5, xwayland.
+    + Don't let libmiral-dev depend on bin:pkg version of libmirclient-dev,
+      rather on the same source version.
+  * debian/mir-*.install:
+    + Update for 1.8.0 release.
+  * debian/man/:
+    + Drop man pages that no longer have executables.
+    + Add mir-shell and miral-terminal man pages.
+    + Adapt man page date to 1.8.0 release date.
+  * debian/*.manpages:
+    + Adjust to added/removed man pages.
+  * debian/libmiral3.symbols:
+    + Update symbols.
+  * debian/rules:
+    + Add MIR_FATAL_COMPILE_WARNINGS to COMMON_COMPILE_FLAGS and set it to
+      'off'.
+  * lintian: Several minor adaptations.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 14 Jul 2020 08:17:04 +0200
+
+mir (1.7.0+dfsg1-1) unstable; urgency=medium
+
+  * Initial upload to Debian. (Closes: #904305).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 03 Feb 2020 15:03:35 +0100

@@ -1,0 +1,55 @@
+.TH mirout "1" "April 2020" "1.8.0" "Mir Display Server Tool"
+
+.SH NAME
+mirout \-  FIXME: FUNCTIONALITY UNKNOWN
+
+.SH SYNOPSIS
+.B mirout
+[\fI\,OPTIONS\/\fR] [\fI\,/path/to/mir/socket\/\fR] [[\fI\,output OUTPUTID\/\fR] \fI\,ACTION \/\fR...]
+
+.SH DESCRIPTION
+FIXME: DESCRIPTION UNKNOWN
+
+.SH OPTIONS
+.TP
+\fB\-h\fR
+Show help text and exit.
+.TP
+\fB\-i\fR \fI<input-filepath>\fR
+Load display configuration from a file instead of the server.
+.TP
+\fB\-o\fR \fI<output-filepath>\fR
+Save resulting configuration to a file.
+.TP
+\fB\-v\fR
+Show verbose information.
+.TP
+\fB\-\-\fR
+Ignore the rest of the command line.
+
+.SH ACTIONS
+As actions, the following values are valid:
+.IP
+off | suspend | standby | on
+.IP
+disable | enable
+.IP
+rotate (normal | inverted | left | right)
+.IP
+place +<X>+<Y>
+.IP
+mode (<WIDTH>x<HEIGHT> | preferred) [rate <HZ>]
+.IP
+fakemode <WIDTH>x<HEIGHT>
+.IP
+rate <HZ>
+
+.SH SEE ALSO
+mirin(1)
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

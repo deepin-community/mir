@@ -1,0 +1,30 @@
+.TH mir_wayland_generator "1" "April 2020" "1.8.0" "Mir Display Server Utiltity"
+
+.SH NAME
+mir_wayland_generator \- Generate Mir-style C++ wrappers from a Wayland protocol description
+
+.SH SYNOPSIS
+.B mir_wayland_generator
+\fI\,<prefix> <input> <mode>\/\fR
+
+.SH DESCRIPTION
+Generate C++ stubs to make developing the server-side implementation of Wayland
+protocols easier.
+
+\fBmir_wayland_generator\fR expects the following command line input:
+
+.IP
+prefix: the name prefix which will be removed, such as 'wl_'; to not use
+a prefix, use _ or anything that won't match the start of a name
+.IP
+input: the input xml file path
+.IP
+mode: 'header' or 'source'
+.PP
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

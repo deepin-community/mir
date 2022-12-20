@@ -1,0 +1,273 @@
+.TH mir_demo_server "1" "April 2020" "1.8.0" "Mir Display Server Demo"
+
+.SH NAME
+mir_demo_server \- Mir Display Server Demo
+
+.SH SYNOPSIS
+\fB\,mir_demo_server\/\fP \fI[options]\fR
+
+.SH DESCRIPTION
+Launch a Mir server demo session.
+.PP
+The Mir demo server startup can be tweaked by:
+.TP
+\fBCommand\-line options:\fR
+e.g. "\-\-host\-socket=/tmp/mir_socket".
+.TP
+\fBEnvironment variables:\fR
+Capitalise the long form of the command line option, prefix it with
+"MIR_SERVER_" and put "_" in place of "\-". E.g.
+"MIR_SERVER_HOST_SOCKET=/tmp/mir_socket".
+.TP
+\fBConfig file entries:\fR
+Use the long form command line options in the configuration file. E.g.
+"\-\-host\-socket=/tmp/mir_socket".
+.PP
+The config file (mir/mir_demo_server.config) is located via the XDG Base
+Directory Specification. ($XDG_CONFIG_HOME or $HOME/.config followed by
+$XDG_CONFIG_DIRS).
+
+.SH OPTIONS
+.TP
+\fB\-\-host\-socket\fR \fI<socket-filename>\fR
+Host socket filename.
+.TP
+\fB\-f\fR [ \fB\-\-file\fR ] \fI<filename>\fR
+Socket filename (default: $XDG_RUNTIME_DIR/mir_socket or /tmp/<UID_NUMBER>\-runtime\-dir/mir_socket).
+.TP
+\fB\-\-no\-file\fR
+Do not provide a socket filename for client connections.
+.TP
+\fB\-\-arw\-file\fR
+Set socket file permissions to globally read-writeable (equivalent to chmod a=rw).
+.TP
+\fB\-p\fR [ \fB\-\-prompt\-file\fR ]
+Provide a "..._trusted" filename for prompt helper connections.
+.TP
+\fB\-\-platform\-graphics\-lib\fR \fI<platform_library>\fR
+Library to use for platform graphics support (default: autodetect).
+.TP
+\fB\-\-platform\-input\-lib\fR \fI<input_library>\fR
+Library to use for platform input support (default: input\-stub.so).
+.TP
+\fB\-\-platform\-path\fR arg (=/usr/lib/x86_64\-linux\-gnu/mir/server\-platform)
+Directory to look for platform libraries (default: /usr/lib/<multi-arch>/mir/server\-platform).
+.TP
+\fB\-i\fR [ \fB\-\-enable\-input\fR ] \fI{0,1}\fR
+Enable input (default: 1, meaning: enabled).
+.TP
+\fB\-\-compositor\-report\fR \fI{log,lttng,off}\fR (=off)
+Compositor reporting, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-connector\-report\fR \fI{log,lttng,off}\fR
+How to handle the Connector report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-display\-report\fR \fI{log,lttng,off}\fR
+How to handle the Display report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-input\-report\fR \fI{log,lttng,off}\fR
+How to handle to Input report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-legacy\-input\-report\fR \fI{log,off}\fR
+How to handle the Legacy Input report, either of \fIlog\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-seat\-report\fR \fI{log,off}\fR
+How to handle to Seat report, either of \fIlog\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-session\-mediator\-report\fR \fI{log,lttng,off}\fR
+How to handle the SessionMediator report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-msg\-processor\-report\fR \fI{log,lttng,off}\fR
+How to handle the MessageProcessor report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-scene\-report\fR \fI{log,lttng,off}\fR
+How to handle the scene report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-shared\-library\-prober\-report\fR \fI{log,lttng,off}\fR
+How to handle the SharedLibraryProber report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: log).
+.TP
+\fB\-\-shell\-report\fR \fI{log,off}\fR
+How to handle the Shell report, either of \fIlog\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-composite\-delay\fR \fI<msecs>\fR
+Compositor frame delay in milliseconds (how long to wait for new frames
+from clients before compositing). Higher values result in lower latency
+but risk causing frame skipping. A negative value means decide
+automatically (default: 0).
+.TP
+\fB\-\-name\fR \fI<name>\fR
+When nested, the name Mir uses when registering with the host.
+.TP
+\fB\-\-nested\-passthrough\fR {0,1}
+When nested, attempt to pass a client's graphics content directly to the
+host to avoid a composition pass (default: 1).
+.TP
+\fB\-\-offscreen\fR
+Render to offscreen buffers instead of the real outputs.
+.TP
+\fB\-\-enable\-touchspots\fR
+Display visualization of touchspots (e.g. for screencasting).
+.TP
+\fB\-\-cursor\fR \fI{auto,null,software}\fR
+Cursor (mouse pointer) to use (default: auto).
+.TP
+\fB\-\-enable\-key\-repeat\fR {0,1}
+Enable server generated key repeat (default: 1).
+.TP
+\fB\-\-on\-fatal\-error\-except\fR
+On "fatal error" conditions (e.g. drivers behaving in unexpected ways)
+throw an exception (instead of a core dump).
+.TP
+\fB\-\-debug\fR
+Enable extra development debugging. This is only interesting for people
+doing Mir server or client development.
+.TP
+\fB\-\-enable\-mirclient\fR
+Enable deprecated mirclient socket (for running old clients)
+.TP
+\fB\-\-console\-provider\fR arg (=auto)
+Console device handling how Mir handles console\-related tasks (device
+handling, VT switching, etc.) Possible values given:
+.IP
+\fIlogind\fR - use logind vt: use the Linux VT subsystem. Requires root privileges.
+.IP
+\fInone\fR - support no console\-related tasks. Useful for nested platforms
+which do not need raw device access and which don't have a VT concept
+.IP
+\fIauto\fR - detect the appropriate provider.
+.TP
+\fB\-\-vt\fR {0,1}
+VT to run on or 0 to use current (default: 0).
+.IP
+Usage of this option requires \fB\-\-console\-provider\fR=\fI\,vt\/\fR
+.TP
+\fB\-\-bypass\fR {0,1}
+[platform\-specific] utilize the bypass optimization for fullscreen
+surfaces (default: 1).
+.TP
+\fB\-\-x11\-output\fR \fI<sizes>\fR
+[mir\-on\-X specific] Colon separated list of WIDTHxHEIGHT sizes for
+"output" windows (default: 1280x1024).
+.TP
+\fB\-\-wayland\-host\fR \fI<socket-name>\fR
+Socket name for host compositor.
+.TP
+\fB\-\-startup\-apps\fR \fI<list-of-applications>\fR
+Colon separated list of startup applications.
+.TP
+\fB\-\-env\-hacks\fR \fI<env-vars>\fR
+Colon separated list of environment variable settings.
+.TP
+\fB\-\-display\-config\fR \fI{clone,sidebyside,single,static=<filename>}\fR
+Display configuration, either of \fIclone\fR, \fIsidebyside\fR, \fIsingle\fR, or \fIstatic=<filename>\fR (default: sidebyside).
+.TP
+\fB\-\-translucent\fR {on,off}
+Select a display mode with alpha (default: off).
+.TP
+\fB\-\-log\-host\-lifecycle\fR
+Write lifecycle events from host to log.
+.TP
+\fB\-\-glog\fR
+Use google::GLog for logging.
+.TP
+\fB\-\-glog\-stderrthreshold\fR \fI<level>\fR
+Copy log messages at or above this level to stderr in addition to
+logfiles (default: 2).
+.IP
+The numbers of severity levels INFO, WARNING, ERROR, and FATAL are 0, 1,
+2, and 3, respectively.
+.TP
+\fB\-\-glog\-minloglevel\fR arg (=0)
+Log messages at or above this level. The numbers of severity levels INFO,
+WARNING, ERROR, and FATAL are 0, 1, 2, and 3, respectively (default: 0).
+.TP
+\fB\-\-glog\-log\-dir\fR \fI<directory-path>\fR
+Log files are written into this directory.
+.TP
+\fB\-\-x11\-display\-experimental\fR \fI<x11-display-number>\fR
+DISPLAY socket to use for experimental X11 support (default: none).
+.TP
+\fB\-\-xwayland\-path\fR \fI<fullpath-to-Xwayland>\fR
+Path to Xwayland executable (default: /usr/bin/Xwayland).
+.TP
+\fB\-\-wayland\-extensions\fR \fI<wayland-extensions-list>\fR
+Colon separated list of wayland extensions to enable (enabled by default:
+
+.IP
+wl_shellxdg_wm_base
+.IP
+zwlr_layer_shell_v1
+.IP
+zxdg_output_manager_v1
+.IP
+zxdg_shell_v6
+
+).
+.TP
+\fB\-\-window\-management\-trace\fR
+Log trace messages.
+.TP
+\fB\-\-custom\-compositor\fR \fI{adorning,default}\fR
+Select an alternative compositor (default: default)
+.TP
+\fB\-\-background\-color\fR \fI{purple,blue,grey,black}\fR
+Fill the background of the adorning compositor with a color, either of
+purple, blue, grey, or black (default: black.)
+.TP
+\fB\-\-disable\-while\-typing\fR \fI{0,1}\fR
+Disable touchpad while typing on keyboard configuration (default: 0).
+.TP
+\fB\-\-mouse\-acceleration\fR \fI{none,adaptive}\fR
+Select acceleration profile for mice and trackballs (default: adaptive).
+.TP
+\fB\-\-mouse\-cursor\-acceleration\-bias\fR \fI<accel>\fR
+Constant factor (+1) to velocity or bias to the acceleration curve within
+the range [\-1.0, 1.0] for mice (default: 0).
+.TP
+\fB\-\-mouse\-scroll\-speed\-scale\fR \fI<speed-scale>\fR
+Scales mice scroll events, use negative values for natural scrolling (default: 1).
+.TP
+\fB\-\-touchpad\-cursor\-acceleration\-bias\fR \fI<accel>\fR
+Constant factor (+1) to velocity or bias to the acceleration curve within
+the range [\-1.0, 1.0] for touchpads (default: 0).
+.TP
+\fB\-\-touchpad\-scroll\-speed\-scale\fR \fI<speed-scale>\fR
+Scales touchpad scroll events, use negative values for natural scrolling
+(default: \-1).
+.TP
+\fB\-\-touchpad\-scroll\-mode\fR \fI<mode>\fR
+Select scroll mode for touchpads, with \fI<mode>\fR being either of \fItwo\-finger\fR or \fIedge\fR (default: two\-finger).
+.TP
+\fB\-\-touchpad\-click\-mode\fR \fI{area,finger\-count}\fR
+Select click mode for touchpads (default: finger\-count).
+.TP
+\fB\-\-timeout\fR \fI<secs>\fR
+Seconds to run before exiting.
+.TP
+\fB\-\-cursor\-theme\fR \fI<cursor-theme>\fR
+Colon separated cursor theme list (e.g. "DMZ\-Black", default: DMZ\-White).
+.TP
+\fB\-\-print\-input\-events\fR
+List input events on std::cout.
+.TP
+\fB\-\-screen\-rotation\fR
+Rotate screen on Ctrl\-Alt\-<Arrow>.
+.TP
+\fB\-\-test\-client\fR \fI<executable>\fR
+Client executable.
+.TP
+\fB\-\-test\-timeout\fR \fI<secs>\fR
+Seconds to run before sending SIGTERM to client (default: 10).
+.TP
+\fB\-h\fR [ \fB\-\-help\fR ]
+Show this help text and exit.
+
+.SH SEE ALSO
+miral-shell(1)
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

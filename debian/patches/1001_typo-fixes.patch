@@ -1,0 +1,26 @@
+Description: Typo fix
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: https://github.com/MirServer/mir/pull/1843
+
+--- a/examples/mir_demo_server/server_example_input_filter.cpp
++++ b/examples/mir_demo_server/server_example_input_filter.cpp
+@@ -124,7 +124,7 @@
+             print_pointer_event(input_event);
+             break;
+         default:
+-            std::cout << "unkown input event type: " << mir_input_event_get_type(input_event) << std::endl;
++            std::cout << "unknown input event type: " << mir_input_event_get_type(input_event) << std::endl;
+             break;
+         }
+ 
+--- a/examples/mir_demo_server/server_example_custom_compositor.cpp
++++ b/examples/mir_demo_server/server_example_custom_compositor.cpp
+@@ -34,7 +34,7 @@
+ namespace
+ {
+ char const* const compositor_option = "custom-compositor";
+-char const* const compositor_description = "Select an alterative compositor [{adorning|default}]";
++char const* const compositor_description = "Select an alternative compositor [{adorning|default}]";
+ char const* const compositor_adorning = "adorning";
+ char const* const compositor_default = "default";
+ 

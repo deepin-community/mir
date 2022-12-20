@@ -1,0 +1,2 @@
+# the miral-shell call is wrapped into a shell, by intention
+mir-demos: desktop-command-not-in-package usr/share/applications/miral-shell.desktop bash

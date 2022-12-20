@@ -1,0 +1,40 @@
+.TH miral-app "1" "April 2020" "1.8.0" "Mir Display Server Demo Application"
+
+.SH NAME
+miral-app \- Launch hosted miral desktop session
+
+.SH SYNOPSIS
+.B miral-app
+[\fI\,options\/\fR] [\fI\,shell options\/\fR]
+
+.SH DESCRIPTION
+\fBmiral\-app\fR is handy launch script for a hosted miral "desktop session".
+By default, \fImiral-shell\fR session is used for that, launching
+\fIqterminal\fR as an initial application inside.
+
+.SH OPTIONS
+.TP
+\fB\-kiosk\fR
+Use \fImiral\-kiosk\fR instead of \fImiral\-shell\fR.
+.TP
+\fB\-launcher\fR \fI<launcher>\fR
+Use \fI<launcher>\fR instead of the default application (\fIqterminal\fR).
+.TP
+\fB\-socket\fR \fI<socket>\fR
+Set the legacy Mir socket (default: /tmp/<UID_NUMBER>\-runtime\-dir/miral_socket).
+.TP
+\fB\-wayland\-display\fR \fI<socket>\fR
+Set the wayland socket (default: wayland\-0).
+.TP
+\fB\-bindir\fR \fI<bindir>\fR
+Path to the \fImiral-*\fR executables (default: /usr/bin).
+
+.SH SEE ALSO
+miral-shell(1), miral-kiosk(1), qterminal(1)
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

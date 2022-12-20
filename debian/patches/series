@@ -1,0 +1,13 @@
+1001_typo-fixes.patch
+2001_dfsg-disable-shared-libraries-tests.patch
+1002_arch-indep-only-install-target.patch
+2002_dont-dpkg-gensymbols-by-upstream.patch
+0001_Fix-Rawhide-FTBFS.patch
+0002_Delete-obsolete-gmock-hack.patch
+0003_Instantiate-parameterized-test-suite-DisplayOrientat.patch
+0004_Add-missing-include.patch
+0005_Fix-compiler-errors.patch
+0007_Fix-missing-includes-for-GCC-11.patch
+0008_Fix-more-missing-includes-for-GCC-11.patch
+0006_Fix-FTBFS-when-building-with-gcc-11.patch
+0009_use-python3.patch

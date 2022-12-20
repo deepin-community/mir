@@ -1,0 +1,616 @@
+Source: mir
+Section: x11
+Priority: optional
+Maintainer: Debian Mir Team <team+mir@tracker.debian.org>
+Uploaders:
+ Simon Quigley <tsimonq2@debian.org>,
+ Christopher James Halse Rogers <raof@ubuntu.com>,
+ Mike Gabriel <sunweaver@debian.org>,
+ Debian UBports Team <team+ubports@tracker.debian.org>,
+Build-Depends: cmake,
+               pkg-config,
+               debhelper-compat (= 13),
+               doxygen,
+               xsltproc,
+               graphviz,
+               gcovr <!noinsttest>,
+               lcov <!noinsttest>,
+               libboost-dev,
+               libboost-date-time-dev,
+               libboost-iostreams-dev,
+               libboost-program-options-dev,
+               libboost-system-dev,
+               libboost-thread-dev,
+               libboost-filesystem-dev,
+               protobuf-compiler,
+               libdrm-dev,
+               libegl1-mesa-dev,
+               libgles2-mesa-dev,
+               libgl1-mesa-dev [amd64 i386],
+               libgbm-dev,
+               libglm-dev,
+               libprotobuf-dev,
+               libgoogle-glog-dev,
+               liblttng-ust-dev,
+               libxkbcommon-dev (>= 0.5),
+               libumockdev-dev (>= 0.6) <!noinsttest>,
+               umockdev (>= 0.8.7) <!noinsttest>,
+               libudev-dev,
+               libgtest-dev <!noinsttest>,
+               google-mock (>= 1.6.0+svn437) <!noinsttest>,
+               libxml++2.6-dev,
+# only enable valgrind once it's been tested to work on each architecture:
+               valgrind [amd64 i386 armhf arm64] <!noinsttest>,
+               libglib2.0-dev,
+               libfreetype6-dev,
+               libevdev-dev,
+               libinput-dev (>= 0.21),
+               uuid-dev,
+               python3:any,
+               dh-python,
+               nettle-dev,
+               libcapnp-dev,
+               capnproto,
+               libepoxy-dev,
+               python3-pil:native,
+               linux-libc-dev,
+               dbus,
+               python3-dbusmock <!noinsttest>,
+               libxcb-composite0-dev,
+               libxcb-xfixes0-dev,
+               libxcb-render0-dev,
+               libxcursor-dev,
+               libyaml-cpp-dev,
+               libwayland-dev,
+               libnvidia-egl-wayland-dev [amd64 i386],
+               eglexternalplatform-dev [amd64 i386],
+               rdfind,
+               symlinks,
+               systemtap-sdt-dev,
+               wlcs <!noinsttest>,
+               pkg-kde-tools,
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://mir-server.io/
+Vcs-Browser: https://salsa.debian.org/mir-server-team/mir
+Vcs-Git: https://salsa.debian.org/mir-server-team/mir.git
+
+Package: libmirprotobuf3
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - RPC definitions
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared library containing the Google Protobuf definitions
+ required for Mir clients and servers.
+
+#TODO: Packaging infrastructure for better dependency generation,
+#      ala pkg-xorg's xviddriver:Provides and ABI detection.
+Package: libmirserver53
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - server library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared library needed by server applications for Mir.
+
+Package: libmirplatform18
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - platform library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir server to interact with
+ the underlying hardware platform.
+
+Package: libmircore-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+ libmircore1 (= ${binary:Version}),
+Description: Mir Display Server - core library - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains core header files required for server and/or client development.
+
+Package: libmircommon-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmircommon7 (= ${binary:Version}),
+         libmircore-dev (= ${binary:Version}),
+         libprotobuf-dev (>= 2.4.1),
+         libxkbcommon-dev,
+         ${misc:Depends},
+Breaks: mircommon-dev (<< 0.6)
+Replaces: mircommon-dev (<< 0.6)
+Description: Mir Display Server - common library - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains common header files required for server and/or client development.
+
+
+Package: libmirplatform-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmirplatform18 (= ${binary:Version}),
+         libmircommon-dev (= ${binary:Version}),
+         libboost-program-options-dev,
+         ${misc:Depends},
+Breaks: libmirplatform (<< 0.6)
+Replaces: libmirplatform (<< 0.6)
+Description: Mir Display Server - platform library - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files required for hardware/driver support development.
+
+Package: libmirserver-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmirserver53 (= ${binary:Version}),
+         libmirplatform-dev (= ${binary:Version}),
+         libmircommon-dev (= ${binary:Version}),
+         libglm-dev,
+         uuid-dev,
+         ${misc:Depends},
+Description: Mir Display Server - server library - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files required to build Mir servers.
+
+Package: mirtest-dev
+Build-Profiles: <!noinsttest>
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmircommon-dev (= ${binary:Version}),
+         libmirplatform-dev (= ${binary:Version}),
+         libmirserver-dev (= ${binary:Version}),
+         mir-renderer-gl-dev (= ${binary:Version}),
+         libboost-filesystem-dev,
+         libboost-system-dev,
+         ${misc:Depends},
+Description: Mir Display Server - test development headers and library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files and static library for testing of server and/or client
+ development.
+
+Package: libmirclient9
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - client library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared library needed by client applications for Mir.
+
+Package: libmirclient-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Breaks: libmirclientcpp-dev
+Replaces: libmirclientcpp-dev
+Provides: libmirclientcpp-dev (=1.5)
+Depends: libmirclient9 (= ${binary:Version}),
+         libmircommon-dev (= ${binary:Version}),
+         libmircookie-dev (= ${binary:Version}),
+         libprotobuf-dev (>= 2.4.1),
+         ${misc:Depends},
+Description: Mir Display Server - client library - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files required to develop against Mir.
+
+Package: mir-demos
+Architecture: linux-any
+Breaks: miral-examples
+Replaces: miral-examples
+Provides: miral-examples (=1.5)
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: dmz-cursor-theme,
+            fonts-liberation,
+            qtwayland5,
+            xwayland,
+Description: Mir Display Server - demonstration programs
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains demo applications that use the Mir display server
+
+Package: mir-utils
+Architecture: linux-any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Suggests: mencoder,
+Description: Mir Display Server - utility programs
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains utility programs for probing and controlling a Mir server.
+
+Package: mir-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends},
+Recommends: python3,
+            python3-pil,
+Description: Mir Display Server - API documentation for Mir
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ This package installs the mir API documentation.
+
+Package: mir-test-tools
+Build-Profiles: <!noinsttest>
+Architecture: linux-any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: mir-demos,
+            xmir,
+            xwayland,
+            glmark2-es2,
+            glmark2-es2-mir,
+            glmark2-es2-wayland
+Description: Mir Display Server - stress tests and other test tools
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains a tool for stress testing the Mir display server
+
+Package: libmircore1
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - core library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the 'core' shared library required for the Mir server and client.
+
+Package: libmircommon7
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - common library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the 'common' shared library required for the Mir server and client.
+
+# Longer-term these drivers should move out-of-tree
+Package: mir-platform-graphics-mesa-x16
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - platform library for X11 Mesa
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir server to interact with
+ the X11 platform using the Mesa drivers.
+
+Package: mir-platform-graphics-mesa-kms16
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - platform library for KMS Mesa
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir server to interact with
+ the hardware platform using the Mesa drivers.
+
+Package: mir-platform-graphics-eglstream-kms16
+Section: libs
+Architecture: amd64 i386
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - platform library for NVIDIA
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir server to interact with
+ the hardware platform using the EGLStream EGL extensions, such as the
+ NVIDIA binary driver.
+
+Package: mir-platform-graphics-wayland16
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - platform library for Wayland
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir server to interact with
+ a "host" Wayland display server.
+
+Package: mir-graphics-drivers-nvidia
+Section: libs
+Architecture: amd64 i386
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         mir-platform-graphics-eglstream-kms16,
+         mir-platform-graphics-mesa-x16,
+         mir-platform-input-evdev7,
+Description: Mir Display Server - Nvidia driver metapackage
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ This package depends on a full set of graphics drivers for Nvidia systems.
+
+Package: mir-platform-input-evdev7
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - input platform library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir server to interact with
+ the input hardware using the evdev interface.
+
+Package: mir-client-platform-mesa5
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Mir client platform - library for Mesa
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared libraries required for the Mir clients to interact with
+ the underlying hardware platform using the Mesa drivers.
+
+Package: mir-client-platform-mesa-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmirclient-dev (= ${binary:Version}),
+         ${misc:Depends},
+Description: Mir client platform - library for Mesa - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files required to use the platform specific capabilities of
+ the Mir Mesa backend.
+
+Package: mir-graphics-drivers-desktop
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         mir-platform-graphics-mesa-kms16,
+         mir-platform-graphics-mesa-x16,
+         mir-platform-graphics-wayland16,
+         mir-client-platform-mesa5,
+         mir-platform-input-evdev7,
+Description: Mir Display Server - desktop driver metapackage
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ This package depends on a full set of graphics drivers for traditional desktop
+ systems.
+
+Package: libmircookie2
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - spoof-resistant timestamps - runtime library
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ libmircookie provides a simple mechanism for a group of cooperating processes
+ to hand out and verify difficult-to-forge timestamps to untrusted 3rd parties.
+ .
+ This package contains the runtime library for generating and verifying the
+ attestable timestamps.
+
+Package: libmircookie-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmircookie2 (= ${binary:Version}),
+         ${misc:Depends},
+Description: Mir Display Server - spoof-resistant timestamps - cookie development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ libmircookie provides a simple mechanism for a group of cooperating processes
+ to hand out and verify difficult-to-forge timestamps to untrusted 3rd parties.
+ .
+ This package contains the development headers for building programs that
+ generate or verify the attestable timestamps.
+
+Package: python3-mir-perf-framework
+Build-Profiles: <!noinsttest>
+Section: python
+Architecture: all
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         python3-evdev,
+         python3-babeltrace,
+         mir-demos
+Description: Mir Display Server - performance testing framework
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ This package contains a python3 framework to facilitate writing performance
+ tests for Mir. It also contains a few interesting performance tests written
+ using the framework.
+
+Package: libmirrenderer-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         libmircommon-dev (= ${binary:Version}),
+         libmirplatform-dev (= ${binary:Version})
+Description: Mir Display Server - renderer - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files required for renderer development.
+
+Package: mir-renderer-gl-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+Description: Mir Display Server - GL renderer - development files
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains header files that define the interfaces through which platforms and
+ renderers access the functionality needed to render with GL.
+
+Package: libmiral3
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - ABI preserving abstraction layer
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ MirAL provides an ABI-stable abstraction layer for Mir based shells,
+ insulating them from mirserver ABI breaks.
+ .
+ Contains the shared library containing MirAL abstraction layer.
+
+Package: libmiral-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmiral3 (= ${binary:Version}),
+         libmirclient-dev (>= ${source:Version}), libmirclient-dev (<< ${source:Version}.1~),
+         ${misc:Depends},
+Description: Mir Display Server - ABI preserving abstraction layer - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ MirAL provides an ABI-stable abstraction layer for Mir based shells,
+ insulating them from mirserver ABI breaks.
+ .
+ Contains header files required for development using the MirAL abstraction
+ layer.
+
+Package: libmirwayland0
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Mir Display Server - Wayland protocol extensions
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the shared library containing generated wrappers for Wayland
+ protocol extensions
+
+Package: libmirwayland-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmirwayland0 (= ${binary:Version}),
+         libmircore-dev (= ${binary:Version}),
+         ${misc:Depends},
+         libmirwayland-bin (= ${binary:Version})
+Description: Mir Display Server - Wayland protocol extensions - development headers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the developer files for using the shared library containing generated
+ wrappers for Wayland protocol extensions
+
+Package: libmirwayland-bin
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: foreign
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+Breaks: libmirwayland-dev (<< 1.4.0+dev20)
+Replaces: libmirwayland-dev (<< 1.4.0+dev20)
+Description: Mir Display Server - generator for Wayland protocol extension wrappers
+ Mir is a display server running on Linux systems, with a focus on efficiency,
+ robust operation and a well-defined driver model.
+ .
+ Contains the tool used for generating the Mir-style wrappers for Wayland
+ protocol extensions found in libmirwayland
+ .
+ This can be useful for implementing Wayland protocol extensions not already
+ implemented in Mir.

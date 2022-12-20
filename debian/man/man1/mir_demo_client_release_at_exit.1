@@ -1,0 +1,30 @@
+.TH mir_demo_client_release_at_exit "1" "April 2020" "1.8.0" "Mir Client Demo Application"
+
+.SH NAME
+mir_demo_client_release_at_exit \- Mir Client Demo Application
+
+.SH SYNOPSIS
+.B mir_demo_client_release_at_exit
+[\fI\,<options>\/\fR]
+
+.SH DESCRIPTION
+Launch a Mir client demo (release at exit demo).
+.PP
+Cutdown version of mir_demo_client_basic to show that
+clients can release the connection after main() exits.
+
+.SH OPTIONS
+This application accepts the following options:
+.TP
+\fB\-m\fR \fI<mir\-server\-socket\-file\-path>\fR
+Full path to the Mir server socket file.
+.TP
+\fB\-h\fR
+Show this help text and exit.
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

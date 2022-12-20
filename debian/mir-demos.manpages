@@ -1,0 +1,6 @@
+debian/man/man1/miral-app.1
+debian/man/man1/miral-kiosk.1
+debian/man/man1/miral-shell.1
+debian/man/man1/miral-terminal.1
+debian/man/man1/miral-system-compositor.1
+debian/man/man1/mir-shell.1

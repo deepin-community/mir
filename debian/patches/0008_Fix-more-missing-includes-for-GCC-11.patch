@@ -1,0 +1,34 @@
+From d07c887641b03c19fbba052cf9600e6d8f7c2c85 Mon Sep 17 00:00:00 2001
+From: Jeff Law <law@redhat.com>
+Date: Fri, 4 Dec 2020 13:52:25 -0700
+Subject: [PATCH] Fix more missing #includes for GCC 11
+
+---
+ src/server/input/default_input_manager.cpp            | 1 +
+ tests/unit-tests/input/test_default_input_manager.cpp | 1 +
+ 2 files changed, 3 insertions(+)
+
+diff --git a/src/server/input/default_input_manager.cpp b/src/server/input/default_input_manager.cpp
+index c83857c244..e1089930f6 100644
+--- a/src/server/input/default_input_manager.cpp
++++ b/src/server/input/default_input_manager.cpp
+@@ -29,6 +29,7 @@
+ #include "mir/terminate_with_current_exception.h"
+ 
+ #include <future>
++#include <memory>
+ 
+ namespace mi = mir::input;
+ 
+diff --git a/tests/unit-tests/input/test_default_input_manager.cpp b/tests/unit-tests/input/test_default_input_manager.cpp
+index ed3d192179..f25998a6e6 100644
+--- a/tests/unit-tests/input/test_default_input_manager.cpp
++++ b/tests/unit-tests/input/test_default_input_manager.cpp
+@@ -33,6 +33,7 @@
+ #include <gmock/gmock.h>
+ #include <chrono>
+ #include <list>
++#include <memory>
+ 
+ namespace mt = mir::test;
+ namespace md = mir::dispatch;

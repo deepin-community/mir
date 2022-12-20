@@ -1,0 +1,5 @@
+debian/man/man1/mir_demo_client*.1
+debian/man/man1/mir_demo_server.1
+debian/man/man1/mir_performance_tests.1
+debian/man/man1/mir_platform_graphics_test_harness.1
+debian/man/man1/mir_stress.1

@@ -1,0 +1,90 @@
+.TH mir_performance_tests "1" "April 2020" "1.8.0" "Mir Display Server Runtime Tests"
+
+.SH NAME
+mir_performance_tests \- Run Mir Display Server performance tests
+
+.SH DESCRIPTION
+This program contains Mir Display Server tests written using Google Test.
+You can use the following command line flags to control its behavior:
+
+.SH OPTIONS
+.SS "Test Selection:"
+.HP
+\fB\-\-gtest_list_tests\fR
+.IP
+List the names of all tests instead of running them. The name of
+TEST(Foo, Bar) is "Foo.Bar".
+.HP
+\fB\-\-gtest_filter\fR=\fI\,POSTIVE_PATTERNS[\-NEGATIVE_PATTERNS]\/\fR
+.IP
+Run only the tests whose name matches one of the positive patterns but
+none of the negative patterns. '?' matches any single character; '*'
+matches any substring; ':' separates two patterns.
+.HP
+\fB\-\-gtest_also_run_disabled_tests\fR
+.IP
+Run all disabled tests too.
+
+.SS "Test Execution:"
+.HP
+\fB\-\-gtest_repeat\fR=\fI\,[COUNT]\/\fR
+.IP
+Run the tests repeatedly; use a negative count to repeat forever.
+.HP
+\fB\-\-gtest_shuffle\fR
+.IP
+Randomize tests' orders on every iteration.
+.HP
+\fB\-\-gtest_random_seed\fR=\fI\,[NUMBER]\/\fR
+.IP
+Random number seed to use for shuffling test orders (between 1 and
+99999, or 0 to use a seed based on the current time).
+
+.SS "Test Output:"
+.HP
+\fB\-\-gtest_color=\fR(yes|no|auto)
+.IP
+Enable/disable colored output. The default is auto.
+.HP
+\fB\-\-gtest_print_time\fR=\fI\,0\/\fR
+.IP
+Don't print the elapsed time of each test.
+.HP
+\fB\-\-gtest_output=\fR(json|xml)[:DIRECTORY_PATH/|:FILE_PATH]
+.IP
+Generate a JSON or XML report in the given directory or with the given
+file name. FILE_PATH defaults to test_detail.xml.
+.HP
+\fB\-\-gtest_stream_result_to\fR=\fI\,HOST\/\fR:PORT
+.IP
+Stream test results to the given server.
+
+.SS "Assertion Behavior:"
+.HP
+\fB\-\-gtest_death_test_style=\fR(fast|threadsafe)
+.IP
+Set the default death test style.
+.HP
+\fB\-\-gtest_break_on_failure\fR
+.IP
+Turn assertion failures into debugger break\-points.
+.HP
+\fB\-\-gtest_throw_on_failure\fR
+.IP
+Turn assertion failures into C++ exceptions for use by an external
+test framework.
+.HP
+\fB\-\-gtest_catch_exceptions\fR=\fI\,0\/\fR
+.IP
+Do not report exceptions as test failures. Instead, allow them
+to crash the program or throw a pop\-up (on Windows).
+.PP
+Except for \fB\-\-gtest_list_tests\fR, you can alternatively set the corresponding
+environment variable of a flag (all letters in upper\-case). For example, to
+disable colored text output, you can either specify \fB\-\-gtest_color\fR=\fI\,no\/\fR or set
+the GTEST_COLOR environment variable to no.
+.PP
+For more information, please read the Google Test documentation at
+https://github.com/google/googletest/. If you find a bug in Google Test
+(not one in your own code or tests), please report it to
+<googletestframework@googlegroups.com>.

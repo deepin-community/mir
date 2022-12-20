@@ -1,0 +1,50 @@
+Description: Provide/fix arch:indep-only install target.
+Author: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Forwarded: https://github.com/MirServer/mir/pull/1844
+
+--- a/cmake/Doxygen.cmake
++++ b/cmake/Doxygen.cmake
+@@ -31,4 +31,12 @@
+                     SOURCES ${PROJECT_BINARY_DIR}/Doxyfile
+                     DEPENDS guides)
+   install(DIRECTORY ${CMAKE_BINARY_DIR}/doc/html DESTINATION ${CMAKE_INSTALL_PREFIX}/share/doc/mir-doc/ OPTIONAL)
++
++  # support arch-indep-only builds
++  add_custom_target(doc-install
++                    COMMAND ${CMAKE_COMMAND} --trace-expand --debug-output -DCMAKE_INSTALL_COMPONENT=doc -P ${CMAKE_BINARY_DIR}/cmake_install.cmake VERBATIM )
++  install(DIRECTORY ${CMAKE_BINARY_DIR}/doc/html
++          DESTINATION ${CMAKE_INSTALL_PREFIX}/share/doc/mir-doc/
++          COMPONENT doc)
++
+ endif()
+--- a/benchmarks/CMakeLists.txt
++++ b/benchmarks/CMakeLists.txt
+@@ -34,6 +34,12 @@
+ if (EXISTS "/etc/debian_version")
+   # Debian requires special options, since they do a custom layout and things...
+   install(CODE "execute_process(COMMAND python3 mir_perf_framework_setup.py install -f --prefix=${CMAKE_INSTALL_PREFIX} --root=\$ENV{DESTDIR} --install-layout=deb --no-compile WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})")
++
++  # Support arch-indep-only builds
++  add_custom_target(py-install
++                    COMMAND ${CMAKE_COMMAND} -DCMAKE_INSTALL_COMPONENT=python -P ${CMAKE_BINARY_DIR}/cmake_install.cmake VERBATIM )
++  install(CODE "execute_process(COMMAND python3 mir_perf_framework_setup.py install -f --prefix=${CMAKE_INSTALL_PREFIX} --root=\$ENV{DESTDIR} --install-layout=deb --no-compile WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})"
++          COMPONENT python)
+ else()
+   install(CODE "execute_process(COMMAND python3 mir_perf_framework_setup.py install -O1 -f --prefix=${CMAKE_INSTALL_PREFIX} --root=\$ENV{DESTDIR} WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})")
+ endif()
+@@ -44,7 +50,15 @@
+   touch_event_latency.py
+ )
+ 
++# this install target is for normal builds...
++install(
++  FILES ${MIR_PERF_SCRIPTS}
++  DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/mir-perf-framework
++)
++
++# ... and this for arch-indep-only builds.
+ install(
+   FILES ${MIR_PERF_SCRIPTS}
+   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/mir-perf-framework
++  COMPONENT python
+ )

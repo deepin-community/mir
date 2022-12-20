@@ -1,0 +1,210 @@
+.TH miral\-shell "1" "April 2020" "1.8.0" "Mir Display Server Demo Application"
+
+.SH NAME
+miral\-shell \- Mir Display Server shell
+
+.SH SYNOPSIS
+\fB\,miral\-shell\/\fR
+\fI[\,options\/]\fR
+
+.SH DESCRIPTION
+\fBmiral\-shell\fR launches a Mir Display Server shell, offering both traditional and tiling window management.
+.PP
+The Mir shell startup can be tweaked by:
+.TP
+\fBCommand\-line options:\fR
+e.g. "\-\-host\-socket=/tmp/mir_socket".
+.TP
+\fBEnvironment variables:\fR
+Capitalise the long form of the command line option, prefix it with
+"MIR_SERVER_" and put "_" in place of "\-". E.g.
+"MIR_SERVER_HOST_SOCKET=/tmp/mir_socket".
+.TP
+\fBConfig file entries:\fR
+Use the long form command line options in the configuration file. E.g.
+"\-\-host\-socket=/tmp/mir_socket".
+.PP
+The config file (mir/mir_demo_server.config) is located via the XDG Base
+Directory Specification. ($XDG_CONFIG_HOME or $HOME/.config followed by
+$XDG_CONFIG_DIRS).
+
+.SH OPTIONS
+
+.TP
+\fB\-\-host\-socket\fR \fI<socket-filename>\fR
+Host socket filename.
+.TP
+\fB\-f\fR [ \fB\-\-file\fR ] \fI<filename>\fR
+Socket filename (default: $XDG_RUNTIME_DIR/mir_socket or /tmp/<UID_NUMBER>\-runtime\-dir/mir_socket).
+.TP
+\fB\-\-no\-file\fR
+Do not provide a socket filename for client connections.
+.TP
+\fB\-\-arw\-file\fR
+Set socket file permissions to globally read-writeable (equivalent to chmod a=rw).
+.TP
+\fB\-p\fR [ \fB\-\-prompt\-file\fR ]
+Provide a "..._trusted" filename for prompt helper connections.
+.TP
+\fB\-\-platform\-graphics\-lib\fR \fI<platform_library>\fR
+Library to use for platform graphics support (default: autodetect).
+.TP
+\fB\-\-platform\-input\-lib\fR \fI<input_library>\fR
+Library to use for platform input support (default: input\-stub.so).
+.TP
+\fB\-\-platform\-path\fR arg (=/usr/lib/x86_64\-linux\-gnu/mir/server\-platform)
+Directory to look for platform libraries (default: /usr/lib/<multi-arch>/mir/server\-platform).
+.TP
+\fB\-i\fR [ \fB\-\-enable\-input\fR ] \fI{0,1}\fR
+Enable input (default: 1, meaning: enabled).
+.TP
+\fB\-\-compositor\-report\fR \fI{log,lttng,off}\fR (=off)
+Compositor reporting, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-connector\-report\fR \fI{log,lttng,off}\fR
+How to handle the Connector report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-display\-report\fR \fI{log,lttng,off}\fR
+How to handle the Display report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-input\-report\fR \fI{log,lttng,off}\fR
+How to handle to Input report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-legacy\-input\-report\fR \fI{log,off}\fR
+How to handle the Legacy Input report, either of \fIlog\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-seat\-report\fR \fI{log,off}\fR
+How to handle to Seat report, either of \fIlog\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-session\-mediator\-report\fR \fI{log,lttng,off}\fR
+How to handle the SessionMediator report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-msg\-processor\-report\fR \fI{log,lttng,off}\fR
+How to handle the MessageProcessor report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-scene\-report\fR \fI{log,lttng,off}\fR
+How to handle the scene report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-shared\-library\-prober\-report\fR \fI{log,lttng,off}\fR
+How to handle the SharedLibraryProber report, either of \fIlog\fR, \fIlttng\fR or \fIoff\fR (default: log).
+.TP
+\fB\-\-shell\-report\fR \fI{log,off}\fR
+How to handle the Shell report, either of \fIlog\fR or \fIoff\fR (default: off).
+.TP
+\fB\-\-composite\-delay\fR \fI<msecs>\fR
+Compositor frame delay in milliseconds (how long to wait for new frames
+from clients before compositing). Higher values result in lower latency
+but risk causing frame skipping. A negative value means decide
+automatically (default: 0).
+.TP
+\fB\-\-name\fR \fI<name>\fR
+When nested, the name Mir uses when registering with the host.
+.TP
+\fB\-\-nested\-passthrough\fR {0,1}
+When nested, attempt to pass a client's graphics content directly to the
+host to avoid a composition pass (default: 1).
+.TP
+\fB\-\-offscreen\fR
+Render to offscreen buffers instead of the real outputs.
+.TP
+\fB\-\-enable\-touchspots\fR
+Display visualization of touchspots (e.g. for screencasting).
+.TP
+\fB\-\-cursor\fR \fI{auto,null,software}\fR
+Cursor (mouse pointer) to use (default: auto).
+.TP
+\fB\-\-enable\-key\-repeat\fR {0,1}
+Enable server generated key repeat (default: 1).
+.TP
+\fB\-\-on\-fatal\-error\-except\fR
+On "fatal error" conditions (e.g. drivers behaving in unexpected ways)
+throw an exception (instead of a core dump).
+.TP
+\fB\-\-debug\fR
+Enable extra development debugging. This is only interesting for people
+doing Mir server or client development.
+.TP
+\fB\-\-enable\-mirclient\fR
+Enable deprecated mirclient socket (for running old clients)
+.TP
+\fB\-\-console\-provider\fR arg (=auto)
+Console device handling how Mir handles console\-related tasks (device
+handling, VT switching, etc.) Possible values given:
+.IP
+\fIlogind\fR - use logind vt: use the Linux VT subsystem. Requires root privileges.
+.IP
+\fInone\fR - support no console\-related tasks. Useful for nested platforms
+which do not need raw device access and which don't have a VT concept
+.IP
+\fIauto\fR - detect the appropriate provider.
+.TP
+\fB\-\-vt\fR {0,1}
+VT to run on or 0 to use current (default: 0).
+.IP
+Usage of this option requires \fB\-\-console\-provider\fR=\fI\,vt\/\fR
+.TP
+\fB\-\-bypass\fR {0,1}
+[platform\-specific] utilize the bypass optimization for fullscreen
+surfaces (default: 1).
+.TP
+\fB\-\-x11\-output\fR \fI<sizes>\fR
+[mir\-on\-X specific] Colon separated list of WIDTHxHEIGHT sizes for
+"output" windows (default: 1280x1024).
+.TP
+\fB\-\-wayland\-host\fR \fI<socket-name>\fR
+Socket name for host compositor.
+.TP
+\fB\-\-startup\-apps\fR \fI<list-of-applications>\fR
+Colon separated list of startup applications.
+.TP
+\fB\-\-env\-hacks\fR \fI<env-vars>\fR
+Colon separated list of environment variable settings.
+.TP
+\fB\-\-cursor\-theme\fR \fI<cursor-theme>\fR
+Colon separated cursor theme list (e.g. "DMZ\-Black", default: DMZ\-White).
+.TP
+\fB\-\-wayland\-extensions\fR \fI<wayland-extensions-list>\fR
+Colon separated list of wayland extensions to enable (enabled by default:
+
+.IP
+wl_shellxdg_wm_base
+.IP
+zwlr_layer_shell_v1
+.IP
+zxdg_output_manager_v1
+.IP
+zxdg_shell_v6
+
+).
+.TP
+\fB\-\-window\-manager\fR \fI{floating,tiling}\fR 
+Window management strategy (default: floating).
+.TP
+\fB\-\-window\-management\-trace\fR
+Log trace messages.
+.TP
+\fB\-\-display\-config\fR \fI{clone,sidebyside,single,static=<filename>}\fR
+Display configuration, either of \fIclone\fR, \fIsidebyside\fR, \fIsingle\fR, or \fIstatic=<filename>\fR (default: sidebyside).
+.TP
+\fB\-\-translucent\fR {on,off}
+Select a display mode with alpha (default: off).
+.TP
+\fB\-\-keymap\fR \fI<keymap>\fR (=us)
+A keymap identifier. Format: \fI<layout>[+<variant>[+<options>]]\fR, e,g,
+"gb", "cz+qwerty" or "de++compose:caps" (default: us).
+.TP
+\fB\-\-shell\-wallpaper\-font\fR \fI<fullpath-to-font>\fR
+Font file to use for wallpaper (default: /usr/share/fonts/truetype/freefont/FreeSansBold.ttf).
+.TP
+\fB\-h\fR [ \fB\-\-help\fR ]
+Show help text and exit.
+
+.SH SEE ALSO
+mir-kiosk(1)
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

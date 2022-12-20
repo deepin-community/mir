@@ -1,0 +1,2 @@
+# no explicit dev:pkg for libmirprotobuf3
+libmirprotobuf3: symbols-file-missing-build-depends-package-field

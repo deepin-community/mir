@@ -1,0 +1,2944 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Mir
+Upstream-Contact: Alan Griffiths <alan.griffiths@canonical.com>
+Source: https://github.com/MirServer/mir
+Files-Excluded:
+ .travis.yml
+ debian/*
+ spread.yaml
+ spread/*
+ tests/unit-tests/shared-libraries/*
+ tools/bot-data.tar.xz.enc
+
+Files: CMakeLists.txt
+ benchmarks/benchmark_multiplexing_dispatchable.cpp
+ benchmarks/frame-uniformity/frame_uniformity_test.cpp
+ benchmarks/frame-uniformity/frame_uniformity_test.h
+ benchmarks/frame-uniformity/main.cpp
+ benchmarks/frame-uniformity/touch_measuring_client.cpp
+ benchmarks/frame-uniformity/touch_measuring_client.h
+ benchmarks/frame-uniformity/touch_producing_server.cpp
+ benchmarks/frame-uniformity/touch_producing_server.h
+ benchmarks/frame-uniformity/touch_samples.cpp
+ benchmarks/frame-uniformity/touch_samples.h
+ benchmarks/frame-uniformity/vsync_simulating_graphics_platform.cpp
+ benchmarks/frame-uniformity/vsync_simulating_graphics_platform.h
+ examples/example-server-lib/decoration_provider.cpp
+ examples/example-server-lib/decoration_provider.h
+ examples/example-server-lib/floating_window_manager.cpp
+ examples/example-server-lib/floating_window_manager.h
+ examples/example-server-lib/sw_splash.cpp
+ examples/example-server-lib/sw_splash.h
+ examples/example-server-lib/tiling_window_manager.cpp
+ examples/example-server-lib/tiling_window_manager.h
+ examples/example-server-lib/wallpaper_config.cpp
+ examples/example-server-lib/wallpaper_config.h
+ examples/example-server-lib/wayland_helpers.cpp
+ examples/example-server-lib/wayland_helpers.h
+ examples/mir_demo_server/as_render_target.h
+ examples/mir_demo_server/glog_logger.cpp
+ examples/mir_demo_server/glog_logger.h
+ examples/mir_demo_server/server_example.cpp
+ examples/mir_demo_server/server_example_adorning_compositor.cpp
+ examples/mir_demo_server/server_example_adorning_compositor.h
+ examples/mir_demo_server/server_example_custom_compositor.cpp
+ examples/mir_demo_server/server_example_custom_compositor.h
+ examples/mir_demo_server/server_example_host_lifecycle_event.cpp
+ examples/mir_demo_server/server_example_host_lifecycle_event_listener.h
+ examples/mir_demo_server/server_example_input_device_config.cpp
+ examples/mir_demo_server/server_example_input_device_config.h
+ examples/mir_demo_server/server_example_input_event_filter.cpp
+ examples/mir_demo_server/server_example_input_event_filter.h
+ examples/mir_demo_server/server_example_input_filter.cpp
+ examples/mir_demo_server/server_example_input_filter.h
+ examples/mir_demo_server/server_example_log_options.cpp
+ examples/mir_demo_server/server_example_log_options.h
+ examples/mir_demo_server/server_example_test_client.cpp
+ examples/mir_demo_server/server_example_test_client.h
+ examples/miral-kiosk/kiosk_main.cpp
+ examples/miral-kiosk/kiosk_window_manager.cpp
+ examples/miral-kiosk/kiosk_window_manager.h
+ examples/miral-shell/shell_main.cpp
+ examples/miral-shell/spinner/eglapp.cpp
+ examples/miral-shell/spinner/eglapp.h
+ examples/miral-shell/spinner/eglspinner.cpp
+ examples/miral-shell/spinner/miregl.cpp
+ examples/miral-shell/spinner/miregl.h
+ examples/miral-shell/spinner/png2header.py
+ examples/miral-shell/spinner/splash.h
+ examples/miral-system-compositor/system_compositor_main.cpp
+ examples/mirclient/animated_cursor_demo_client.c
+ examples/mirclient/basic.c
+ examples/mirclient/buffer_render_target.cpp
+ examples/mirclient/buffer_render_target.h
+ examples/mirclient/camera.c
+ examples/mirclient/chain_jumping_buffers.c
+ examples/mirclient/client_helpers.cpp
+ examples/mirclient/client_helpers.h
+ examples/mirclient/client_touch_validator.cpp
+ examples/mirclient/cursors_demo_client.c
+ examples/mirclient/demo_client_display_config.c
+ examples/mirclient/eglapp.c
+ examples/mirclient/eglapp.h
+ examples/mirclient/eglcounter.cpp
+ examples/mirclient/eglflash.c
+ examples/mirclient/eglplasma.c
+ examples/mirclient/eglsquare.cpp
+ examples/mirclient/eglstateswitcher.c
+ examples/mirclient/egltriangle.c
+ examples/mirclient/fingerpaint.c
+ examples/mirclient/flicker.c
+ examples/mirclient/graphics.h
+ examples/mirclient/graphics_utils.cpp
+ examples/mirclient/image_renderer.cpp
+ examples/mirclient/image_renderer.h
+ examples/mirclient/input_shapes.cpp
+ examples/mirclient/multi_stream.cpp
+ examples/mirclient/multiwin.c
+ examples/mirclient/pointer_confinement.c
+ examples/mirclient/prerendered_frames.c
+ examples/mirclient/progressbar.c
+ examples/mirclient/prompt_session.c
+ examples/mirclient/release_at_exit.c
+ examples/mirclient/render_surface.cpp
+ examples/mirclient/screencast.cpp
+ examples/mirclient/scroll.cpp
+ examples/mirclient/target.c
+ examples/mirclient/tooltip.c
+ examples/mirclient/wayland_client.c
+ include/cookie/mir/cookie/authority.h
+ include/cookie/mir/cookie/cookie.h
+ include/miral/miral/add_init_callback.h
+ include/miral/miral/append_event_filter.h
+ include/miral/miral/application.h
+ include/miral/miral/application_authorizer.h
+ include/miral/miral/application_info.h
+ include/miral/miral/canonical_window_manager.h
+ include/miral/miral/command_line_option.h
+ include/miral/miral/cursor_theme.h
+ include/miral/miral/debug_extension.h
+ include/miral/miral/display_configuration_option.h
+ include/miral/miral/external_client.h
+ include/miral/miral/internal_client.h
+ include/miral/miral/keymap.h
+ include/miral/miral/lambda_as_function.h
+ include/miral/miral/output.h
+ include/miral/miral/runner.h
+ include/miral/miral/set_command_line_handler.h
+ include/miral/miral/set_terminator.h
+ include/miral/miral/set_window_management_policy.h
+ include/miral/miral/wayland_extensions.h
+ include/miral/miral/window.h
+ include/miral/miral/window_info.h
+ include/miral/miral/window_management_options.h
+ include/miral/miral/window_management_policy.h
+ include/miral/miral/window_manager_tools.h
+ include/miral/miral/window_specification.h
+ include/miral/miral/x11_support.h
+ include/miral/miral/zone.h
+ include/platform/mir/executor.h
+ include/renderer/mir/renderer/renderer.h
+ include/renderer/mir/renderer/renderer_factory.h
+ include/server/mir/compositor/compositor.h
+ include/server/mir/compositor/compositor_id.h
+ include/server/mir/compositor/compositor_report.h
+ include/server/mir/compositor/display_buffer_compositor.h
+ include/server/mir/compositor/display_buffer_compositor_factory.h
+ include/server/mir/compositor/display_listener.h
+ include/server/mir/compositor/scene.h
+ include/server/mir/compositor/scene_element.h
+ include/server/mir/frontend/buffer_sink.h
+ include/server/mir/frontend/buffer_stream.h
+ include/server/mir/frontend/prompt_session.h
+ include/server/mir/frontend/session_authorizer.h
+ include/server/mir/frontend/session_credentials.h
+ include/server/mir/frontend/session_mediator_observer.h
+ include/server/mir/frontend/surface.h
+ include/server/mir/frontend/surface_stack.h
+ include/server/mir/frontend/wayland.h
+ include/server/mir/graphics/default_display_configuration_policy.h
+ include/server/mir/graphics/display_configuration_observer.h
+ include/server/mir/input/composite_event_filter.h
+ include/server/mir/input/cursor_images.h
+ include/server/mir/input/cursor_listener.h
+ include/server/mir/input/device.h
+ include/server/mir/input/event_filter.h
+ include/server/mir/input/input_device_hub.h
+ include/server/mir/input/input_device_observer.h
+ include/server/mir/input/input_dispatcher.h
+ include/server/mir/input/input_manager.h
+ include/server/mir/input/input_reception_mode.h
+ include/server/mir/input/seat_observer.h
+ include/server/mir/input/surface.h
+ include/server/mir/input/touch_visualizer.h
+ include/server/mir/lockable_callback.h
+ include/server/mir/main_loop.h
+ include/server/mir/observer_registrar.h
+ include/server/mir/report_exception.h
+ include/server/mir/scene/application_not_responding_detector.h
+ include/server/mir/scene/application_not_responding_detector_wrapper.h
+ include/server/mir/scene/buffer_stream_factory.h
+ include/server/mir/scene/coordinate_translator.h
+ include/server/mir/scene/null_session_listener.h
+ include/server/mir/scene/null_surface_observer.h
+ include/server/mir/scene/observer.h
+ include/server/mir/scene/prompt_session.h
+ include/server/mir/scene/prompt_session_creation_parameters.h
+ include/server/mir/scene/prompt_session_listener.h
+ include/server/mir/scene/prompt_session_manager.h
+ include/server/mir/scene/session.h
+ include/server/mir/scene/session_coordinator.h
+ include/server/mir/scene/session_listener.h
+ include/server/mir/scene/snapshot.h
+ include/server/mir/scene/surface.h
+ include/server/mir/scene/surface_creation_parameters.h
+ include/server/mir/scene/surface_factory.h
+ include/server/mir/scene/surface_observer.h
+ include/server/mir/server.h
+ include/server/mir/server_action_queue.h
+ include/server/mir/server_status_listener.h
+ include/server/mir/shell/abstract_shell.h
+ include/server/mir/shell/display_configuration_controller.h
+ include/server/mir/shell/display_layout.h
+ include/server/mir/shell/focus_controller.h
+ include/server/mir/shell/host_lifecycle_event_listener.h
+ include/server/mir/shell/input_targeter.h
+ include/server/mir/shell/persistent_surface_store.h
+ include/server/mir/shell/shell.h
+ include/server/mir/shell/shell_report.h
+ include/server/mir/shell/shell_wrapper.h
+ include/server/mir/shell/surface_ready_observer.h
+ include/server/mir/shell/surface_specification.h
+ include/server/mir/shell/surface_stack.h
+ include/server/mir/shell/surface_stack_wrapper.h
+ include/server/mir/shell/system_compositor_window_manager.h
+ include/server/mir/shell/window_management_info.h
+ include/server/mir/shell/window_manager.h
+ include/server/mir/shell/window_manager_builder.h
+ include/server/mir/terminate_with_current_exception.h
+ include/server/mir/time/alarm.h
+ include/server/mir/time/alarm_factory.h
+ include/test/mir/test/auto_unblock_thread.h
+ include/test/mir/test/cross_process_action.h
+ include/test/mir/test/cross_process_sync.h
+ include/test/mir/test/death.h
+ include/test/mir/test/display_config_matchers.h
+ include/test/mir/test/doubles/fake_display.h
+ include/test/mir/test/doubles/mock_client_buffer.h
+ include/test/mir/test/doubles/mock_client_context.h
+ include/test/mir/test/doubles/mock_display_configuration.h
+ include/test/mir/test/doubles/mock_display_configuration_observer.h
+ include/test/mir/test/doubles/mock_egl.h
+ include/test/mir/test/doubles/mock_egl_native_surface.h
+ include/test/mir/test/doubles/mock_gl.h
+ include/test/mir/test/doubles/mock_input_device_hub.h
+ include/test/mir/test/doubles/mock_input_device_observer.h
+ include/test/mir/test/doubles/mock_input_dispatcher.h
+ include/test/mir/test/doubles/mock_platform_authentication.h
+ include/test/mir/test/doubles/mock_prompt_session_listener.h
+ include/test/mir/test/doubles/mock_seat_report.h
+ include/test/mir/test/doubles/mock_window_manager.h
+ include/test/mir/test/doubles/nested_mock_egl.h
+ include/test/mir/test/doubles/null_display.h
+ include/test/mir/test/doubles/null_display_buffer.h
+ include/test/mir/test/doubles/null_display_buffer_compositor_factory.h
+ include/test/mir/test/doubles/null_display_configuration.h
+ include/test/mir/test/doubles/null_display_sync_group.h
+ include/test/mir/test/doubles/null_gl_context.h
+ include/test/mir/test/doubles/null_logger.h
+ include/test/mir/test/doubles/null_platform.h
+ include/test/mir/test/doubles/null_platform_ipc_operations.h
+ include/test/mir/test/doubles/stub_cursor.h
+ include/test/mir/test/doubles/stub_cursor_image.h
+ include/test/mir/test/doubles/stub_display_buffer.h
+ include/test/mir/test/doubles/stub_display_configuration.h
+ include/test/mir/test/doubles/stub_input_device.h
+ include/test/mir/test/doubles/stub_session.h
+ include/test/mir/test/doubles/stub_session_authorizer.h
+ include/test/mir/test/doubles/stub_surface.h
+ include/test/mir/test/doubles/wrap_shell_to_track_latest_surface.h
+ include/test/mir/test/empty_deleter.h
+ include/test/mir/test/event_factory.h
+ include/test/mir/test/event_matchers.h
+ include/test/mir/test/fake_shared.h
+ include/test/mir/test/pipe.h
+ include/test/mir/test/popen.h
+ include/test/mir/test/signal.h
+ include/test/mir/test/signal_actions.h
+ include/test/mir/test/spin_wait.h
+ include/test/mir/test/validity_matchers.h
+ include/test/mir_test_framework/any_surface.h
+ include/test/mir_test_framework/async_server_runner.h
+ include/test/mir_test_framework/canonical_window_manager_policy.h
+ include/test/mir_test_framework/connected_client_headless_server.h
+ include/test/mir_test_framework/connected_client_with_a_window.h
+ include/test/mir_test_framework/declarative_placement_window_manage_policy.h
+ include/test/mir_test_framework/detect_server.h
+ include/test/mir_test_framework/executable_path.h
+ include/test/mir_test_framework/fake_input_device.h
+ include/test/mir_test_framework/headless_display_buffer_compositor_factory.h
+ include/test/mir_test_framework/headless_in_process_server.h
+ include/test/mir_test_framework/headless_nested_server_runner.h
+ include/test/mir_test_framework/headless_test.h
+ include/test/mir_test_framework/in_process_server.h
+ include/test/mir_test_framework/interprocess_client_server_test.h
+ include/test/mir_test_framework/main.h
+ include/test/mir_test_framework/observant_shell.h
+ include/test/mir_test_framework/passthrough_tracker.h
+ include/test/mir_test_framework/placement_applying_shell.h
+ include/test/mir_test_framework/process.h
+ include/test/mir_test_framework/server_runner.h
+ include/test/mir_test_framework/stub_client_platform_options.h
+ include/test/mir_test_framework/stub_graphics_platform_operation.h
+ include/test/mir_test_framework/stub_platform_extension.h
+ include/test/mir_test_framework/stub_platform_helpers.h
+ include/test/mir_test_framework/stub_server_platform_factory.h
+ include/test/mir_test_framework/temporary_environment_value.h
+ include/test/mir_test_framework/visible_surface.h
+ include/test/miral/test_display_server.h
+ include/test/miral/test_server.h
+ include/wayland/mir/wayland/wayland_base.h
+ playground/diamond.c
+ playground/diamond.h
+ playground/egldiamond_render_surface.c
+ playground/mir_egl_platform_shim.c
+ playground/mir_egl_platform_shim.h
+ src/cookie/authority.cpp
+ src/cookie/format.h
+ src/cookie/hmac_cookie.cpp
+ src/cookie/hmac_cookie.h
+ src/gl/default_program_factory.cpp
+ src/gl/recently_used_cache.cpp
+ src/gl/recently_used_cache.h
+ src/include/cookie/mir/cookie/blob.h
+ src/include/gl/mir/gl/default_program_factory.h
+ src/include/server/mir/basic_callback.h
+ src/include/server/mir/compositor/buffer_stream.h
+ src/include/server/mir/default_server_configuration.h
+ src/include/server/mir/default_server_status_listener.h
+ src/include/server/mir/display_changer.h
+ src/include/server/mir/display_server.h
+ src/include/server/mir/emergency_cleanup.h
+ src/include/server/mir/frontend/basic_mir_client_session.h
+ src/include/server/mir/frontend/connection_context.h
+ src/include/server/mir/frontend/connection_creator.h
+ src/include/server/mir/frontend/connections.h
+ src/include/server/mir/frontend/connector.h
+ src/include/server/mir/frontend/connector_report.h
+ src/include/server/mir/frontend/display_changer.h
+ src/include/server/mir/frontend/event_sink.h
+ src/include/server/mir/frontend/fd_sets.h
+ src/include/server/mir/frontend/input_configuration_changer.h
+ src/include/server/mir/frontend/message_processor.h
+ src/include/server/mir/frontend/message_processor_report.h
+ src/include/server/mir/frontend/mir_client_session.h
+ src/include/server/mir/frontend/protobuf_connection_creator.h
+ src/include/server/mir/frontend/protobuf_message_sender.h
+ src/include/server/mir/frontend/screencast.h
+ src/include/server/mir/frontend/shell.h
+ src/include/server/mir/frontend/template_protobuf_message_processor.h
+ src/include/server/mir/glib_main_loop.h
+ src/include/server/mir/glib_main_loop_sources.h
+ src/include/server/mir/graphics/gl_extensions_base.h
+ src/include/server/mir/graphics/surfaceless_egl_context.h
+ src/include/server/mir/input/input_probe.h
+ src/include/server/mir/input/legacy_input_dispatchable.h
+ src/include/server/mir/input/scene.h
+ src/include/server/mir/input/seat.h
+ src/include/server/mir/input/validator.h
+ src/include/server/mir/input/vt_filter.h
+ src/include/server/mir/lockable_callback_wrapper.h
+ src/include/server/mir/observer_multiplexer.h
+ src/include/server/mir/run_mir.h
+ src/include/server/mir/scene/legacy_scene_change_notification.h
+ src/include/server/mir/scene/null_observer.h
+ src/include/server/mir/scene/null_prompt_session_listener.h
+ src/include/server/mir/scene/output_properties_cache.h
+ src/include/server/mir/scene/scene_report.h
+ src/include/server/mir/scene/session_container.h
+ src/include/server/mir/scene/session_event_handler_register.h
+ src/include/server/mir/scene/session_event_sink.h
+ src/include/server/mir/scene/surface_event_source.h
+ src/include/server/mir/scene/surface_observers.h
+ src/include/server/mir/server_configuration.h
+ src/include/server/mir/synchronised.h
+ src/include/server/mir/thread/basic_thread_pool.h
+ src/miral/active_outputs.cpp
+ src/miral/active_outputs.h
+ src/miral/add_init_callback.cpp
+ src/miral/append_event_filter.cpp
+ src/miral/application.cpp
+ src/miral/application_authorizer.cpp
+ src/miral/application_info.cpp
+ src/miral/basic_window_manager.cpp
+ src/miral/basic_window_manager.h
+ src/miral/canonical_window_manager.cpp
+ src/miral/command_line_option.cpp
+ src/miral/coordinate_translator.cpp
+ src/miral/coordinate_translator.h
+ src/miral/cursor_theme.cpp
+ src/miral/debug_extension.cpp
+ src/miral/display_configuration_listeners.cpp
+ src/miral/display_configuration_listeners.h
+ src/miral/display_configuration_option.cpp
+ src/miral/external_client.cpp
+ src/miral/internal_client.cpp
+ src/miral/join_client_threads.h
+ src/miral/keymap.cpp
+ src/miral/launch_app.cpp
+ src/miral/launch_app.h
+ src/miral/mru_window_list.cpp
+ src/miral/mru_window_list.h
+ src/miral/output.cpp
+ src/miral/runner.cpp
+ src/miral/set_command_line_handler.cpp
+ src/miral/set_terminator.cpp
+ src/miral/set_window_management_policy.cpp
+ src/miral/static_display_config.cpp
+ src/miral/static_display_config.h
+ src/miral/window.cpp
+ src/miral/window_info.cpp
+ src/miral/window_info_defaults.h
+ src/miral/window_management_options.cpp
+ src/miral/window_management_policy.cpp
+ src/miral/window_management_trace.cpp
+ src/miral/window_management_trace.h
+ src/miral/window_manager_tools.cpp
+ src/miral/window_manager_tools_implementation.h
+ src/miral/window_specification.cpp
+ src/miral/x11_support.cpp
+ src/miral/xcursor_loader.cpp
+ src/miral/xcursor_loader.h
+ src/miral/zone.cpp
+ src/platforms/evdev/button_utils.cpp
+ src/platforms/evdev/button_utils.h
+ src/platforms/mesa/server/x11/input/input.cpp
+ src/platforms/mesa/server/x11/input/input_device.cpp
+ src/platforms/mesa/server/x11/input/input_platform.cpp
+ src/platforms/mesa/server/x11/input/input_platform.h
+ src/platforms/wayland/input.cpp
+ src/platforms/wayland/input_device.cpp
+ src/platforms/wayland/input_platform.cpp
+ src/platforms/wayland/input_platform.h
+ src/renderers/gl/program_family.cpp
+ src/renderers/gl/program_family.h
+ src/renderers/gl/renderer.cpp
+ src/renderers/gl/renderer.h
+ src/renderers/gl/renderer_factory.cpp
+ src/renderers/gl/renderer_factory.h
+ src/server/basic_callback.cpp
+ src/server/compositor/buffer_acquisition.h
+ src/server/compositor/buffer_stream_factory.cpp
+ src/server/compositor/buffer_stream_factory.h
+ src/server/compositor/compositing_screencast.cpp
+ src/server/compositor/compositing_screencast.h
+ src/server/compositor/default_configuration.cpp
+ src/server/compositor/default_display_buffer_compositor.cpp
+ src/server/compositor/default_display_buffer_compositor.h
+ src/server/compositor/default_display_buffer_compositor_factory.cpp
+ src/server/compositor/default_display_buffer_compositor_factory.h
+ src/server/compositor/dropping_schedule.cpp
+ src/server/compositor/dropping_schedule.h
+ src/server/compositor/multi_monitor_arbiter.cpp
+ src/server/compositor/multi_monitor_arbiter.h
+ src/server/compositor/multi_threaded_compositor.cpp
+ src/server/compositor/multi_threaded_compositor.h
+ src/server/compositor/occlusion.cpp
+ src/server/compositor/occlusion.h
+ src/server/compositor/queueing_schedule.cpp
+ src/server/compositor/queueing_schedule.h
+ src/server/compositor/schedule.h
+ src/server/compositor/screencast_display_buffer.cpp
+ src/server/compositor/screencast_display_buffer.h
+ src/server/compositor/stream.cpp
+ src/server/compositor/stream.h
+ src/server/console/default_configuration.cpp
+ src/server/console/ioctl_vt_switcher.cpp
+ src/server/console/ioctl_vt_switcher.h
+ src/server/console/linux_virtual_terminal.cpp
+ src/server/console/linux_virtual_terminal.h
+ src/server/console/logind_console_services.cpp
+ src/server/console/logind_console_services.h
+ src/server/console/minimal_console_services.cpp
+ src/server/console/minimal_console_services.h
+ src/server/default_emergency_cleanup.cpp
+ src/server/default_emergency_cleanup.h
+ src/server/default_server_configuration.cpp
+ src/server/display_server.cpp
+ src/server/frontend/authorizing_display_changer.cpp
+ src/server/frontend/authorizing_display_changer.h
+ src/server/frontend/authorizing_input_config_changer.cpp
+ src/server/frontend/authorizing_input_config_changer.h
+ src/server/frontend/basic_mir_client_session.cpp
+ src/server/frontend/connection_context.cpp
+ src/server/frontend/default_configuration.cpp
+ src/server/frontend/default_ipc_factory.cpp
+ src/server/frontend/default_ipc_factory.h
+ src/server/frontend/display_server.h
+ src/server/frontend/event_sender.cpp
+ src/server/frontend/event_sender.h
+ src/server/frontend/event_sink_factory.h
+ src/server/frontend/message_receiver.h
+ src/server/frontend/message_sender.h
+ src/server/frontend/no_prompt_shell.cpp
+ src/server/frontend/no_prompt_shell.h
+ src/server/frontend/protobuf_buffer_packer.cpp
+ src/server/frontend/protobuf_buffer_packer.h
+ src/server/frontend/protobuf_connection_creator.cpp
+ src/server/frontend/protobuf_input_converter.cpp
+ src/server/frontend/protobuf_input_converter.h
+ src/server/frontend/protobuf_ipc_factory.h
+ src/server/frontend/protobuf_message_processor.cpp
+ src/server/frontend/protobuf_message_processor.h
+ src/server/frontend/protobuf_responder.cpp
+ src/server/frontend/protobuf_responder.h
+ src/server/frontend/published_socket_connector.cpp
+ src/server/frontend/published_socket_connector.h
+ src/server/frontend/reordering_message_sender.cpp
+ src/server/frontend/reordering_message_sender.h
+ src/server/frontend/resource_cache.cpp
+ src/server/frontend/resource_cache.h
+ src/server/frontend/screencast_buffer_tracker.cpp
+ src/server/frontend/screencast_buffer_tracker.h
+ src/server/frontend/session_credentials.cpp
+ src/server/frontend/session_mediator.cpp
+ src/server/frontend/session_mediator.h
+ src/server/frontend/session_mediator_observer_multiplexer.cpp
+ src/server/frontend/session_mediator_observer_multiplexer.h
+ src/server/frontend/shell_wrapper.cpp
+ src/server/frontend/shell_wrapper.h
+ src/server/frontend/socket_connection.cpp
+ src/server/frontend/socket_connection.h
+ src/server/frontend/socket_messenger.cpp
+ src/server/frontend/socket_messenger.h
+ src/server/frontend/unauthorized_screencast.cpp
+ src/server/frontend/unauthorized_screencast.h
+ src/server/frontend_wayland/wayland_default_configuration.cpp
+ src/server/frontend_wayland/wl_region.cpp
+ src/server/frontend_wayland/wl_region.h
+ src/server/frontend_wayland/wlshmbuffer.cpp
+ src/server/frontend_wayland/wlshmbuffer.h
+ src/server/glib_main_loop.cpp
+ src/server/glib_main_loop_sources.cpp
+ src/server/graphics/default_configuration.cpp
+ src/server/graphics/default_display_configuration_policy.cpp
+ src/server/graphics/display_configuration_observer_multiplexer.cpp
+ src/server/graphics/display_configuration_observer_multiplexer.h
+ src/server/graphics/gl_extensions_base.cpp
+ src/server/graphics/nested/buffer.cpp
+ src/server/graphics/nested/buffer.h
+ src/server/graphics/nested/cursor.cpp
+ src/server/graphics/nested/cursor.h
+ src/server/graphics/nested/display.cpp
+ src/server/graphics/nested/display.h
+ src/server/graphics/nested/display_buffer.cpp
+ src/server/graphics/nested/display_buffer.h
+ src/server/graphics/nested/host_buffer.cpp
+ src/server/graphics/nested/host_buffer.h
+ src/server/graphics/nested/host_chain.h
+ src/server/graphics/nested/host_connection.h
+ src/server/graphics/nested/host_stream.h
+ src/server/graphics/nested/host_surface.h
+ src/server/graphics/nested/host_surface_spec.h
+ src/server/graphics/nested/input_platform.cpp
+ src/server/graphics/nested/input_platform.h
+ src/server/graphics/nested/ipc_operations.cpp
+ src/server/graphics/nested/ipc_operations.h
+ src/server/graphics/nested/mir_client_host_connection.cpp
+ src/server/graphics/nested/mir_client_host_connection.h
+ src/server/graphics/nested/native_buffer.h
+ src/server/graphics/nested/nested_display_configuration.cpp
+ src/server/graphics/nested/nested_display_configuration.h
+ src/server/graphics/nested/passthrough_option.h
+ src/server/graphics/nested/platform.cpp
+ src/server/graphics/nested/platform.h
+ src/server/graphics/null_cursor.h
+ src/server/graphics/offscreen/display.cpp
+ src/server/graphics/offscreen/display.h
+ src/server/graphics/offscreen/display_buffer.cpp
+ src/server/graphics/offscreen/display_buffer.h
+ src/server/graphics/offscreen/display_configuration.cpp
+ src/server/graphics/offscreen/display_configuration.h
+ src/server/graphics/platform_probe.cpp
+ src/server/graphics/platform_probe.h
+ src/server/graphics/software_cursor.cpp
+ src/server/graphics/software_cursor.h
+ src/server/graphics/surfaceless_egl_context.cpp
+ src/server/input/basic_seat.cpp
+ src/server/input/basic_seat.h
+ src/server/input/builtin_cursor_images.cpp
+ src/server/input/builtin_cursor_images.h
+ src/server/input/config_changer.cpp
+ src/server/input/config_changer.h
+ src/server/input/cursor_controller.cpp
+ src/server/input/cursor_controller.h
+ src/server/input/default_configuration.cpp
+ src/server/input/default_device.cpp
+ src/server/input/default_device.h
+ src/server/input/default_event_builder.cpp
+ src/server/input/default_event_builder.h
+ src/server/input/default_input_device_hub.cpp
+ src/server/input/default_input_device_hub.h
+ src/server/input/default_input_manager.cpp
+ src/server/input/default_input_manager.h
+ src/server/input/event_filter_chain_dispatcher.cpp
+ src/server/input/event_filter_chain_dispatcher.h
+ src/server/input/input_modifier_utils.cpp
+ src/server/input/input_modifier_utils.h
+ src/server/input/input_probe.cpp
+ src/server/input/key_repeat_dispatcher.cpp
+ src/server/input/key_repeat_dispatcher.h
+ src/server/input/null_input_dispatcher.cpp
+ src/server/input/null_input_dispatcher.h
+ src/server/input/null_input_manager.h
+ src/server/input/null_input_targeter.h
+ src/server/input/seat_input_device_tracker.cpp
+ src/server/input/seat_input_device_tracker.h
+ src/server/input/seat_observer_multiplexer.cpp
+ src/server/input/seat_observer_multiplexer.h
+ src/server/input/surface_input_dispatcher.cpp
+ src/server/input/surface_input_dispatcher.h
+ src/server/input/touchspot_controller.cpp
+ src/server/input/touchspot_controller.h
+ src/server/input/validator.cpp
+ src/server/input/vt_filter.cpp
+ src/server/linux_virtual_terminal.cpp
+ src/server/linux_virtual_terminal.h
+ src/server/lockable_callback_wrapper.cpp
+ src/server/report/default_server_configuration.cpp
+ src/server/report/logging/compositor_report.cpp
+ src/server/report/logging/compositor_report.h
+ src/server/report/logging/connector_report.cpp
+ src/server/report/logging/connector_report.h
+ src/server/report/logging/display_configuration_report.cpp
+ src/server/report/logging/display_configuration_report.h
+ src/server/report/logging/display_report.cpp
+ src/server/report/logging/display_report.h
+ src/server/report/logging/input_report.cpp
+ src/server/report/logging/input_report.h
+ src/server/report/logging/logging_report_factory.cpp
+ src/server/report/logging/message_processor_report.cpp
+ src/server/report/logging/message_processor_report.h
+ src/server/report/logging/scene_report.cpp
+ src/server/report/logging/scene_report.h
+ src/server/report/logging/seat_report.cpp
+ src/server/report/logging/seat_report.h
+ src/server/report/logging/session_mediator_report.cpp
+ src/server/report/logging/session_mediator_report.h
+ src/server/report/logging/shell_report.cpp
+ src/server/report/logging/shell_report.h
+ src/server/report/logging_report_factory.h
+ src/server/report/lttng/compositor_report.cpp
+ src/server/report/lttng/compositor_report.h
+ src/server/report/lttng/compositor_report_tp.h
+ src/server/report/lttng/connector_report.cpp
+ src/server/report/lttng/connector_report.h
+ src/server/report/lttng/connector_report_tp.h
+ src/server/report/lttng/display_report.cpp
+ src/server/report/lttng/display_report.h
+ src/server/report/lttng/display_report_tp.h
+ src/server/report/lttng/input_report.cpp
+ src/server/report/lttng/input_report.h
+ src/server/report/lttng/input_report_tp.h
+ src/server/report/lttng/lttng_report_factory.cpp
+ src/server/report/lttng/lttng_utils.h
+ src/server/report/lttng/message_processor_report.cpp
+ src/server/report/lttng/message_processor_report.h
+ src/server/report/lttng/message_processor_report_tp.h
+ src/server/report/lttng/scene_report.cpp
+ src/server/report/lttng/scene_report.h
+ src/server/report/lttng/scene_report_tp.h
+ src/server/report/lttng/server_tracepoint_provider.cpp
+ src/server/report/lttng/server_tracepoint_provider.h
+ src/server/report/lttng/session_mediator_report.cpp
+ src/server/report/lttng/session_mediator_report.h
+ src/server/report/lttng/session_mediator_report_tp.h
+ src/server/report/lttng/shared_library_prober_report.cpp
+ src/server/report/lttng/shared_library_prober_report.h
+ src/server/report/lttng/shared_library_prober_report_tp.h
+ src/server/report/lttng_report_factory.h
+ src/server/report/null/compositor_report.cpp
+ src/server/report/null/compositor_report.h
+ src/server/report/null/connector_report.cpp
+ src/server/report/null/connector_report.h
+ src/server/report/null/display_report.cpp
+ src/server/report/null/display_report.h
+ src/server/report/null/input_report.cpp
+ src/server/report/null/input_report.h
+ src/server/report/null/message_processor_report.cpp
+ src/server/report/null/message_processor_report.h
+ src/server/report/null/null_report_factory.cpp
+ src/server/report/null/scene_report.cpp
+ src/server/report/null/scene_report.h
+ src/server/report/null/seat_report.cpp
+ src/server/report/null/seat_report.h
+ src/server/report/null/session_mediator_report.cpp
+ src/server/report/null/session_mediator_report.h
+ src/server/report/null/shell_report.cpp
+ src/server/report/null/shell_report.h
+ src/server/report/null_report_factory.h
+ src/server/report/report_factory.h
+ src/server/report/reports.cpp
+ src/server/report/reports.h
+ src/server/report_exception.cpp
+ src/server/run_mir.cpp
+ src/server/scene/application_not_responding_detector_wrapper.cpp
+ src/server/scene/application_session.cpp
+ src/server/scene/application_session.h
+ src/server/scene/basic_surface.cpp
+ src/server/scene/basic_surface.h
+ src/server/scene/broadcasting_session_event_sink.cpp
+ src/server/scene/broadcasting_session_event_sink.h
+ src/server/scene/default_configuration.cpp
+ src/server/scene/default_coordinate_translator.cpp
+ src/server/scene/default_coordinate_translator.h
+ src/server/scene/gl_pixel_buffer.cpp
+ src/server/scene/gl_pixel_buffer.h
+ src/server/scene/legacy_scene_change_notification.cpp
+ src/server/scene/legacy_surface_change_notification.cpp
+ src/server/scene/legacy_surface_change_notification.h
+ src/server/scene/mediating_display_changer.cpp
+ src/server/scene/mediating_display_changer.h
+ src/server/scene/null_observer.cpp
+ src/server/scene/null_surface_observer.cpp
+ src/server/scene/output_properties_cache.cpp
+ src/server/scene/pixel_buffer.h
+ src/server/scene/prompt_session_container.cpp
+ src/server/scene/prompt_session_container.h
+ src/server/scene/prompt_session_impl.cpp
+ src/server/scene/prompt_session_impl.h
+ src/server/scene/prompt_session_manager_impl.cpp
+ src/server/scene/prompt_session_manager_impl.h
+ src/server/scene/rendering_tracker.cpp
+ src/server/scene/rendering_tracker.h
+ src/server/scene/session_container.cpp
+ src/server/scene/session_manager.cpp
+ src/server/scene/session_manager.h
+ src/server/scene/snapshot_strategy.h
+ src/server/scene/surface_allocator.cpp
+ src/server/scene/surface_allocator.h
+ src/server/scene/surface_creation_parameters.cpp
+ src/server/scene/surface_event_source.cpp
+ src/server/scene/surface_stack.cpp
+ src/server/scene/surface_stack.h
+ src/server/scene/threaded_snapshot_strategy.cpp
+ src/server/scene/threaded_snapshot_strategy.h
+ src/server/scene/timeout_application_not_responding_detector.cpp
+ src/server/scene/timeout_application_not_responding_detector.h
+ src/server/scene/unsupported_coordinate_translator.cpp
+ src/server/scene/unsupported_coordinate_translator.h
+ src/server/server.cpp
+ src/server/shell/abstract_shell.cpp
+ src/server/shell/decoration/basic_decoration.cpp
+ src/server/shell/decoration/basic_decoration.h
+ src/server/shell/decoration/basic_manager.cpp
+ src/server/shell/decoration/basic_manager.h
+ src/server/shell/decoration/decoration.h
+ src/server/shell/decoration/input.cpp
+ src/server/shell/decoration/input.h
+ src/server/shell/decoration/manager.h
+ src/server/shell/decoration/null_manager.h
+ src/server/shell/decoration/renderer.cpp
+ src/server/shell/decoration/renderer.h
+ src/server/shell/decoration/threadsafe_access.h
+ src/server/shell/decoration/window.cpp
+ src/server/shell/decoration/window.h
+ src/server/shell/default_configuration.cpp
+ src/server/shell/default_persistent_surface_store.cpp
+ src/server/shell/default_persistent_surface_store.h
+ src/server/shell/frontend_shell.cpp
+ src/server/shell/frontend_shell.h
+ src/server/shell/graphics_display_layout.cpp
+ src/server/shell/graphics_display_layout.h
+ src/server/shell/null_host_lifecycle_event_listener.h
+ src/server/shell/persistent_surface_store.cpp
+ src/server/shell/shell_wrapper.cpp
+ src/server/shell/surface_ready_observer.cpp
+ src/server/shell/surface_specification.cpp
+ src/server/shell/surface_stack_wrapper.cpp
+ src/server/shell/system_compositor_window_manager.cpp
+ src/server/shell/window_management_info.cpp
+ src/server/terminate_with_current_exception.cpp
+ src/server/thread/basic_thread_pool.cpp
+ src/utils/in.cpp
+ src/utils/out.c
+ src/utils/screencast.cpp
+ src/utils/vanity.c
+ src/wayland/generator/argument.cpp
+ src/wayland/generator/argument.h
+ src/wayland/generator/emitter.cpp
+ src/wayland/generator/emitter.h
+ src/wayland/generator/enum.cpp
+ src/wayland/generator/enum.h
+ src/wayland/generator/event.cpp
+ src/wayland/generator/event.h
+ src/wayland/generator/global.cpp
+ src/wayland/generator/global.h
+ src/wayland/generator/interface.cpp
+ src/wayland/generator/interface.h
+ src/wayland/generator/method.cpp
+ src/wayland/generator/method.h
+ src/wayland/generator/request.cpp
+ src/wayland/generator/request.h
+ src/wayland/generator/utils.cpp
+ src/wayland/generator/utils.h
+ src/wayland/wayland_base.cpp
+ src/wrapper.c
+ tests/acceptance-tests/client_mediated_user_gestures.cpp
+ tests/acceptance-tests/drag_and_drop.cpp
+ tests/acceptance-tests/precompiled.hpp
+ tests/acceptance-tests/server_configuration_options.cpp
+ tests/acceptance-tests/server_configuration_wrapping.cpp
+ tests/acceptance-tests/server_signal_handling.cpp
+ tests/acceptance-tests/server_stop_callback.cpp
+ tests/acceptance-tests/strict_close.cpp
+ tests/acceptance-tests/test_application_not_responding_detection.cpp
+ tests/acceptance-tests/test_buffer_stream_arrangement.cpp
+ tests/acceptance-tests/test_buffer_stream_arrangement1.cpp
+ tests/acceptance-tests/test_client_authorization.cpp
+ tests/acceptance-tests/test_client_cookie.cpp
+ tests/acceptance-tests/test_client_cursor_api.cpp
+ tests/acceptance-tests/test_client_extensions.cpp
+ tests/acceptance-tests/test_client_focus_notification.cpp
+ tests/acceptance-tests/test_client_header_version.cpp
+ tests/acceptance-tests/test_client_input.cpp
+ tests/acceptance-tests/test_client_library.cpp
+ tests/acceptance-tests/test_client_library_callbacks.cpp
+ tests/acceptance-tests/test_client_library_errors.cpp
+ tests/acceptance-tests/test_client_library_old.cpp
+ tests/acceptance-tests/test_client_logging.cpp
+ tests/acceptance-tests/test_client_scaling.cpp
+ tests/acceptance-tests/test_client_screencast.cpp
+ tests/acceptance-tests/test_client_surface_events.cpp
+ tests/acceptance-tests/test_client_surface_swap_buffers.cpp
+ tests/acceptance-tests/test_client_surface_visibility.cpp
+ tests/acceptance-tests/test_client_surfaces.cpp
+ tests/acceptance-tests/test_client_with_custom_display_config_deadlock.cpp
+ tests/acceptance-tests/test_command_line_handling.cpp
+ tests/acceptance-tests/test_confined_pointer.cpp
+ tests/acceptance-tests/test_custom_input_dispatcher.cpp
+ tests/acceptance-tests/test_custom_window_management.cpp
+ tests/acceptance-tests/test_display_configuration.cpp
+ tests/acceptance-tests/test_input_device_hub.cpp
+ tests/acceptance-tests/test_mirblob.cpp
+ tests/acceptance-tests/test_nested_input.cpp
+ tests/acceptance-tests/test_nested_mir.cpp
+ tests/acceptance-tests/test_new_display_configuration.cpp
+ tests/acceptance-tests/test_persistent_surface_store.cpp
+ tests/acceptance-tests/test_presentation_chain.cpp
+ tests/acceptance-tests/test_prompt_session_client_api.cpp
+ tests/acceptance-tests/test_render_override.cpp
+ tests/acceptance-tests/test_render_surface.cpp
+ tests/acceptance-tests/test_seat_report.cpp
+ tests/acceptance-tests/test_server_disconnect.cpp
+ tests/acceptance-tests/test_server_shutdown.cpp
+ tests/acceptance-tests/test_server_startup.cpp
+ tests/acceptance-tests/test_server_without_active_outputs.cpp
+ tests/acceptance-tests/test_session_mediator_report.cpp
+ tests/acceptance-tests/test_surface_modifications.cpp
+ tests/acceptance-tests/test_surface_morphing.cpp
+ tests/acceptance-tests/test_surface_placement.cpp
+ tests/acceptance-tests/test_surface_raise.cpp
+ tests/acceptance-tests/test_surface_specification.cpp
+ tests/acceptance-tests/test_surfaces_with_output_id.cpp
+ tests/acceptance-tests/test_symbols_required_by_mesa.cpp
+ tests/acceptance-tests/test_system_compositor_window_manager.cpp
+ tests/acceptance-tests/test_unresponsive_client.cpp
+ tests/client-language/c99.c
+ tests/include/check_gtest_version.h
+ tests/include/gmock_set_arg.h
+ tests/include/mir/shell/basic_window_manager.h
+ tests/include/mir/shell/canonical_window_manager.h
+ tests/include/mir/test/as_render_target.h
+ tests/include/mir/test/barrier.h
+ tests/include/mir/test/current_thread_name.h
+ tests/include/mir/test/doubles/advanceable_clock.h
+ tests/include/mir/test/doubles/explicit_executor.h
+ tests/include/mir/test/doubles/fake_alarm_factory.h
+ tests/include/mir/test/doubles/fake_ipc_factory.h
+ tests/include/mir/test/doubles/fake_renderable.h
+ tests/include/mir/test/doubles/fd_matcher.h
+ tests/include/mir/test/doubles/mock_buffer.h
+ tests/include/mir/test/doubles/mock_buffer_ipc_message.h
+ tests/include/mir/test/doubles/mock_buffer_stream.h
+ tests/include/mir/test/doubles/mock_client_buffer_factory.h
+ tests/include/mir/test/doubles/mock_client_platform.h
+ tests/include/mir/test/doubles/mock_compositor.h
+ tests/include/mir/test/doubles/mock_compositor_report.h
+ tests/include/mir/test/doubles/mock_console_services.h
+ tests/include/mir/test/doubles/mock_coordinate_translator.h
+ tests/include/mir/test/doubles/mock_cursor_listener.h
+ tests/include/mir/test/doubles/mock_device.h
+ tests/include/mir/test/doubles/mock_display.h
+ tests/include/mir/test/doubles/mock_display_buffer.h
+ tests/include/mir/test/doubles/mock_display_changer.h
+ tests/include/mir/test/doubles/mock_display_configuration_observer.h
+ tests/include/mir/test/doubles/mock_display_layout.h
+ tests/include/mir/test/doubles/mock_display_report.h
+ tests/include/mir/test/doubles/mock_drm.h
+ tests/include/mir/test/doubles/mock_event_filter.h
+ tests/include/mir/test/doubles/mock_event_handler_register.h
+ tests/include/mir/test/doubles/mock_event_sink.h
+ tests/include/mir/test/doubles/mock_event_sink_factory.h
+ tests/include/mir/test/doubles/mock_fb_hal_device.h
+ tests/include/mir/test/doubles/mock_frontend_surface.h
+ tests/include/mir/test/doubles/mock_gbm.h
+ tests/include/mir/test/doubles/mock_gl_buffer.h
+ tests/include/mir/test/doubles/mock_gl_config.h
+ tests/include/mir/test/doubles/mock_gl_display_buffer.h
+ tests/include/mir/test/doubles/mock_hwc_composer_device_1.h
+ tests/include/mir/test/doubles/mock_input_config_changer.h
+ tests/include/mir/test/doubles/mock_input_device.h
+ tests/include/mir/test/doubles/mock_input_device_registry.h
+ tests/include/mir/test/doubles/mock_input_manager.h
+ tests/include/mir/test/doubles/mock_input_platform.h
+ tests/include/mir/test/doubles/mock_input_seat.h
+ tests/include/mir/test/doubles/mock_input_sink.h
+ tests/include/mir/test/doubles/mock_input_surface.h
+ tests/include/mir/test/doubles/mock_input_targeter.h
+ tests/include/mir/test/doubles/mock_key_mapper.h
+ tests/include/mir/test/doubles/mock_libinput.h
+ tests/include/mir/test/doubles/mock_lockable_callback.h
+ tests/include/mir/test/doubles/mock_main_loop.h
+ tests/include/mir/test/doubles/mock_mesa_auth_extensions.h
+ tests/include/mir/test/doubles/mock_message_sender.h
+ tests/include/mir/test/doubles/mock_mir_buffer.h
+ tests/include/mir/test/doubles/mock_mir_buffer_stream.h
+ tests/include/mir/test/doubles/mock_mir_client_session.h
+ tests/include/mir/test/doubles/mock_option.h
+ tests/include/mir/test/doubles/mock_platform_ipc_operations.h
+ tests/include/mir/test/doubles/mock_protobuf_server.h
+ tests/include/mir/test/doubles/mock_renderable.h
+ tests/include/mir/test/doubles/mock_renderer.h
+ tests/include/mir/test/doubles/mock_rpc_report.h
+ tests/include/mir/test/doubles/mock_scene.h
+ tests/include/mir/test/doubles/mock_scene_session.h
+ tests/include/mir/test/doubles/mock_screencast.h
+ tests/include/mir/test/doubles/mock_server_status_listener.h
+ tests/include/mir/test/doubles/mock_session_listener.h
+ tests/include/mir/test/doubles/mock_surface.h
+ tests/include/mir/test/doubles/mock_surface_stack.h
+ tests/include/mir/test/doubles/mock_timer.h
+ tests/include/mir/test/doubles/mock_touch_visualizer.h
+ tests/include/mir/test/doubles/mock_udev.h
+ tests/include/mir/test/doubles/mock_udev_device.h
+ tests/include/mir/test/doubles/mock_x11.h
+ tests/include/mir/test/doubles/null_application_not_responding_detector.h
+ tests/include/mir/test/doubles/null_client_buffer.h
+ tests/include/mir/test/doubles/null_client_event_sink.h
+ tests/include/mir/test/doubles/null_console_services.h
+ tests/include/mir/test/doubles/null_device_observer.h
+ tests/include/mir/test/doubles/null_display_changer.h
+ tests/include/mir/test/doubles/null_display_configuration_policy.h
+ tests/include/mir/test/doubles/null_emergency_cleanup.h
+ tests/include/mir/test/doubles/null_event_sink.h
+ tests/include/mir/test/doubles/null_event_sink_factory.h
+ tests/include/mir/test/doubles/null_gl_config.h
+ tests/include/mir/test/doubles/null_message_sender.h
+ tests/include/mir/test/doubles/null_pixel_buffer.h
+ tests/include/mir/test/doubles/null_prompt_session.h
+ tests/include/mir/test/doubles/null_prompt_session_manager.h
+ tests/include/mir/test/doubles/null_screencast.h
+ tests/include/mir/test/doubles/null_session_event_sink.h
+ tests/include/mir/test/doubles/null_snapshot_strategy.h
+ tests/include/mir/test/doubles/null_video_devices.h
+ tests/include/mir/test/doubles/simple_device_observer.h
+ tests/include/mir/test/doubles/stub_alarm.h
+ tests/include/mir/test/doubles/stub_buffer.h
+ tests/include/mir/test/doubles/stub_buffer_allocator.h
+ tests/include/mir/test/doubles/stub_buffer_stream.h
+ tests/include/mir/test/doubles/stub_buffer_stream_factory.h
+ tests/include/mir/test/doubles/stub_client_buffer.h
+ tests/include/mir/test/doubles/stub_client_buffer_factory.h
+ tests/include/mir/test/doubles/stub_client_platform_factory.h
+ tests/include/mir/test/doubles/stub_connection_configuration.h
+ tests/include/mir/test/doubles/stub_console_services.h
+ tests/include/mir/test/doubles/stub_cursor_listener.h
+ tests/include/mir/test/doubles/stub_display.h
+ tests/include/mir/test/doubles/stub_display_server.h
+ tests/include/mir/test/doubles/stub_gbm_native_buffer.h
+ tests/include/mir/test/doubles/stub_gl_buffer.h
+ tests/include/mir/test/doubles/stub_gl_buffer_allocator.h
+ tests/include/mir/test/doubles/stub_gl_config.h
+ tests/include/mir/test/doubles/stub_gl_display_buffer.h
+ tests/include/mir/test/doubles/stub_gl_program.h
+ tests/include/mir/test/doubles/stub_gl_program_factory.h
+ tests/include/mir/test/doubles/stub_host_connection.h
+ tests/include/mir/test/doubles/stub_input_scene.h
+ tests/include/mir/test/doubles/stub_input_surface.h
+ tests/include/mir/test/doubles/stub_input_targeter.h
+ tests/include/mir/test/doubles/stub_ipc_factory.h
+ tests/include/mir/test/doubles/stub_mir_client_session.h
+ tests/include/mir/test/doubles/stub_observer_registrar.h
+ tests/include/mir/test/doubles/stub_renderable.h
+ tests/include/mir/test/doubles/stub_renderer.h
+ tests/include/mir/test/doubles/stub_scene.h
+ tests/include/mir/test/doubles/stub_scene_element.h
+ tests/include/mir/test/doubles/stub_shell.h
+ tests/include/mir/test/doubles/stub_surface_factory.h
+ tests/include/mir/test/doubles/stub_touch_visualizer.h
+ tests/include/mir/test/doubles/triggered_main_loop.h
+ tests/include/mir/test/fake_clock.h
+ tests/include/mir/test/fd_utils.h
+ tests/include/mir/test/input_config_matchers.h
+ tests/include/mir/test/input_devices_matcher.h
+ tests/include/mir/test/stub_server_tool.h
+ tests/include/mir/test/test_dispatchable.h
+ tests/include/mir/test/test_protobuf_client.h
+ tests/include/mir/test/test_protobuf_server.h
+ tests/include/mir/test/wait_object.h
+ tests/include/mir_test_framework/basic_client_server_fixture.h
+ tests/include/mir_test_framework/client_platform_factory.h
+ tests/include/mir_test_framework/command_line_server_configuration.h
+ tests/include/mir_test_framework/deferred_in_process_server.h
+ tests/include/mir_test_framework/fake_input_server_configuration.h
+ tests/include/mir_test_framework/input_testing_server_configuration.h
+ tests/include/mir_test_framework/libinput_environment.h
+ tests/include/mir_test_framework/open_wrapper.h
+ tests/include/mir_test_framework/stub_client_connection_configuration.h
+ tests/include/mir_test_framework/stub_client_platform_factory.h
+ tests/include/mir_test_framework/stub_input_platform.h
+ tests/include/mir_test_framework/stubbed_server_configuration.h
+ tests/include/mir_test_framework/testing_server_configuration.h
+ tests/include/mir_test_framework/udev_environment.h
+ tests/integration-tests/compositor/multithread_harness.h
+ tests/integration-tests/compositor/test_swapping_swappers.cpp
+ tests/integration-tests/compositor/test_synchronizer.cpp
+ tests/integration-tests/graphics/mesa/test_buffer_integration.cpp
+ tests/integration-tests/input/test_configuring_input_manager.cpp
+ tests/integration-tests/input/test_cursor_listener.cpp
+ tests/integration-tests/input/test_single_seat_setup.cpp
+ tests/integration-tests/precompiled.hpp
+ tests/integration-tests/process/test_process.cpp
+ tests/integration-tests/session_management.cpp
+ tests/integration-tests/shell/test_session_lifecycle_event.cpp
+ tests/integration-tests/test_client_screencast.cpp
+ tests/integration-tests/test_display_info.cpp
+ tests/integration-tests/test_display_server_main_loop_events.cpp
+ tests/integration-tests/test_error_reporting.cpp
+ tests/integration-tests/test_focus_selection.cpp
+ tests/integration-tests/test_large_messages.cpp
+ tests/integration-tests/test_server_client_types.cpp
+ tests/integration-tests/test_server_shutdown.cpp
+ tests/integration-tests/test_session.cpp
+ tests/integration-tests/test_surface_first_frame_sync.cpp
+ tests/integration-tests/test_surface_stack_with_compositor.cpp
+ tests/integration-tests/test_surfaceloop.cpp
+ tests/integration-tests/test_swapinterval.cpp
+ tests/integration-tests/test_test_framework.cpp
+ tests/integration-tests/test_touchspot_visualization.cpp
+ tests/loader-tests/test_reload.c
+ tests/mir_test/cross_process_action.cpp
+ tests/mir_test/cross_process_sync.cpp
+ tests/mir_test/current_thread_name.cpp
+ tests/mir_test/display_config_matchers.cpp
+ tests/mir_test/event_factory.cpp
+ tests/mir_test/event_matchers.cpp
+ tests/mir_test/fake_clock.cpp
+ tests/mir_test/fd_utils.cpp
+ tests/mir_test/pipe.cpp
+ tests/mir_test/popen.cpp
+ tests/mir_test/signal.cpp
+ tests/mir_test/spin_wait.cpp
+ tests/mir_test/test_dispatchable.cpp
+ tests/mir_test/wait_object.cpp
+ tests/mir_test_doubles/fake_alarm_factory.cpp
+ tests/mir_test_doubles/fake_display.cpp
+ tests/mir_test_doubles/mock_drm.cpp
+ tests/mir_test_doubles/mock_egl.cpp
+ tests/mir_test_doubles/mock_event_sink_factory.cpp
+ tests/mir_test_doubles/mock_gbm.cpp
+ tests/mir_test_doubles/mock_gl.cpp
+ tests/mir_test_doubles/mock_input_device.cpp
+ tests/mir_test_doubles/mock_libinput.cpp
+ tests/mir_test_doubles/mock_timer.cpp
+ tests/mir_test_doubles/mock_udev.cpp
+ tests/mir_test_doubles/mock_x11.cpp
+ tests/mir_test_doubles/nested_mock_egl.cpp
+ tests/mir_test_doubles/null_event_sink_factory.cpp
+ tests/mir_test_doubles/null_logger.cpp
+ tests/mir_test_doubles/simple_device_observer.cpp
+ tests/mir_test_doubles/stub_console_services.cpp
+ tests/mir_test_doubles/stub_display_configuration.cpp
+ tests/mir_test_doubles/test_protobuf_client.cpp
+ tests/mir_test_doubles/test_protobuf_socket_server.cpp
+ tests/mir_test_doubles/triggered_main_loop.cpp
+ tests/mir_test_framework/any_surface.cpp
+ tests/mir_test_framework/async_server_runner.cpp
+ tests/mir_test_framework/basic_window_manager.cpp
+ tests/mir_test_framework/canonical_window_manager.cpp
+ tests/mir_test_framework/command_line_server_configuration.cpp
+ tests/mir_test_framework/connected_client_headless_server.cpp
+ tests/mir_test_framework/connected_client_with_a_window.cpp
+ tests/mir_test_framework/declarative_placement_window_manage_policy.cpp
+ tests/mir_test_framework/executable_path.cpp
+ tests/mir_test_framework/fake_input_device_impl.cpp
+ tests/mir_test_framework/fake_input_device_impl.h
+ tests/mir_test_framework/fake_input_server_configuration.cpp
+ tests/mir_test_framework/headless_display_buffer_compositor_factory.cpp
+ tests/mir_test_framework/headless_in_process_server.cpp
+ tests/mir_test_framework/headless_nested_server_runner.cpp
+ tests/mir_test_framework/headless_test.cpp
+ tests/mir_test_framework/input_testing_server_options.cpp
+ tests/mir_test_framework/interprocess_client_server_test.cpp
+ tests/mir_test_framework/libinput_environment.cpp
+ tests/mir_test_framework/main.cpp
+ tests/mir_test_framework/observant_shell.cpp
+ tests/mir_test_framework/open_wrapper.cpp
+ tests/mir_test_framework/passthrough_tracker.cpp
+ tests/mir_test_framework/placement_applying_shell.cpp
+ tests/mir_test_framework/platform_graphics_dummy.cpp
+ tests/mir_test_framework/platform_graphics_throw.cpp
+ tests/mir_test_framework/process.cpp
+ tests/mir_test_framework/server_runner.cpp
+ tests/mir_test_framework/socket_detect_server.cpp
+ tests/mir_test_framework/stub_client_platform_factory.cpp
+ tests/mir_test_framework/stub_client_platform_module.cpp
+ tests/mir_test_framework/stub_client_platform_options.cpp
+ tests/mir_test_framework/stub_input.cpp
+ tests/mir_test_framework/stub_input_platform.cpp
+ tests/mir_test_framework/stub_server_platform_factory.cpp
+ tests/mir_test_framework/stub_session.cpp
+ tests/mir_test_framework/stub_surface.cpp
+ tests/mir_test_framework/stubbed_graphics_platform.cpp
+ tests/mir_test_framework/stubbed_graphics_platform.h
+ tests/mir_test_framework/stubbed_server_configuration.cpp
+ tests/mir_test_framework/temporary_environment_value.cpp
+ tests/mir_test_framework/test_display_server.cpp
+ tests/mir_test_framework/test_server.cpp
+ tests/mir_test_framework/testing_client_options.cpp
+ tests/mir_test_framework/testing_server_options.cpp
+ tests/mir_test_framework/udev_environment.cpp
+ tests/mir_test_framework/visible_surface.cpp
+ tests/miral/active_outputs.cpp
+ tests/miral/active_window.cpp
+ tests/miral/application_zone.cpp
+ tests/miral/client_mediated_gestures.cpp
+ tests/miral/command_line_option.cpp
+ tests/miral/depth_layer.cpp
+ tests/miral/display_reconfiguration.cpp
+ tests/miral/drag_active_window.cpp
+ tests/miral/drag_and_drop.cpp
+ tests/miral/initial_window_placement.cpp
+ tests/miral/modify_window_state.cpp
+ tests/miral/mru_window_list.cpp
+ tests/miral/output_updates.cpp
+ tests/miral/popup_window_placement.cpp
+ tests/miral/raise_tree.cpp
+ tests/miral/runner.cpp
+ tests/miral/select_active_window.cpp
+ tests/miral/server_example_decoration.cpp
+ tests/miral/server_example_decoration.h
+ tests/miral/test_window_manager_tools.cpp
+ tests/miral/test_window_manager_tools.h
+ tests/miral/window_id.cpp
+ tests/miral/window_info.cpp
+ tests/miral/window_placement_anchors_to_parent.cpp
+ tests/miral/window_placement_attached.cpp
+ tests/miral/window_placement_client_api.cpp
+ tests/miral/window_placement_fullscreen.cpp
+ tests/miral/window_properties.cpp
+ tests/miral/workspaces.cpp
+ tests/miral/zone.cpp
+ tests/performance-tests/system_performance_test.cpp
+ tests/performance-tests/system_performance_test.h
+ tests/performance-tests/test_client_startup.cpp
+ tests/performance-tests/test_compositor.cpp
+ tests/performance-tests/test_glmark2-es2-mir.cpp
+ tests/privileged-tests/test_input_events.cpp
+ tests/privileged-tests/ui_get_sysname_ioctl_override.cpp
+ tests/test-clients/impolite-shutdown/scroll.cpp
+ tests/test-clients/mir-stress/src/client.cpp
+ tests/test-clients/mir-stress/src/client.h
+ tests/test-clients/mir-stress/src/mir-stress.cpp
+ tests/test-clients/mir-stress/src/results.cpp
+ tests/test-clients/mir-stress/src/results.h
+ tests/test-clients/mir-stress/src/threading.cpp
+ tests/test-clients/mir-stress/src/threading.h
+ tests/umock-acceptance-tests/test_libinput.cpp
+ tests/unit-tests/compositor/test_compositing_screencast.cpp
+ tests/unit-tests/compositor/test_default_display_buffer_compositor.cpp
+ tests/unit-tests/compositor/test_dropping_schedule.cpp
+ tests/unit-tests/compositor/test_multi_monitor_arbiter.cpp
+ tests/unit-tests/compositor/test_multi_threaded_compositor.cpp
+ tests/unit-tests/compositor/test_occlusion.cpp
+ tests/unit-tests/compositor/test_queueing_schedule.cpp
+ tests/unit-tests/compositor/test_screencast_display_buffer.cpp
+ tests/unit-tests/compositor/test_stream.cpp
+ tests/unit-tests/console/test_linux_virtual_terminal.cpp
+ tests/unit-tests/console/test_logind_console_services.cpp
+ tests/unit-tests/console/test_minimal_console_services.cpp
+ tests/unit-tests/dispatch/test_action_queue.cpp
+ tests/unit-tests/dispatch/test_dispatch_utils.cpp
+ tests/unit-tests/dispatch/test_multiplexing_dispatchable.cpp
+ tests/unit-tests/dispatch/test_readable_fd.cpp
+ tests/unit-tests/dispatch/test_threaded_dispatcher.cpp
+ tests/unit-tests/geometry/test-dimensions.cpp
+ tests/unit-tests/geometry/test-displacement.cpp
+ tests/unit-tests/geometry/test-length.cpp
+ tests/unit-tests/geometry/test-point.cpp
+ tests/unit-tests/geometry/test-rectangle.cpp
+ tests/unit-tests/geometry/test-rectangles.cpp
+ tests/unit-tests/geometry/test-size.cpp
+ tests/unit-tests/gl/test_program_factory.cpp
+ tests/unit-tests/gl/test_tessellation_helpers.cpp
+ tests/unit-tests/graphics/egl_mock/egl_mock_test.cpp
+ tests/unit-tests/graphics/test_anonymous_shm_file.cpp
+ tests/unit-tests/graphics/test_buffer_id.cpp
+ tests/unit-tests/graphics/test_buffer_properties.cpp
+ tests/unit-tests/graphics/test_default_display_configuration_policy.cpp
+ tests/unit-tests/graphics/test_display_configuration.cpp
+ tests/unit-tests/graphics/test_egl_error.cpp
+ tests/unit-tests/graphics/test_egl_extensions.cpp
+ tests/unit-tests/graphics/test_gamma_curves.cpp
+ tests/unit-tests/graphics/test_overlapping_output_grouping.cpp
+ tests/unit-tests/graphics/test_pixel_format_utils.cpp
+ tests/unit-tests/graphics/test_platform_prober.cpp
+ tests/unit-tests/graphics/test_shm_buffer.cpp
+ tests/unit-tests/graphics/test_software_cursor.cpp
+ tests/unit-tests/graphics/test_surfaceless_egl_context.cpp
+ tests/unit-tests/input/evdev/test_evdev_device_detection.cpp
+ tests/unit-tests/input/evdev/test_evdev_input_platform.cpp
+ tests/unit-tests/input/evdev/test_libinput_device.cpp
+ tests/unit-tests/input/test_config_changer.cpp
+ tests/unit-tests/input/test_cursor_controller.cpp
+ tests/unit-tests/input/test_default_device.cpp
+ tests/unit-tests/input/test_default_input_device_hub.cpp
+ tests/unit-tests/input/test_default_input_manager.cpp
+ tests/unit-tests/input/test_event_builders.cpp
+ tests/unit-tests/input/test_event_filter_chain_dispatcher.cpp
+ tests/unit-tests/input/test_external_input_device_hub.cpp
+ tests/unit-tests/input/test_input_event.cpp
+ tests/unit-tests/input/test_input_platform_probing.cpp
+ tests/unit-tests/input/test_key_repeat_dispatcher.cpp
+ tests/unit-tests/input/test_nested_input_platform.cpp
+ tests/unit-tests/input/test_seat_input_device_tracker.cpp
+ tests/unit-tests/input/test_surface_input_dispatcher.cpp
+ tests/unit-tests/input/test_touchspot_controller.cpp
+ tests/unit-tests/input/test_x11_module.cpp
+ tests/unit-tests/input/test_x11_platform.cpp
+ tests/unit-tests/library_example.cpp
+ tests/unit-tests/library_example.h
+ tests/unit-tests/logging/message_processor_report.cpp
+ tests/unit-tests/logging/test_compositor_report.cpp
+ tests/unit-tests/logging/test_display_report.cpp
+ tests/unit-tests/options/test_program_option.cpp
+ tests/unit-tests/platforms/eglstream-kms/server/test_threaded_drm_event_handler.cpp
+ tests/unit-tests/platforms/eglstream-kms/server/test_utils.cpp
+ tests/unit-tests/platforms/mesa/kms-utils/test_connector_utils.cpp
+ tests/unit-tests/platforms/mesa/kms-utils/test_drm_mode_resources.cpp
+ tests/unit-tests/platforms/mesa/kms/mock_kms_output.h
+ tests/unit-tests/platforms/mesa/kms/test_buffer_allocator.cpp
+ tests/unit-tests/platforms/mesa/kms/test_bypass.cpp
+ tests/unit-tests/platforms/mesa/kms/test_cursor.cpp
+ tests/unit-tests/platforms/mesa/kms/test_display.cpp
+ tests/unit-tests/platforms/mesa/kms/test_display_buffer.cpp
+ tests/unit-tests/platforms/mesa/kms/test_display_configuration.cpp
+ tests/unit-tests/platforms/mesa/kms/test_display_generic.cpp
+ tests/unit-tests/platforms/mesa/kms/test_display_multi_monitor.cpp
+ tests/unit-tests/platforms/mesa/kms/test_drm_helper.cpp
+ tests/unit-tests/platforms/mesa/kms/test_gbm_buffer.cpp
+ tests/unit-tests/platforms/mesa/kms/test_graphics_platform.cpp
+ tests/unit-tests/platforms/mesa/kms/test_ipc_operations.cpp
+ tests/unit-tests/platforms/mesa/kms/test_kms_page_flipper.cpp
+ tests/unit-tests/platforms/mesa/kms/test_nested_authentication.cpp
+ tests/unit-tests/platforms/mesa/kms/test_platform.cpp
+ tests/unit-tests/platforms/mesa/kms/test_real_kms_output.cpp
+ tests/unit-tests/platforms/mesa/kms/test_software_buffer.cpp
+ tests/unit-tests/platforms/mesa/x11/test_display.cpp
+ tests/unit-tests/platforms/mesa/x11/test_display_generic.cpp
+ tests/unit-tests/platforms/mesa/x11/test_graphics_platform.cpp
+ tests/unit-tests/platforms/mesa/x11/test_platform.cpp
+ tests/unit-tests/platforms/nested/mir_display_configuration_builder.cpp
+ tests/unit-tests/platforms/nested/mir_display_configuration_builder.h
+ tests/unit-tests/platforms/nested/test_buffer.cpp
+ tests/unit-tests/platforms/nested/test_ipc_operations.cpp
+ tests/unit-tests/platforms/nested/test_nested_cursor.cpp
+ tests/unit-tests/platforms/nested/test_nested_display.cpp
+ tests/unit-tests/platforms/nested/test_nested_display_buffer.cpp
+ tests/unit-tests/platforms/nested/test_nested_display_configuration.cpp
+ tests/unit-tests/platforms/test_display.h
+ tests/unit-tests/platforms/test_graphics_platform.h
+ tests/unit-tests/precompiled.hpp
+ tests/unit-tests/renderers/gl/test_gl_renderer.cpp
+ tests/unit-tests/scene/test_abstract_shell.cpp
+ tests/unit-tests/scene/test_application_session.cpp
+ tests/unit-tests/scene/test_basic_surface.cpp
+ tests/unit-tests/scene/test_broadcasting_session_event_sink.cpp
+ tests/unit-tests/scene/test_gl_pixel_buffer.cpp
+ tests/unit-tests/scene/test_legacy_scene_change_notification.cpp
+ tests/unit-tests/scene/test_mediating_display_changer.cpp
+ tests/unit-tests/scene/test_prompt_session_container.cpp
+ tests/unit-tests/scene/test_prompt_session_impl.cpp
+ tests/unit-tests/scene/test_prompt_session_manager.cpp
+ tests/unit-tests/scene/test_rendering_tracker.cpp
+ tests/unit-tests/scene/test_session_manager.cpp
+ tests/unit-tests/scene/test_surface.cpp
+ tests/unit-tests/scene/test_surface_impl.cpp
+ tests/unit-tests/scene/test_surface_stack.cpp
+ tests/unit-tests/scene/test_the_session_container_implementation.cpp
+ tests/unit-tests/scene/test_threaded_snapshot_strategy.cpp
+ tests/unit-tests/scene/test_timeout_application_not_responding_detector.cpp
+ tests/unit-tests/shared_library_test.cpp
+ tests/unit-tests/shell/test_decoration_basic_decoration.cpp
+ tests/unit-tests/shell/test_decoration_basic_manager.cpp
+ tests/unit-tests/shell/test_default_persistent_surface_store.cpp
+ tests/unit-tests/shell/test_graphics_display_layout.cpp
+ tests/unit-tests/shell/test_persistent_surface_store_id.cpp
+ tests/unit-tests/test_default_emergency_cleanup.cpp
+ tests/unit-tests/test_edid.cpp
+ tests/unit-tests/test_fatal.cpp
+ tests/unit-tests/test_fd.cpp
+ tests/unit-tests/test_flags.cpp
+ tests/unit-tests/test_glib_main_loop.cpp
+ tests/unit-tests/test_gmock_fixes.cpp
+ tests/unit-tests/test_lockable_callback.cpp
+ tests/unit-tests/test_mir_cookie.cpp
+ tests/unit-tests/test_module_deleter.cpp
+ tests/unit-tests/test_observer_multiplexer.cpp
+ tests/unit-tests/test_posix_rw_mutex.cpp
+ tests/unit-tests/test_posix_timestamp.cpp
+ tests/unit-tests/test_raii.cpp
+ tests/unit-tests/test_recursive_read_write_mutex.cpp
+ tests/unit-tests/test_shared_library_prober.cpp
+ tests/unit-tests/test_thread_name.cpp
+ tests/unit-tests/test_thread_safe_list.cpp
+ tests/unit-tests/test_udev_wrapper.cpp
+ tests/unit-tests/test_variable_length_array.cpp
+ tests/unit-tests/thread/test_basic_thread_pool.cpp
+ tests/unit-tests/wayland/test_wayland_executor.cpp
+ tools/png2header.py
+Copyright: 2012, 2014, Canonical Ltd.
+  2012, 2016, Canonical Ltd.
+  2012, Canonical Ltd.
+  2012, 2014, Canonical Ltd.
+  2012-2013, Canonical Ltd.
+  2012-2014, Canonical Ltd.
+  2012-2015, Canonical Ltd.
+  2012-2016, Canonical Ltd.
+  2012-2017, Canonical Ltd.
+  2012-2018, Canonical Ltd.
+  2012-2019, Canonical Ltd.
+  2013, 2015, Canonical Ltd.
+  2013, 2016, Canonical Ltd.
+  2013, 2017, Canonical Ltd.
+  2013, Canonical Ltd.
+  2013-2014, Canonical Ltd.
+  2013-2015, Canonical Ltd.
+  2013-2016, Canonical Ltd.
+  2013-2017, Canonical Ltd.
+  2013-2018, Canonical Ltd.
+  2013-2019, Canonical Ltd.
+  2014, 2016, Canonical Ltd.
+  2014, Canonical Ltd.
+  2014-2015, Canonical Ltd.
+  2014-2016, Canonical Ltd.
+  2014-2017, Canonical Ltd.
+  2014-2018, Canonical Ltd.
+  2014-2019, Canonical Ltd.
+  2015, Canonical Ltd.
+  2015-2016, Canonical Ltd.
+  2015-2017, Canonical Ltd.
+  2015-2018, Canonical Ltd.
+  2015-2019, Canonical Ltd.
+  2016, Canonical Ltd.
+  2016-2017, Canonical Ltd.
+  2016-2018, Canonical Ltd.
+  2016-2019, Canonical Ltd.
+  2016-2020, Canonical Ltd.
+  2017, Canonical Ltd.
+  2017-2018, Canonical Ltd.
+  2018, Canonical Ltd.
+  2018-2019, Canonical Ltd.
+  2018-2020, Canonical Ltd.
+  2019, Canonical Ltd.
+  2020, Canonical Ltd.
+License: GPL-3-or-GPL-2
+
+Files: include/client/mir/client/blob.h
+ include/client/mir/client/connection.h
+ include/client/mir/client/cookie.h
+ include/client/mir/client/display_config.h
+ include/client/mir/client/event.h
+ include/client/mir/client/surface.h
+ include/client/mir/client/window.h
+ include/client/mir/client/window_id.h
+ include/client/mir/client/window_spec.h
+ include/client/mir/event_printer.h
+ include/client/mir/events/event_builders.h
+ include/client/mir_toolkit/client_types.h
+ include/client/mir_toolkit/cursors.h
+ include/client/mir_toolkit/event.h
+ include/client/mir_toolkit/events/event.h
+ include/client/mir_toolkit/events/input/input_event.h
+ include/client/mir_toolkit/events/input/keyboard_event.h
+ include/client/mir_toolkit/events/input/pointer_event.h
+ include/client/mir_toolkit/events/input/touch_event.h
+ include/client/mir_toolkit/events/input_configuration_event.h
+ include/client/mir_toolkit/events/input_device_state_event.h
+ include/client/mir_toolkit/events/keymap_event.h
+ include/client/mir_toolkit/events/orientation_event.h
+ include/client/mir_toolkit/events/prompt_session_event.h
+ include/client/mir_toolkit/events/resize_event.h
+ include/client/mir_toolkit/events/surface_event.h
+ include/client/mir_toolkit/events/surface_output_event.h
+ include/client/mir_toolkit/events/surface_placement.h
+ include/client/mir_toolkit/events/window_event.h
+ include/client/mir_toolkit/events/window_output_event.h
+ include/client/mir_toolkit/events/window_placement.h
+ include/client/mir_toolkit/extensions/android_buffer.h
+ include/client/mir_toolkit/extensions/android_egl.h
+ include/client/mir_toolkit/extensions/drag_and_drop.h
+ include/client/mir_toolkit/extensions/fenced_buffers.h
+ include/client/mir_toolkit/extensions/gbm_buffer.h
+ include/client/mir_toolkit/extensions/graphics_module.h
+ include/client/mir_toolkit/extensions/hardware_buffer_stream.h
+ include/client/mir_toolkit/extensions/mesa_drm_auth.h
+ include/client/mir_toolkit/extensions/set_gbm_device.h
+ include/client/mir_toolkit/extensions/window_coordinate_translation.h
+ include/client/mir_toolkit/mir_blob.h
+ include/client/mir_toolkit/mir_buffer.h
+ include/client/mir_toolkit/mir_buffer_stream.h
+ include/client/mir_toolkit/mir_client_library.h
+ include/client/mir_toolkit/mir_connection.h
+ include/client/mir_toolkit/mir_cookie.h
+ include/client/mir_toolkit/mir_cursor_configuration.h
+ include/client/mir_toolkit/mir_display_configuration.h
+ include/client/mir_toolkit/mir_error.h
+ include/client/mir_toolkit/mir_extension_core.h
+ include/client/mir_toolkit/mir_input_device.h
+ include/client/mir_toolkit/mir_persistent_id.h
+ include/client/mir_toolkit/mir_platform_message.h
+ include/client/mir_toolkit/mir_presentation_chain.h
+ include/client/mir_toolkit/mir_prompt_session.h
+ include/client/mir_toolkit/mir_screencast.h
+ include/client/mir_toolkit/mir_surface.h
+ include/client/mir_toolkit/mir_wait.h
+ include/client/mir_toolkit/mir_window.h
+ include/client/mir_toolkit/mir_window_id.h
+ include/client/mir_toolkit/rs/mir_render_surface.h
+ include/common/mir/assert_module_entry_point.h
+ include/common/mir/cached_ptr.h
+ include/common/mir/dispatch/action_queue.h
+ include/common/mir/dispatch/dispatchable.h
+ include/common/mir/dispatch/multiplexing_dispatchable.h
+ include/common/mir/dispatch/readable_fd.h
+ include/common/mir/dispatch/threaded_dispatcher.h
+ include/common/mir/events/contact_state.h
+ include/common/mir/events/input_device_state.h
+ include/common/mir/extension_description.h
+ include/common/mir/flags.h
+ include/common/mir/frontend/buffer_stream_id.h
+ include/common/mir/frontend/surface_id.h
+ include/common/mir/graphics/native_buffer.h
+ include/common/mir/input/device_capability.h
+ include/common/mir/input/keymap.h
+ include/common/mir/input/mir_input_config.h
+ include/common/mir/input/mir_input_config_serialization.h
+ include/common/mir/input/mir_keyboard_config.h
+ include/common/mir/input/mir_pointer_config.h
+ include/common/mir/input/mir_touchpad_config.h
+ include/common/mir/input/mir_touchscreen_config.h
+ include/common/mir/libname.h
+ include/common/mir/log.h
+ include/common/mir/logging/logger.h
+ include/common/mir/module_deleter.h
+ include/common/mir/posix_rw_mutex.h
+ include/common/mir/raii.h
+ include/common/mir/shared_library.h
+ include/common/mir/time/posix_timestamp.h
+ include/common/mir/time/types.h
+ include/common/mir/uncaught.h
+ include/core/mir/abnormal_exit.h
+ include/core/mir/anonymous_shm_file.h
+ include/core/mir/depth_layer.h
+ include/core/mir/fatal.h
+ include/core/mir/fd.h
+ include/core/mir/geometry/dimensions.h
+ include/core/mir/geometry/displacement.h
+ include/core/mir/geometry/forward.h
+ include/core/mir/geometry/length.h
+ include/core/mir/geometry/point.h
+ include/core/mir/geometry/rectangle.h
+ include/core/mir/geometry/rectangles.h
+ include/core/mir/geometry/size.h
+ include/core/mir/int_wrapper.h
+ include/core/mir/optional_value.h
+ include/core/mir/shm_file.h
+ include/core/mir_toolkit/common.h
+ include/core/mir_toolkit/deprecations.h
+ include/core/mir_toolkit/mir_input_device_types.h
+ include/core/mir_toolkit/mir_native_buffer.h
+ include/core/mir_toolkit/mir_version_number.h
+ include/platform/mir/client/client_buffer.h
+ include/platform/mir/client/client_buffer_factory.h
+ include/platform/mir/client/client_context.h
+ include/platform/mir/client/client_platform.h
+ include/platform/mir/client/client_platform_factory.h
+ include/platform/mir/client/egl_native_display_container.h
+ include/platform/mir/client/egl_native_surface.h
+ include/platform/mir/console_services.h
+ include/platform/mir/emergency_cleanup_registry.h
+ include/platform/mir/graphics/atomic_frame.h
+ include/platform/mir/graphics/buffer.h
+ include/platform/mir/graphics/buffer_basic.h
+ include/platform/mir/graphics/buffer_id.h
+ include/platform/mir/graphics/buffer_ipc_message.h
+ include/platform/mir/graphics/buffer_properties.h
+ include/platform/mir/graphics/cursor.h
+ include/platform/mir/graphics/cursor_image.h
+ include/platform/mir/graphics/display.h
+ include/platform/mir/graphics/display_buffer.h
+ include/platform/mir/graphics/display_configuration.h
+ include/platform/mir/graphics/display_configuration_policy.h
+ include/platform/mir/graphics/display_report.h
+ include/platform/mir/graphics/egl_error.h
+ include/platform/mir/graphics/egl_extensions.h
+ include/platform/mir/graphics/egl_resources.h
+ include/platform/mir/graphics/egl_wayland_allocator.h
+ include/platform/mir/graphics/event_handler_register.h
+ include/platform/mir/graphics/frame.h
+ include/platform/mir/graphics/gamma_curves.h
+ include/platform/mir/graphics/gl_config.h
+ include/platform/mir/graphics/gl_format.h
+ include/platform/mir/graphics/graphic_buffer_allocator.h
+ include/platform/mir/graphics/platform.h
+ include/platform/mir/graphics/platform_authentication.h
+ include/platform/mir/graphics/platform_ipc_operations.h
+ include/platform/mir/graphics/platform_ipc_package.h
+ include/platform/mir/graphics/platform_operation_message.h
+ include/platform/mir/graphics/program.h
+ include/platform/mir/graphics/program_factory.h
+ include/platform/mir/graphics/renderable.h
+ include/platform/mir/graphics/transformation.h
+ include/platform/mir/graphics/virtual_output.h
+ include/platform/mir/graphics/wayland_allocator.h
+ include/platform/mir/input/event_builder.h
+ include/platform/mir/input/input_device.h
+ include/platform/mir/input/input_device_info.h
+ include/platform/mir/input/input_device_registry.h
+ include/platform/mir/input/input_report.h
+ include/platform/mir/input/input_sink.h
+ include/platform/mir/input/platform.h
+ include/platform/mir/input/pointer_settings.h
+ include/platform/mir/input/touchpad_settings.h
+ include/platform/mir/input/touchscreen_settings.h
+ include/platform/mir/mir_buffer.h
+ include/platform/mir/mir_buffer_stream.h
+ include/platform/mir/mir_render_surface.h
+ include/platform/mir/module_properties.h
+ include/platform/mir/options/option.h
+ include/platform/mir/options/program_option.h
+ include/platform/mir/renderer/sw/pixel_source.h
+ include/platforms/mesa/mir_toolkit/mesa/native_display.h
+ include/platforms/mesa/mir_toolkit/mesa/platform_operation.h
+ include/renderers/gl/mir/renderer/gl/context.h
+ include/renderers/gl/mir/renderer/gl/context_source.h
+ include/renderers/gl/mir/renderer/gl/egl_platform.h
+ include/renderers/gl/mir/renderer/gl/render_target.h
+ include/renderers/gl/mir/renderer/gl/texture_source.h
+ include/renderers/gl/mir/renderer/gl/texture_target.h
+ src/capnproto/CMakeLists.txt
+ src/capnproto/mir_event.capnp
+ src/capnproto/mir_input_config.capnp
+ src/client/atomic_callback.h
+ src/client/buffer.cpp
+ src/client/buffer.h
+ src/client/buffer_factory.cpp
+ src/client/buffer_factory.h
+ src/client/buffer_stream.cpp
+ src/client/buffer_stream.h
+ src/client/buffer_stream_configuration.cpp
+ src/client/buffer_stream_configuration.h
+ src/client/buffer_vault.cpp
+ src/client/buffer_vault.h
+ src/client/connection_configuration.h
+ src/client/connection_surface_map.cpp
+ src/client/connection_surface_map.h
+ src/client/cursor_configuration.h
+ src/client/default_connection_configuration.cpp
+ src/client/default_connection_configuration.h
+ src/client/display_configuration.cpp
+ src/client/display_configuration.h
+ src/client/display_configuration_api.cpp
+ src/client/drag_and_drop.cpp
+ src/client/drag_and_drop.h
+ src/client/error_buffer.cpp
+ src/client/error_buffer.h
+ src/client/error_connections.cpp
+ src/client/error_connections.h
+ src/client/error_handler.h
+ src/client/error_render_surface.cpp
+ src/client/error_render_surface.h
+ src/client/error_stream.cpp
+ src/client/error_stream.h
+ src/client/event.cpp
+ src/client/event_distributor.h
+ src/client/event_handler_register.h
+ src/client/event_printer.cpp
+ src/client/event_sink.h
+ src/client/events/CMakeLists.txt
+ src/client/events/event_builders.cpp
+ src/client/frame_clock.cpp
+ src/client/frame_clock.h
+ src/client/handle_event_exception.h
+ src/client/input/CMakeLists.txt
+ src/client/input/input_devices.cpp
+ src/client/input/input_event.cpp
+ src/client/input/xkb_mapper.cpp
+ src/client/lifecycle_control.h
+ src/client/logging/input_receiver_report.cpp
+ src/client/logging/input_receiver_report.h
+ src/client/logging/perf_report.cpp
+ src/client/logging/perf_report.h
+ src/client/logging/rpc_report.cpp
+ src/client/logging/rpc_report.h
+ src/client/lttng/client_tracepoint_provider.cpp
+ src/client/lttng/client_tracepoint_provider.h
+ src/client/lttng/input_receiver_report.cpp
+ src/client/lttng/input_receiver_report.h
+ src/client/lttng/input_receiver_report_tp.h
+ src/client/lttng/perf_report.cpp
+ src/client/lttng/perf_report.h
+ src/client/lttng/perf_report_tp.h
+ src/client/lttng/rpc_report.cpp
+ src/client/lttng/rpc_report.h
+ src/client/lttng/rpc_report_tp.h
+ src/client/lttng/shared_library_prober_report.cpp
+ src/client/lttng/shared_library_prober_report.h
+ src/client/lttng/shared_library_prober_report_tp.h
+ src/client/make_protobuf_object.h
+ src/client/mir_blob.cpp
+ src/client/mir_buffer_api.cpp
+ src/client/mir_buffer_stream_api.cpp
+ src/client/mir_connection.cpp
+ src/client/mir_connection.h
+ src/client/mir_connection_api.cpp
+ src/client/mir_cookie.cpp
+ src/client/mir_cookie.h
+ src/client/mir_cursor_api.cpp
+ src/client/mir_error.cpp
+ src/client/mir_error.h
+ src/client/mir_error_api.cpp
+ src/client/mir_event_distributor.cpp
+ src/client/mir_event_distributor.h
+ src/client/mir_extension_core.cpp
+ src/client/mir_input_device_api.cpp
+ src/client/mir_platform_message_api.cpp
+ src/client/mir_presentation_chain.h
+ src/client/mir_presentation_chain_api.cpp
+ src/client/mir_prompt_session.cpp
+ src/client/mir_prompt_session.h
+ src/client/mir_prompt_session_api.cpp
+ src/client/mir_render_surface_api.cpp
+ src/client/mir_screencast.cpp
+ src/client/mir_screencast.h
+ src/client/mir_screencast_api.cpp
+ src/client/mir_surface.cpp
+ src/client/mir_surface.h
+ src/client/mir_surface_api.cpp
+ src/client/mir_wait_api.cpp
+ src/client/mir_wait_handle.cpp
+ src/client/mir_wait_handle.h
+ src/client/no_tls_future-inl.h
+ src/client/perf_report.h
+ src/client/periodic_perf_report.cpp
+ src/client/periodic_perf_report.h
+ src/client/ping_handler.h
+ src/client/presentation_chain.cpp
+ src/client/presentation_chain.h
+ src/client/protobuf_to_native_buffer.cpp
+ src/client/protobuf_to_native_buffer.h
+ src/client/render_surface.cpp
+ src/client/render_surface.h
+ src/client/rpc/make_rpc_channel.h
+ src/client/rpc/make_socket_rpc_channel.cpp
+ src/client/rpc/mir_basic_rpc_channel.cpp
+ src/client/rpc/mir_basic_rpc_channel.h
+ src/client/rpc/mir_display_server.cpp
+ src/client/rpc/mir_display_server.h
+ src/client/rpc/mir_display_server_debug.cpp
+ src/client/rpc/mir_display_server_debug.h
+ src/client/rpc/mir_protobuf_rpc_channel.cpp
+ src/client/rpc/mir_protobuf_rpc_channel.h
+ src/client/rpc/null_rpc_report.cpp
+ src/client/rpc/null_rpc_report.h
+ src/client/rpc/rpc_report.h
+ src/client/rpc/stream_socket_transport.cpp
+ src/client/rpc/stream_socket_transport.h
+ src/client/rpc/stream_transport.h
+ src/client/screencast_stream.cpp
+ src/client/screencast_stream.h
+ src/client/version.h.in
+ src/common/dispatch/CMakeLists.txt
+ src/common/dispatch/action_queue.cpp
+ src/common/dispatch/multiplexing_dispatchable.cpp
+ src/common/dispatch/readable_fd.cpp
+ src/common/dispatch/threaded_dispatcher.cpp
+ src/common/dispatch/utils.cpp
+ src/common/dispatch/utils.h
+ src/common/edid.cpp
+ src/common/env/CMakeLists.txt
+ src/common/env/default_configuration.cpp
+ src/common/events/CMakeLists.txt
+ src/common/events/close_surface_event.cpp
+ src/common/events/event.cpp
+ src/common/events/input_configuration_event.cpp
+ src/common/events/input_device_state_event.cpp
+ src/common/events/input_event.cpp
+ src/common/events/keyboard_event.cpp
+ src/common/events/keymap_event.cpp
+ src/common/events/orientation_event.cpp
+ src/common/events/pointer_event.cpp
+ src/common/events/prompt_session_event.cpp
+ src/common/events/resize_event.cpp
+ src/common/events/surface_event.cpp
+ src/common/events/surface_output_event.cpp
+ src/common/events/surface_placement_event.cpp
+ src/common/events/touch_event.cpp
+ src/common/fd/CMakeLists.txt
+ src/common/fd/fd_socket_transmission.cpp
+ src/common/input/mir_input_config.cpp
+ src/common/input/mir_input_config_serialization.cpp
+ src/common/input/mir_keyboard_config.cpp
+ src/common/input/mir_pointer_config.cpp
+ src/common/input/mir_touchpad_config.cpp
+ src/common/input/mir_touchscreen_config.cpp
+ src/common/libname.cpp
+ src/common/log.cpp
+ src/common/logging/CMakeLists.txt
+ src/common/logging/dumb_console_logger.cpp
+ src/common/logging/input_timestamp.cpp
+ src/common/logging/logger.cpp
+ src/common/logging/shared_library_prober_report.cpp
+ src/common/output_type_names.cpp
+ src/common/posix_rw_mutex.cpp
+ src/common/report/lttng/tracepoint_provider.cpp
+ src/common/sharedlibrary/CMakeLists.txt
+ src/common/sharedlibrary/module_deleter.cpp
+ src/common/sharedlibrary/shared_library.cpp
+ src/common/sharedlibrary/shared_library_prober.cpp
+ src/common/thread/CMakeLists.txt
+ src/common/thread/recursive_read_write_mutex.cpp
+ src/common/thread/signal_blocker.cpp
+ src/common/thread/thread_name.cpp
+ src/common/time/steady_clock.cpp
+ src/core/anonymous_shm_file.cpp
+ src/core/depth_layer.cpp
+ src/core/fatal.cpp
+ src/core/fd.cpp
+ src/core/geometry/ostream.cpp
+ src/core/geometry/rectangle.cpp
+ src/core/geometry/rectangles.cpp
+ src/gl/program.cpp
+ src/gl/tessellation_helpers.cpp
+ src/gl/texture.cpp
+ src/include/client/mir/client/surface_map.h
+ src/include/client/mir/event_type_to_string.h
+ src/include/client/mir/input/input_devices.h
+ src/include/client/mir/platform_message.h
+ src/include/client/mir_toolkit/mir_buffer_private.h
+ src/include/common/mir/basic_observers.h
+ src/include/common/mir/client_visible_error.h
+ src/include/common/mir/default_configuration.h
+ src/include/common/mir/events/close_surface_event.h
+ src/include/common/mir/events/event.h
+ src/include/common/mir/events/event_private.h
+ src/include/common/mir/events/input_configuration_event.h
+ src/include/common/mir/events/input_device_state_event.h
+ src/include/common/mir/events/input_event.h
+ src/include/common/mir/events/keyboard_event.h
+ src/include/common/mir/events/keymap_event.h
+ src/include/common/mir/events/orientation_event.h
+ src/include/common/mir/events/pointer_event.h
+ src/include/common/mir/events/prompt_session_event.h
+ src/include/common/mir/events/resize_event.h
+ src/include/common/mir/events/surface_event.h
+ src/include/common/mir/events/surface_output_event.h
+ src/include/common/mir/events/surface_placement_event.h
+ src/include/common/mir/events/touch_event.h
+ src/include/common/mir/fd_socket_transmission.h
+ src/include/common/mir/frontend/client_constants.h
+ src/include/common/mir/graphics/edid.h
+ src/include/common/mir/input/input_receiver_report.h
+ src/include/common/mir/input/key_mapper.h
+ src/include/common/mir/input/null_input_receiver_report.h
+ src/include/common/mir/input/xkb_mapper.h
+ src/include/common/mir/logging/dumb_console_logger.h
+ src/include/common/mir/logging/input_timestamp.h
+ src/include/common/mir/logging/null_shared_library_prober_report.h
+ src/include/common/mir/logging/shared_library_prober_report.h
+ src/include/common/mir/output_type_names.h
+ src/include/common/mir/protobuf/display_server.h
+ src/include/common/mir/protobuf/display_server_debug.h
+ src/include/common/mir/protobuf/protocol_version.h
+ src/include/common/mir/recursive_read_write_mutex.h
+ src/include/common/mir/report/lttng/mir_tracepoint.h
+ src/include/common/mir/report/lttng/tracepoint_provider.h
+ src/include/common/mir/require.h
+ src/include/common/mir/shared_library_prober.h
+ src/include/common/mir/shared_library_prober_report.h
+ src/include/common/mir/signal_blocker.h
+ src/include/common/mir/thread_name.h
+ src/include/common/mir/thread_safe_list.h
+ src/include/common/mir/time/clock.h
+ src/include/common/mir/time/steady_clock.h
+ src/include/common/mir/unwind_helpers.h
+ src/include/common/mir/variable_length_array.h
+ src/include/common/mir_blob.h
+ src/include/gl/mir/gl/primitive.h
+ src/include/gl/mir/gl/program.h
+ src/include/gl/mir/gl/program_factory.h
+ src/include/gl/mir/gl/tessellation_helpers.h
+ src/include/gl/mir/gl/texture.h
+ src/include/gl/mir/gl/texture_cache.h
+ src/include/platform/mir/graphics/overlapping_output_grouping.h
+ src/include/platform/mir/graphics/pixel_format_utils.h
+ src/include/platform/mir/graphics/platform_authentication_wrapper.h
+ src/include/platform/mir/options/configuration.h
+ src/include/platform/mir/options/default_configuration.h
+ src/include/platform/mir/udev/wrapper.h
+ src/platform/graphics/atomic_frame.cpp
+ src/platform/graphics/buffer_basic.cpp
+ src/platform/graphics/display_configuration.cpp
+ src/platform/graphics/egl_error.cpp
+ src/platform/graphics/egl_extensions.cpp
+ src/platform/graphics/egl_resources.cpp
+ src/platform/graphics/egl_wayland_allocator.cpp
+ src/platform/graphics/gamma_curves.cpp
+ src/platform/graphics/overlapping_output_grouping.cpp
+ src/platform/graphics/pixel_format_utils.cpp
+ src/platform/graphics/program.cpp
+ src/platform/graphics/program_factory.cpp
+ src/platform/graphics/texture.cpp
+ src/platform/graphics/wayland_allocator.cpp
+ src/platform/options/default_configuration.cpp
+ src/platform/options/program_option.cpp
+ src/platform/udev/udev_wrapper.cpp
+ src/platforms/common/client/mir/aging_buffer.cpp
+ src/platforms/common/client/mir/aging_buffer.h
+ src/platforms/common/client/mir/weak_egl.cpp
+ src/platforms/common/client/mir/weak_egl.h
+ src/platforms/common/server/buffer_texture_binder.h
+ src/platforms/common/server/kms-utils/drm_mode_resources.cpp
+ src/platforms/common/server/kms-utils/drm_mode_resources.h
+ src/platforms/common/server/kms-utils/kms_connector.cpp
+ src/platforms/common/server/kms-utils/kms_connector.h
+ src/platforms/common/server/one_shot_device_observer.cpp
+ src/platforms/common/server/one_shot_device_observer.h
+ src/platforms/common/server/platform_authentication_wrapper.cpp
+ src/platforms/common/server/shm_buffer.cpp
+ src/platforms/common/server/shm_buffer.h
+ src/platforms/eglstream-kms/include/native_buffer.h
+ src/platforms/eglstream-kms/server/buffer_allocator.cpp
+ src/platforms/eglstream-kms/server/buffer_allocator.h
+ src/platforms/eglstream-kms/server/display.cpp
+ src/platforms/eglstream-kms/server/display.h
+ src/platforms/eglstream-kms/server/drm_event_handler.h
+ src/platforms/eglstream-kms/server/egl_output.cpp
+ src/platforms/eglstream-kms/server/egl_output.h
+ src/platforms/eglstream-kms/server/kms_display_configuration.cpp
+ src/platforms/eglstream-kms/server/kms_display_configuration.h
+ src/platforms/eglstream-kms/server/platform.cpp
+ src/platforms/eglstream-kms/server/platform.h
+ src/platforms/eglstream-kms/server/platform_symbols.cpp
+ src/platforms/eglstream-kms/server/software_buffer.cpp
+ src/platforms/eglstream-kms/server/software_buffer.h
+ src/platforms/eglstream-kms/server/threaded_drm_event_handler.cpp
+ src/platforms/eglstream-kms/server/threaded_drm_event_handler.h
+ src/platforms/eglstream-kms/server/utils.cpp
+ src/platforms/eglstream-kms/server/utils.h
+ src/platforms/evdev/evdev_device_detection.cpp
+ src/platforms/evdev/evdev_device_detection.h
+ src/platforms/evdev/fd_store.cpp
+ src/platforms/evdev/fd_store.h
+ src/platforms/evdev/libinput_device.cpp
+ src/platforms/evdev/libinput_device.h
+ src/platforms/evdev/libinput_device_ptr.cpp
+ src/platforms/evdev/libinput_device_ptr.h
+ src/platforms/evdev/libinput_ptr.cpp
+ src/platforms/evdev/libinput_ptr.h
+ src/platforms/evdev/platform.cpp
+ src/platforms/evdev/platform.h
+ src/platforms/evdev/platform_factory.cpp
+ src/platforms/mesa/client/buffer_file_ops.h
+ src/platforms/mesa/client/client_buffer.cpp
+ src/platforms/mesa/client/client_buffer.h
+ src/platforms/mesa/client/client_buffer_factory.cpp
+ src/platforms/mesa/client/client_buffer_factory.h
+ src/platforms/mesa/client/client_platform.cpp
+ src/platforms/mesa/client/client_platform.h
+ src/platforms/mesa/client/client_platform_factory.cpp
+ src/platforms/mesa/client/mesa_native_display_container.cpp
+ src/platforms/mesa/client/mesa_native_display_container.h
+ src/platforms/mesa/client/native_surface.cpp
+ src/platforms/mesa/client/native_surface.h
+ src/platforms/mesa/common/gbm_format_conversions.cpp
+ src/platforms/mesa/include/gbm_format_conversions.h
+ src/platforms/mesa/include/mesa_extensions.h
+ src/platforms/mesa/include/native_buffer.h
+ src/platforms/mesa/server/buffer_allocator.cpp
+ src/platforms/mesa/server/buffer_allocator.h
+ src/platforms/mesa/server/display_helpers.cpp
+ src/platforms/mesa/server/display_helpers.h
+ src/platforms/mesa/server/drm_authentication.h
+ src/platforms/mesa/server/drm_native_platform.cpp
+ src/platforms/mesa/server/drm_native_platform.h
+ src/platforms/mesa/server/gbm_buffer.cpp
+ src/platforms/mesa/server/gbm_buffer.h
+ src/platforms/mesa/server/gbm_platform.cpp
+ src/platforms/mesa/server/gbm_platform.h
+ src/platforms/mesa/server/ipc_operations.cpp
+ src/platforms/mesa/server/ipc_operations.h
+ src/platforms/mesa/server/kms/bypass.cpp
+ src/platforms/mesa/server/kms/bypass.h
+ src/platforms/mesa/server/kms/cursor.cpp
+ src/platforms/mesa/server/kms/cursor.h
+ src/platforms/mesa/server/kms/display.cpp
+ src/platforms/mesa/server/kms/display.h
+ src/platforms/mesa/server/kms/display_buffer.cpp
+ src/platforms/mesa/server/kms/display_buffer.h
+ src/platforms/mesa/server/kms/egl_helper.cpp
+ src/platforms/mesa/server/kms/egl_helper.h
+ src/platforms/mesa/server/kms/kms_display_configuration.h
+ src/platforms/mesa/server/kms/kms_output.h
+ src/platforms/mesa/server/kms/kms_output_container.h
+ src/platforms/mesa/server/kms/kms_page_flipper.cpp
+ src/platforms/mesa/server/kms/kms_page_flipper.h
+ src/platforms/mesa/server/kms/mutex.h
+ src/platforms/mesa/server/kms/page_flipper.h
+ src/platforms/mesa/server/kms/platform.cpp
+ src/platforms/mesa/server/kms/platform.h
+ src/platforms/mesa/server/kms/platform_symbols.cpp
+ src/platforms/mesa/server/kms/real_kms_display_configuration.cpp
+ src/platforms/mesa/server/kms/real_kms_display_configuration.h
+ src/platforms/mesa/server/kms/real_kms_output.cpp
+ src/platforms/mesa/server/kms/real_kms_output.h
+ src/platforms/mesa/server/kms/real_kms_output_container.cpp
+ src/platforms/mesa/server/kms/real_kms_output_container.h
+ src/platforms/mesa/server/nested_authentication.cpp
+ src/platforms/mesa/server/nested_authentication.h
+ src/platforms/mesa/server/platform_common.h
+ src/platforms/mesa/server/software_buffer.cpp
+ src/platforms/mesa/server/software_buffer.h
+ src/platforms/mesa/server/x11/X11_resources.cpp
+ src/platforms/mesa/server/x11/X11_resources.h
+ src/platforms/mesa/server/x11/graphics/display.cpp
+ src/platforms/mesa/server/x11/graphics/display.h
+ src/platforms/mesa/server/x11/graphics/display_buffer.cpp
+ src/platforms/mesa/server/x11/graphics/display_buffer.h
+ src/platforms/mesa/server/x11/graphics/display_configuration.cpp
+ src/platforms/mesa/server/x11/graphics/display_configuration.h
+ src/platforms/mesa/server/x11/graphics/egl_helper.cpp
+ src/platforms/mesa/server/x11/graphics/egl_helper.h
+ src/platforms/mesa/server/x11/graphics/graphics.cpp
+ src/platforms/mesa/server/x11/graphics/platform.cpp
+ src/platforms/mesa/server/x11/graphics/platform.h
+ src/platforms/mesa/server/x11/input/input_device.h
+ src/platforms/rpi-dispmanx/buffer_allocator.cpp
+ src/platforms/rpi-dispmanx/buffer_allocator.h
+ src/platforms/rpi-dispmanx/display.cpp
+ src/platforms/rpi-dispmanx/display.h
+ src/platforms/rpi-dispmanx/display_buffer.cpp
+ src/platforms/rpi-dispmanx/display_buffer.h
+ src/platforms/rpi-dispmanx/display_platform.cpp
+ src/platforms/rpi-dispmanx/display_platform.h
+ src/platforms/rpi-dispmanx/platform.cpp
+ src/platforms/rpi-dispmanx/platform.h
+ src/platforms/rpi-dispmanx/platform_symbols.cpp
+ src/platforms/rpi-dispmanx/rendering_platform.cpp
+ src/platforms/rpi-dispmanx/rendering_platform.h
+ src/platforms/wayland/buffer_allocator.cpp
+ src/platforms/wayland/buffer_allocator.h
+ src/platforms/wayland/cursor.cpp
+ src/platforms/wayland/cursor.h
+ src/platforms/wayland/display.cpp
+ src/platforms/wayland/display.h
+ src/platforms/wayland/display_input.h
+ src/platforms/wayland/input_device.h
+ src/platforms/wayland/platform.cpp
+ src/platforms/wayland/platform.h
+ src/platforms/wayland/platform_symbols.cpp
+ src/platforms/wayland/wayland_display.cpp
+ src/platforms/wayland/wayland_display.h
+ src/protobuf/google_protobuf_guard.cpp
+Copyright: 2012, 2014, Canonical Ltd.
+  2012, 2016, Canonical Ltd.
+  2012, Canonical Ltd.
+  2012-2013, 2016, Canonical Ltd.
+  2012-2014, Canonical Ltd.
+  2012-2015, Canonical Ltd.
+  2012-2016, Canonical Ltd.
+  2013, Canonical Ltd.
+  2013-2014, Canonical Ltd.
+  2013-2015, Canonical Ltd.
+  2013-2016, Canonical Ltd.
+  2014, 2016, Canonical Ltd.
+  2014, Canonical Ltd.
+  2014-2015, Canonical Ltd.
+  2014-2016, Canonical Ltd.
+  2014-2017, Canonical Ltd.
+  2015, Canonical Ltd.
+  2015-2016, Canonical Ltd.
+  2015-2020, Canonical Ltd.
+  2016, Canonical Ltd.
+  2016-2017, Canonical Ltd.
+  2017, Canonical Ltd.
+  2018, Canonical Ltd.
+  2019, Canonical Ltd.
+License: LGPL-3-or-LGPL-2
+
+Files: .clang-format
+ .gitignore
+ .gitmodules
+ HACKING.md
+ benchmarks/CMakeLists.txt
+ benchmarks/commit_to_present.py
+ benchmarks/cpu/CMakeLists.txt
+ benchmarks/cpu/benchmark.sh.in
+ benchmarks/frame-uniformity/CMakeLists.txt
+ benchmarks/frame-uniformity/README.txt
+ benchmarks/key_event_latency.py
+ benchmarks/memory/CMakeLists.txt
+ benchmarks/memory/benchmark.sh.in
+ benchmarks/mir_perf_framework/__init__.py
+ benchmarks/mir_perf_framework/client.py
+ benchmarks/mir_perf_framework/common.py
+ benchmarks/mir_perf_framework/performance_test.py
+ benchmarks/mir_perf_framework/server.py
+ benchmarks/mir_perf_framework_setup.py.in
+ benchmarks/nested_client_to_display_buffer_latency.py
+ benchmarks/touch_event_latency.py
+ cmake/CMakeLists.txt
+ cmake/Debian.cmake
+ cmake/FindEGL.cmake
+ cmake/FindGFlags.cmake
+ cmake/FindGLESv2.cmake
+ cmake/FindGLM.cmake
+ cmake/FindGLog.cmake
+ cmake/FindGtestGmock.cmake
+ cmake/FindLTTngUST.cmake
+ cmake/FindPIL.cmake
+ cmake/FindXKBCOMMON.cmake
+ cmake/LinuxCrossCompile.cmake
+ cmake/MirCommon.cmake
+ cmake/ParseArguments.cmake
+ cmake/src/CMakeLists.txt
+ cmake/src/mir/CMakeLists.txt
+ cmake/src/mir/fail_on_success.sh
+ cmake/src/mir/mir_test_fd_leak.cpp
+ cmake/src/mir/mir_test_memory_error.cpp
+ cmake/src/mir/mir_test_tmpfile.cpp
+ doc/Doxyfile.in
+ doc/component_reports.md
+ doc/dso_versioning_guide.md
+ doc/extra.css
+ doc/getting_and_using_mir.md
+ doc/getting_involved_in_mir.md
+ doc/introducing_the_miral_api.md
+ doc/kernel_requirements.md
+ doc/mainpage.md
+ doc/performance_framework.md
+ examples/CMakeLists.txt
+ examples/example-server-lib/CMakeLists.txt
+ examples/mir_demo_server/CMakeLists.txt
+ examples/miral-kiosk/CMakeLists.txt
+ examples/miral-shell/CMakeLists.txt
+ examples/miral-shell/desktop/CMakeLists.txt
+ examples/miral-shell/desktop/mir-shell.desktop.in
+ examples/miral-shell/desktop/mir-shell.sh
+ examples/miral-shell/desktop/miral-shell.desktop.in
+ examples/miral-shell/desktop/ubuntu-logo.svg
+ examples/miral-shell/miral-app.sh
+ examples/miral-shell/miral-terminal.sh
+ examples/miral-shell/spinner/spinner-glow.png
+ examples/miral-shell/spinner/spinner-logo.png
+ examples/miral-system-compositor/CMakeLists.txt
+ examples/mirclient/CMakeLists.txt
+ examples/mirclient/README
+ examples/mirclient/uses_non_client_symbol.cpp
+ guides/CMakeLists.txt
+ guides/cppguide.xml
+ guides/favicon.ico
+ guides/styleguide.css
+ guides/styleguide.xsl
+ playground/CMakeLists.txt
+ playground/README
+ src/CMakeLists.txt
+ src/client/CMakeLists.txt
+ src/client/lttng/CMakeLists.txt
+ src/client/lttng/tracepoints.c
+ src/client/mirclient.pc.in
+ src/client/mirclientcpp.pc.in
+ src/client/probing_client_platform_factory.cpp
+ src/client/probing_client_platform_factory.h
+ src/client/rpc/CMakeLists.txt
+ src/client/symbols-debug.map
+ src/client/symbols.map
+ src/common/CMakeLists.txt
+ src/common/mircommon.pc.in
+ src/common/report/lttng/CMakeLists.txt
+ src/common/symbols.map
+ src/common/time/CMakeLists.txt
+ src/cookie/CMakeLists.txt
+ src/cookie/mircookie.pc.in
+ src/cookie/symbols.map
+ src/core/CMakeLists.txt
+ src/core/mircore.pc.in
+ src/core/symbols.map
+ src/gl/CMakeLists.txt
+ src/miral/CMakeLists.txt
+ src/miral/check-and-update-debian-symbols.py
+ src/miral/miral.pc.in
+ src/miral/symbols.map
+ src/platform/CMakeLists.txt
+ src/platform/graphics/CMakeLists.txt
+ src/platform/mirplatform.pc.in
+ src/platform/options/CMakeLists.txt
+ src/platform/udev/CMakeLists.txt
+ src/platforms/CMakeLists.txt
+ src/platforms/common/CMakeLists.txt
+ src/platforms/common/client/mir/CMakeLists.txt
+ src/platforms/common/server/CMakeLists.txt
+ src/platforms/common/server/buffer_from_wl_shm.cpp
+ src/platforms/common/server/kms-utils/CMakeLists.txt
+ src/platforms/eglstream-kms/CMakeLists.txt
+ src/platforms/eglstream-kms/server/CMakeLists.txt
+ src/platforms/eglstream-kms/server/symbols.map.in
+ src/platforms/evdev/CMakeLists.txt
+ src/platforms/input_platform_symbols.map.in
+ src/platforms/mesa/CMakeLists.txt
+ src/platforms/mesa/client/CMakeLists.txt
+ src/platforms/mesa/client/symbols.map
+ src/platforms/mesa/common/CMakeLists.txt
+ src/platforms/mesa/mir-client-platform-mesa.pc.in
+ src/platforms/mesa/server/CMakeLists.txt
+ src/platforms/mesa/server/kms/CMakeLists.txt
+ src/platforms/mesa/server/kms/symbols.map.in
+ src/platforms/mesa/server/x11/CMakeLists.txt
+ src/platforms/mesa/server/x11/graphics/CMakeLists.txt
+ src/platforms/mesa/server/x11/input/CMakeLists.txt
+ src/platforms/mesa/server/x11/symbols.map.in
+ src/platforms/rpi-dispmanx/CMakeLists.txt
+ src/platforms/rpi-dispmanx/symbols.map.in
+ src/platforms/wayland/CMakeLists.txt
+ src/platforms/wayland/symbols.map.in
+ src/protobuf/CMakeLists.txt
+ src/protobuf/mir_protobuf.proto
+ src/protobuf/mir_protobuf_wire.proto
+ src/protobuf/symbols.map
+ src/renderer/CMakeLists.txt
+ src/renderer/mirrenderer.pc.in
+ src/renderers/CMakeLists.txt
+ src/renderers/gl/CMakeLists.txt
+ src/renderers/gl/mir-renderer-gl-dev.pc.in
+ src/server/CMakeLists.txt
+ src/server/compositor/CMakeLists.txt
+ src/server/console/logind-seat.xml
+ src/server/console/logind-session.xml
+ src/server/frontend/CMakeLists.txt
+ src/server/frontend_wayland/CMakeLists.txt
+ src/server/frontend_wayland/wayland_frontend.tp
+ src/server/frontend_xwayland/CMakeLists.txt
+ src/server/graphics/CMakeLists.txt
+ src/server/graphics/nested/CMakeLists.txt
+ src/server/graphics/offscreen/CMakeLists.txt
+ src/server/input/CMakeLists.txt
+ src/server/input/default-theme.h
+ src/server/input/touchspot_image.c
+ src/server/mirserver.pc.in
+ src/server/report/CMakeLists.txt
+ src/server/report/logging/CMakeLists.txt
+ src/server/report/lttng/CMakeLists.txt
+ src/server/report/lttng/input_report_tp.c
+ src/server/report/lttng/message_processor_report_tp.c
+ src/server/report/lttng/tracepoints.c
+ src/server/report/null/CMakeLists.txt
+ src/server/scene/CMakeLists.txt
+ src/server/shell/CMakeLists.txt
+ src/server/shell/decoration/CMakeLists.txt
+ src/server/symbols.map
+ src/server/thread/CMakeLists.txt
+ src/utils/CMakeLists.txt
+ src/wayland/generator/CMakeLists.txt
+ src/wayland/mirwayland.pc.in
+ src/wayland/symbols.map
+ tests/CMakeLists.txt
+ tests/acceptance-tests/CMakeLists.txt
+ tests/acceptance-tests/buffer_stream_arrangement.h
+ tests/acceptance-tests/test_client_platform_operation.cpp
+ tests/acceptance-tests/wayland/CMakeLists.txt
+ tests/acceptance-tests/wayland/symbol.map
+ tests/client-language/CMakeLists.txt
+ tests/include/mir_test_framework/stub_platform_native_buffer.h
+ tests/integration-tests/CMakeLists.txt
+ tests/integration-tests/compositor/CMakeLists.txt
+ tests/integration-tests/graphics/mesa/CMakeLists.txt
+ tests/integration-tests/input/CMakeLists.txt
+ tests/integration-tests/process/CMakeLists.txt
+ tests/integration-tests/shell/CMakeLists.txt
+ tests/loader-tests/CMakeLists.txt
+ tests/mir_test/CMakeLists.txt
+ tests/mir_test/validity_matchers.cpp
+ tests/mir_test_doubles/CMakeLists.txt
+ tests/mir_test_framework/CMakeLists.txt
+ tests/mir_test_framework/symbols-client.map
+ tests/mir_test_framework/symbols-server.map.in
+ tests/mir_test_framework/testing-cursor-theme/CMakeLists.txt
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/arrow
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/arrow.in
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/arrow.png
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/blue
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/blue.in
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/blue.png
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/generate-theme.sh
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/green
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/green.in
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/green.png
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/red
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/red.in
+ tests/mir_test_framework/testing-cursor-theme/default/cursors/red.png
+ tests/mir_test_framework/udev-recordings/CMakeLists.txt
+ tests/mir_test_framework/udev-recordings/bluetooth-magic-trackpad.ioctl
+ tests/mir_test_framework/udev-recordings/bluetooth-magic-trackpad.umockdev
+ tests/mir_test_framework/udev-recordings/joystick-detection.ioctl
+ tests/mir_test_framework/udev-recordings/joystick-detection.umockdev
+ tests/mir_test_framework/udev-recordings/laptop-keyboard-hello.evemu
+ tests/mir_test_framework/udev-recordings/laptop-keyboard.ioctl
+ tests/mir_test_framework/udev-recordings/laptop-keyboard.umockdev
+ tests/mir_test_framework/udev-recordings/laptop-mouse-click.evemu
+ tests/mir_test_framework/udev-recordings/laptop-mouse-motion.evemu
+ tests/mir_test_framework/udev-recordings/laptop-mouse.ioctl
+ tests/mir_test_framework/udev-recordings/laptop-mouse.umockdev
+ tests/mir_test_framework/udev-recordings/mt-screen-detection.ioctl
+ tests/mir_test_framework/udev-recordings/mt-screen-detection.umockdev
+ tests/mir_test_framework/udev-recordings/standard-drm-devices.umockdev
+ tests/mir_test_framework/udev-recordings/standard-drm-render-nodes.ioctl
+ tests/mir_test_framework/udev-recordings/standard-drm-render-nodes.umockdev
+ tests/mir_test_framework/udev-recordings/synaptics-touchpad.ioctl
+ tests/mir_test_framework/udev-recordings/synaptics-touchpad.umockdev
+ tests/mir_test_framework/udev-recordings/usb-keyboard.ioctl
+ tests/mir_test_framework/udev-recordings/usb-keyboard.umockdev
+ tests/mir_test_framework/udev-recordings/usb-mouse.ioctl
+ tests/mir_test_framework/udev-recordings/usb-mouse.umockdev
+ tests/miral/CMakeLists.txt
+ tests/miral/generated/CMakeLists.txt
+ tests/mirtest.pc.in
+ tests/performance-tests/CMakeLists.txt
+ tests/platform_test_harness/CMakeLists.txt
+ tests/privileged-tests/CMakeLists.txt
+ tests/privileged-tests/README
+ tests/test-clients/CMakeLists.txt
+ tests/test-clients/impolite-shutdown/CMakeLists.txt
+ tests/test-clients/mir-stress/CMakeLists.txt
+ tests/umock-acceptance-tests/CMakeLists.txt
+ tests/unit-tests/CMakeLists.txt
+ tests/unit-tests/compositor/CMakeLists.txt
+ tests/unit-tests/console/CMakeLists.txt
+ tests/unit-tests/dbus/session.conf
+ tests/unit-tests/dbus/system.conf
+ tests/unit-tests/dispatch/CMakeLists.txt
+ tests/unit-tests/geometry/CMakeLists.txt
+ tests/unit-tests/gl/CMakeLists.txt
+ tests/unit-tests/graphics/CMakeLists.txt
+ tests/unit-tests/graphics/egl_mock/CMakeLists.txt
+ tests/unit-tests/graphics/offscreen/CMakeLists.txt
+ tests/unit-tests/graphics/offscreen/test_offscreen_display.cpp
+ tests/unit-tests/input/CMakeLists.txt
+ tests/unit-tests/input/evdev/CMakeLists.txt
+ tests/unit-tests/logging/CMakeLists.txt
+ tests/unit-tests/options/CMakeLists.txt
+ tests/unit-tests/platforms/CMakeLists.txt
+ tests/unit-tests/platforms/eglstream-kms/CMakeLists.txt
+ tests/unit-tests/platforms/eglstream-kms/client/CMakeLists.txt
+ tests/unit-tests/platforms/eglstream-kms/server/CMakeLists.txt
+ tests/unit-tests/platforms/mesa/CMakeLists.txt
+ tests/unit-tests/platforms/mesa/kms-utils/CMakeLists.txt
+ tests/unit-tests/platforms/mesa/kms/CMakeLists.txt
+ tests/unit-tests/platforms/mesa/x11/CMakeLists.txt
+ tests/unit-tests/platforms/nested/CMakeLists.txt
+ tests/unit-tests/renderers/gl/CMakeLists.txt
+ tests/unit-tests/scene/CMakeLists.txt
+ tests/unit-tests/shell/CMakeLists.txt
+ tests/unit-tests/thread/CMakeLists.txt
+ tests/unit-tests/wayland/CMakeLists.txt
+ tools/abi-check-mircommon-skip-symbols
+ tools/abi-check-mirserver-skip-symbols
+ tools/abigail_check.sh
+ tools/abigail_suppressions_client
+ tools/abigail_suppressions_generic
+ tools/detect_fd_leaks.bash
+ tools/discover_gtests.sh
+ tools/lib_descriptor.xml.skel
+ tools/make_release_tarball
+ tools/mir-smoke-test-runner.sh
+ tools/ppa-upload.sh
+ tools/process_snaps.py
+ tools/requirements.txt
+ tools/run_ctests.sh
+ tools/tsan-suppressions
+ tools/ubsan-suppressions
+ tools/update_package_abis.sh
+ tools/valgrind_suppressions_armhf
+ tools/valgrind_suppressions_generic
+ tools/valgrind_suppressions_libhybris
+Copyright: 2012-2020, Canonical Ltd.
+License: GPL-3-or-GPL-2
+Comment:
+ No license headers. Assuming license and copyright
+ holdership from majority of code files.
+ .
+ Upstream ships a debian/copyright with
+ 'Files: *' using the same license.
+
+Files: examples/example-server-lib/splash_session.h
+ examples/miral-shell/spinner.cpp
+ examples/miral-shell/spinner/CMakeLists.txt
+ include/miral/miral/display_configuration.h
+ include/miral/miral/minimal_window_manager.h
+ include/test/mir_test_framework/input_device_faker.h
+ include/test/miral/test_wlcs_display_server.h
+ src/miral/display_configuration.cpp
+ src/miral/minimal_window_manager.cpp
+ src/miral/wayland_extensions.cpp
+ src/miral/window_info_defaults.cpp
+ src/server/frontend_wayland/data_device.cpp
+ src/server/frontend_wayland/data_device.h
+ src/server/frontend_wayland/deleted_for_resource.cpp
+ src/server/frontend_wayland/deleted_for_resource.h
+ src/server/frontend_wayland/layer_shell_v1.cpp
+ src/server/frontend_wayland/layer_shell_v1.h
+ src/server/frontend_wayland/mir_display.cpp
+ src/server/frontend_wayland/mir_display.h
+ src/server/frontend_wayland/null_event_sink.cpp
+ src/server/frontend_wayland/null_event_sink.h
+ src/server/frontend_wayland/output_manager.cpp
+ src/server/frontend_wayland/output_manager.h
+ src/server/frontend_wayland/wayland_connector.cpp
+ src/server/frontend_wayland/wayland_connector.h
+ src/server/frontend_wayland/wayland_executor.cpp
+ src/server/frontend_wayland/wayland_executor.h
+ src/server/frontend_wayland/wayland_input_dispatcher.cpp
+ src/server/frontend_wayland/wayland_input_dispatcher.h
+ src/server/frontend_wayland/wayland_surface_observer.cpp
+ src/server/frontend_wayland/wayland_surface_observer.h
+ src/server/frontend_wayland/wayland_utils.h
+ src/server/frontend_wayland/window_wl_surface_role.cpp
+ src/server/frontend_wayland/window_wl_surface_role.h
+ src/server/frontend_wayland/wl_keyboard.cpp
+ src/server/frontend_wayland/wl_keyboard.h
+ src/server/frontend_wayland/wl_pointer.cpp
+ src/server/frontend_wayland/wl_pointer.h
+ src/server/frontend_wayland/wl_seat.cpp
+ src/server/frontend_wayland/wl_seat.h
+ src/server/frontend_wayland/wl_subcompositor.cpp
+ src/server/frontend_wayland/wl_subcompositor.h
+ src/server/frontend_wayland/wl_surface.cpp
+ src/server/frontend_wayland/wl_surface.h
+ src/server/frontend_wayland/wl_surface_role.h
+ src/server/frontend_wayland/wl_touch.cpp
+ src/server/frontend_wayland/wl_touch.h
+ src/server/frontend_wayland/xdg_output_v1.cpp
+ src/server/frontend_wayland/xdg_output_v1.h
+ src/server/frontend_wayland/xdg_shell_stable.cpp
+ src/server/frontend_wayland/xdg_shell_stable.h
+ src/server/frontend_wayland/xdg_shell_v6.cpp
+ src/server/frontend_wayland/xdg_shell_v6.h
+ src/server/frontend_xwayland/xwayland_surface_observer.cpp
+ src/server/frontend_xwayland/xwayland_surface_observer.h
+ src/server/frontend_xwayland/xwayland_surface_observer_surface.h
+ src/server/frontend_xwayland/xwayland_surface_role.cpp
+ src/server/frontend_xwayland/xwayland_surface_role.h
+ src/server/frontend_xwayland/xwayland_surface_role_surface.h
+ src/server/report/logging/default_configuration.cpp
+ tests/acceptance-tests/wayland/miral_integration.cpp
+ tests/integration-tests/graphics/android/testdraw/mesa_graphics_region_factory.cpp
+ tests/mir_test_framework/input_device_faker.cpp
+ tests/mir_test_framework/test_wlcs_display_server.cpp
+ tests/miral/external_client.cpp
+ tests/miral/ignored_requests.cpp
+ tests/miral/modify_window_specification.cpp
+ tests/miral/static_display_config.cpp
+ tests/miral/wayland_extensions.cpp
+ tests/platform_test_harness/graphics_platform_test_harness.cpp
+Copyright: 2013, Canonical Ltd.
+  2014, Canonical Ltd.
+  2015, Canonical Ltd.
+  2015-2018, Canonical Ltd.
+  2015-2019, Canonical Ltd.
+  2017, Canonical Ltd.
+  2018, Canonical Ltd.
+  2018-2019, Canonical Ltd.
+  2019, Canonical Ltd.
+  2020, Canonical Ltd.
+License: GPL-3
+
+Files: cmake/Doxygen.cmake
+ src/miral/regenerate-miral-symbols-map.py
+ src/platform/symbols.map
+ src/server/console/CMakeLists.txt
+ src/wayland/CMakeLists.txt
+ src/wayland/generated/CMakeLists.txt
+ src/wayland/generated/wayland_wrapper.cpp
+ src/wayland/generated/wayland_wrapper.h
+ src/wayland/generated/wlr-layer-shell-unstable-v1_wrapper.cpp
+ src/wayland/generated/wlr-layer-shell-unstable-v1_wrapper.h
+ src/wayland/generated/xdg-output-unstable-v1_wrapper.cpp
+ src/wayland/generated/xdg-output-unstable-v1_wrapper.h
+ src/wayland/generated/xdg-shell-unstable-v6_wrapper.cpp
+ src/wayland/generated/xdg-shell-unstable-v6_wrapper.h
+ src/wayland/generated/xdg-shell_wrapper.cpp
+ src/wayland/generated/xdg-shell_wrapper.h
+ tests/miral/generated/server-decoration_wrapper.cpp
+ tests/miral/generated/server-decoration_wrapper.h
+ tools/process_doxygen_xml.py
+ tools/valgrind_suppressions_glibc_2.23
+Copyright: 2012-2020, Canonical Ltd.
+License: GPL-3-or-GPL-2
+Comment:
+ Auto-generated files without license headers.
+ .
+ Assuming license and copyright holdership from
+ majority of code files.
+ .
+ Upstream ships a debian/copyright with
+ 'Files: *' using the same license.
+
+Files: src/server/console/logind-seat.c
+ src/server/console/logind-seat.h
+ src/server/console/logind-session.c
+ src/server/console/logind-session.h
+Copyright: 2012-2020, Canonical Ltd.
+  The DBus Interface API Developers
+License: GPL-2+ or AFL-2.1
+Comment:
+ Generated files.
+ .
+ Licensed under the same license as the DBus interface
+ description.
+ .
+ See debian/changelog of the Debian dbus src:pkg.
+
+Files: src/server/frontend_xwayland/xcb_connection.cpp
+ src/server/frontend_xwayland/xcb_connection.h
+ src/server/frontend_xwayland/xwayland_connector.cpp
+ src/server/frontend_xwayland/xwayland_connector.h
+ src/server/frontend_xwayland/xwayland_server.cpp
+ src/server/frontend_xwayland/xwayland_server.h
+ src/server/frontend_xwayland/xwayland_surface.cpp
+ src/server/frontend_xwayland/xwayland_surface.h
+ src/server/frontend_xwayland/xwayland_wm.cpp
+ src/server/frontend_xwayland/xwayland_wm.h
+ src/server/frontend_xwayland/xwayland_wm_shell.cpp
+ src/server/frontend_xwayland/xwayland_wm_shell.h
+Copyright: 2018, Marius Gripsgard <marius@ubports.com>
+  2019, Canonical Ltd.
+  2020, Canonical Ltd.
+License: GPL-3-or-GPL-2
+
+Files: examples/mirclient/mir_image.h
+ src/miral/version.h.in
+ src/server/version.h.in
+ src/wayland/generator/wrapper_generator.cpp
+Copyright: 2012, Canonical Ltd.
+  2014, Canonical Ltd.
+  2016, Canonical Ltd.
+  2017, Canonical Ltd.
+License: GPL-3-or-GPL-2
+Comment:
+ Generated files.
+
+Files: cmake/FindLcov.cmake
+ cmake/Findgcovr.cmake
+Copyright: 2010, Johannes Wienke <jwienke at techfak dot uni-bielefeld dot de>
+  2011, Johannes Wienke <jwienke at techfak dot uni-bielefeld dot de>
+License: GPL-2+
+
+Files: src/server/frontend_xwayland/xwayland_default_configuration.cpp
+ src/server/frontend_xwayland/xwayland_log.h
+Copyright: 2018, Marius Gripsgard <marius@ubports.com>
+License: GPL-3-or-GPL-2
+
+Files: src/cookie/const_memcmp.cpp
+ src/cookie/const_memcmp.h
+Copyright: 2013-2016, Frank Denis <j at pureftpd dot org>
+License: ISC
+
+Files: src/platforms/wayland/displayclient.cpp
+ src/platforms/wayland/displayclient.h
+Copyright: 2018-2019, Octopull Ltd.
+  2019, Canonical Ltd.
+License: LGPL-3-or-LGPL-2
+
+Files: src/miral/xcursor.c
+ src/miral/xcursor.h
+Copyright: 2002, Keith Packard
+License: MIT~X11
+
+Files: benchmarks/text_histogram/__init__.py
+Copyright: 2010, bit.ly
+License: Apache-2.0
+
+Files: tests/include/mir/test/gmock_fixes.h
+Copyright: 2012, Canonical Ltd.
+  2007, Google Inc.
+License: BSD-3-clause
+
+Files: cmake/EnableCoverageReport.cmake
+Copyright: 2010, Johannes Wienke <jwienke at techfak dot uni-bielefeld dot de>
+License: GPL-2+
+Comment:
+ Generated file.
+
+Files: doc/footer.html.in
+Copyright: 2012, 2020, Canonical Ltd.
+License: GPL-3-or-GPL-2
+
+Files: tests/unit-tests/input/test_validator.cpp
+Copyright: © 2015 Canonical Ltd.
+License: GPL-3-or-GPL-2
+
+Files: README.md
+Copyright: 2012-2018, Canonical Ltd.
+License: GPL-3-or-GPL-2 or LGPL-3-or-LGPL-2
+
+Files: include/platform/mir/graphics/texture.h
+Copyright: 2018, Canonical Ltd.
+License: LGPL-3-or-LGPL-2
+Comment:
+ Generated file.
+
+Files: tests/miral/protocol/server-decoration.xml
+Copyright: 2015, Martin Gräßlin
+License: LGPL-2.1+
+
+Files: tests/miral/org_kde_kwin_server_decoration.c
+Copyright: 2015, Martin Gräßlin
+License: LGPL-2.1+
+Comment:
+ Generated file.
+
+Files: tests/miral/org_kde_kwin_server_decoration.h
+Copyright: 2015, Martin Gräßlin
+License: LGPL-2.1+
+Comment:
+ Generated file.
+
+Files: src/core/geometry/CMakeLists.txt
+Copyright: 2013, Canonical Ltd.
+License: LGPL-3
+
+Files: src/platforms/eglstream-kms/server/wayland-eglstream-controller.xml
+Copyright: 2017, NVIDIA CORPORATION
+License: Expat
+
+Files: src/platforms/eglstream-kms/server/wayland-eglstream-controller.h
+Copyright: 2017, NVIDIA CORPORATION.
+License: Expat
+Comment:
+ Generated file.
+
+Files: src/wayland/protocol/wlr-layer-shell-unstable-v1.xml
+Copyright: 2017, Drew DeVault
+License: MIT~X11
+
+Files: src/wayland/protocol/wayland.xml
+Copyright: 2008-2011, Kristian Høgsberg
+  2010-2011, Intel Corporation
+  2012-2013, Collabora, Ltd.
+License: Expat
+
+Files: src/wayland/protocol/xdg-shell-unstable-v6.xml
+Copyright: 2008-2013, Kristian Høgsberg
+  2010-2013, Intel Corporation
+  2013, Jasper St. Pierre
+  2013, Rafael Antognolli
+License: Expat
+
+Files: src/wayland/protocol/xdg-shell.xml
+Copyright: 2008-2013, Kristian Høgsberg
+  2010-2013, Intel Corporation
+  2013, Jasper St. Pierre
+  2013, Rafael Antognolli
+  2015-2017, Red Hat Inc.
+  2015-2017, Samsung Electronics Co., Ltd
+License: Expat
+
+Files: src/wayland/protocol/xdg-output-unstable-v1.xml
+Copyright: 2017, Red Hat Inc.
+License: Expat
+
+Files: design/Architecture.dia
+Copyright: 2013, Canonical Ltd.
+License: GPL-3-or-GPL-2
+Comment:
+ Assuming license from the majority of
+ project files.
+ .
+ Deriving copyright holder and year from
+ upstream's Git log.
+
+Files: debian/*
+Copyright: 2012-2020, Canonical Ltd.
+  2020, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+License: GPL-3-or-GPL-2 or LGPL-3-or-LGPL-2 or GPL-2+ or LGPL-3 or LGPL-2.1+ or ISC or MIT~X11 or Expat or BSD-3-clause
+Comment:
+ Allowing all licenses occurring in the upstream
+ code base.
+
+License: GPL-3-or-GPL-2
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 or 3 as
+ published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License version 3 as published
+ by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
+License: LGPL-3-or-LGPL-2
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2 or 3
+ as published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/LGPL-2'.
+
+License: LGPL-2.1+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 2.1 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 2.1 can be found in the file
+ `/usr/share/common-licenses/LGPL-2.1'.
+
+License: LGPL-3
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 3 as
+ published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, and the entire permission notice in its entirety,
+    including the disclaimer of warranties.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote
+    products derived from this software without specific prior
+    written permission.
+ .
+ THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: ISC
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: MIT~X11
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation, and that the name of the copyright holders not be used in
+ advertising or publicity pertaining to distribution of the software without
+ specific, written prior permission. The copyright holders  make no
+ representations about the suitability of this software for any purpose.  It
+ is provided "as is" without express or implied warranty.
+ .
+ THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+ INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+ EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+ CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+ DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ PERFORMANCE OF THIS SOFTWARE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice (including the next
+ paragraph) shall be included in all copies or substantial portions of the
+ Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
+License: AFL-2.1
+ The Academic Free License
+ v. 2.1
+ .
+ This Academic Free License (the "License") applies to any original
+ work of authorship (the "Original Work") whose owner (the "Licensor")
+ has placed the following notice immediately following the copyright
+ notice for the Original Work:
+ .
+ Licensed under the Academic Free License version 2.1
+ .
+ 1) Grant of Copyright License. Licensor hereby grants You a
+ world-wide, royalty-free, non-exclusive, perpetual, sublicenseable
+ license to do the following:
+ .
+ a) to reproduce the Original Work in copies;
+ .
+ b) to prepare derivative works ("Derivative Works") based upon the
+ Original Work;
+ .
+ c) to distribute copies of the Original Work and Derivative Works to
+ the public;
+ .
+ d) to perform the Original Work publicly; and
+ .
+ e) to display the Original Work publicly.
+ .
+ 2) Grant of Patent License. Licensor hereby grants You a world-wide,
+ royalty-free, non-exclusive, perpetual, sublicenseable license, under
+ patent claims owned or controlled by the Licensor that are embodied in
+ the Original Work as furnished by the Licensor, to make, use, sell and
+ offer for sale the Original Work and Derivative Works.
+ .
+ 3) Grant of Source Code License. The term "Source Code" means the
+ preferred form of the Original Work for making modifications to it and
+ all available documentation describing how to modify the Original
+ Work. Licensor hereby agrees to provide a machine-readable copy of the
+ Source Code of the Original Work along with each copy of the Original
+ Work that Licensor distributes. Licensor reserves the right to satisfy
+ this obligation by placing a machine-readable copy of the Source Code
+ in an information repository reasonably calculated to permit
+ inexpensive and convenient access by You for as long as Licensor
+ continues to distribute the Original Work, and by publishing the
+ address of that information repository in a notice immediately
+ following the copyright notice that applies to the Original Work.
+ .
+ 4) Exclusions From License Grant. Neither the names of Licensor, nor
+ the names of any contributors to the Original Work, nor any of their
+ trademarks or service marks, may be used to endorse or promote
+ products derived from this Original Work without express prior written
+ permission of the Licensor. Nothing in this License shall be deemed to
+ grant any rights to trademarks, copyrights, patents, trade secrets or
+ any other intellectual property of Licensor except as expressly stated
+ herein. No patent license is granted to make, use, sell or offer to
+ sell embodiments of any patent claims other than the licensed claims
+ defined in Section 2. No right is granted to the trademarks of
+ Licensor even if such marks are included in the Original Work. Nothing
+ in this License shall be interpreted to prohibit Licensor from
+ licensing under different terms from this License any Original Work
+ that Licensor otherwise would have a right to license.
+ .
+ 5) This section intentionally omitted.
+ .
+ 6) Attribution Rights. You must retain, in the Source Code of any
+ Derivative Works that You create, all copyright, patent or trademark
+ notices from the Source Code of the Original Work, as well as any
+ notices of licensing and any descriptive text identified therein as an
+ "Attribution Notice." You must cause the Source Code for any
+ Derivative Works that You create to carry a prominent Attribution
+ Notice reasonably calculated to inform recipients that You have
+ modified the Original Work.
+ .
+ 7) Warranty of Provenance and Disclaimer of Warranty. Licensor
+ warrants that the copyright in and to the Original Work and the patent
+ rights granted herein by Licensor are owned by the Licensor or are
+ sublicensed to You under the terms of this License with the permission
+ of the contributor(s) of those copyrights and patent rights. Except as
+ expressly stated in the immediately proceeding sentence, the Original
+ Work is provided under this License on an "AS IS" BASIS and WITHOUT
+ WARRANTY, either express or implied, including, without limitation,
+ the warranties of NON-INFRINGEMENT, MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL
+ WORK IS WITH YOU. This DISCLAIMER OF WARRANTY constitutes an essential
+ part of this License. No license to Original Work is granted hereunder
+ except under this disclaimer.
+ .
+ 8) Limitation of Liability. Under no circumstances and under no legal
+ theory, whether in tort (including negligence), contract, or
+ otherwise, shall the Licensor be liable to any person for any direct,
+ indirect, special, incidental, or consequential damages of any
+ character arising as a result of this License or the use of the
+ Original Work including, without limitation, damages for loss of
+ goodwill, work stoppage, computer failure or malfunction, or any and
+ all other commercial damages or losses. This limitation of liability
+ shall not apply to liability for death or personal injury resulting
+ from Licensor's negligence to the extent applicable law prohibits such
+ limitation. Some jurisdictions do not allow the exclusion or
+ limitation of incidental or consequential damages, so this exclusion
+ and limitation may not apply to You.
+ .
+ 9) Acceptance and Termination. If You distribute copies of the
+ Original Work or a Derivative Work, You must make a reasonable effort
+ under the circumstances to obtain the express assent of recipients to
+ the terms of this License. Nothing else but this License (or another
+ written agreement between Licensor and You) grants You permission to
+ create Derivative Works based upon the Original Work or to exercise
+ any of the rights granted in Section 1 herein, and any attempt to do
+ so except under the terms of this License (or another written
+ agreement between Licensor and You) is expressly prohibited by
+ U.S. copyright law, the equivalent laws of other countries, and by
+ international treaty. Therefore, by exercising any of the rights
+ granted to You in Section 1 herein, You indicate Your acceptance of
+ this License and all of its terms and conditions.
+ .
+ 10) Termination for Patent Action. This License shall terminate
+ automatically and You may no longer exercise any of the rights granted
+ to You by this License as of the date You commence an action,
+ including a cross-claim or counterclaim, against Licensor or any
+ licensee alleging that the Original Work infringes a patent. This
+ termination provision shall not apply for an action alleging patent
+ infringement by combinations of the Original Work with other software
+ or hardware.
+ .
+ 11) Jurisdiction, Venue and Governing Law. Any action or suit relating
+ to this License may be brought only in the courts of a jurisdiction
+ wherein the Licensor resides or in which Licensor conducts its primary
+ business, and under the laws of that jurisdiction excluding its
+ conflict-of-law provisions. The application of the United Nations
+ Convention on Contracts for the International Sale of Goods is
+ expressly excluded. Any use of the Original Work outside the scope of
+ this License or after its termination shall be subject to the
+ requirements and penalties of the U.S. Copyright Act, 17 U.S.C. Â§ 101
+ et seq., the equivalent laws of other countries, and international
+ treaty. This section shall survive the termination of this License.
+ .
+ 12) Attorneys Fees. In any action to enforce the terms of this License
+ or seeking damages relating thereto, the prevailing party shall be
+ entitled to recover its costs and expenses, including, without
+ limitation, reasonable attorneys' fees and costs incurred in
+ connection with such action, including any appeal of such action. This
+ section shall survive the termination of this License.
+ .
+ 13) Miscellaneous. This License represents the complete agreement
+ concerning the subject matter hereof. If any provision of this License
+ is held to be unenforceable, such provision shall be reformed only to
+ the extent necessary to make it enforceable.
+ .
+ 14) Definition of "You" in This License. "You" throughout this
+ License, whether in upper or lower case, means an individual or a
+ legal entity exercising rights under, and complying with all of the
+ terms of, this License. For legal entities, "You" includes any entity
+ that controls, is controlled by, or is under common control with
+ you. For purposes of this definition, "control" means (i) the power,
+ direct or indirect, to cause the direction or management of such
+ entity, whether by contract or otherwise, or (ii) ownership of fifty
+ percent (50%) or more of the outstanding shares, or (iii) beneficial
+ ownership of such entity.
+ .
+ 15) Right to Use. You may use the Original Work in all ways not
+ otherwise restricted or conditioned by this License or by law, and
+ Licensor promises not to interfere with or be responsible for such
+ uses by You.
+ .
+ This license is Copyright (C) 2003-2004 Lawrence E. Rosen. All rights
+ reserved. Permission is hereby granted to copy and distribute this
+ license without modification. This license may not be modified without
+ the express written permission of its copyright owner.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+   http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the full text of the Apache License
+ version 2.0 can be found in the file
+ `/usr/share/common-licenses/Apache-2.0'

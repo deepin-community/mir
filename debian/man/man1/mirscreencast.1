@@ -1,0 +1,58 @@
+.TH mirscreencast "1" "April 2020" "1.8.0" "Mir Display Server Tool"
+.SH NAME
+mirscreencast \- Mir screencast capture tool
+
+.SH SYNOPSIS
+
+\fBmirscreencast\fR \fI[\,options\/]\fR
+
+.SH DESCRIPTION
+Capture Mir server frames and dump them as RBGA/BGRA data to file or stdout.
+
+.SH OPTIONS
+.TP
+\fB\-h\fR [ \fB\-\-help\fR ]
+Show help text and exit.
+.HP
+\fB\-n\fR [ \fB\-\-number\-of\-frames\fR ] \fI<N>\fR
+Capture <N> number of frames.
+.TP
+\fB\-d\fR [ \fB\-\-display\-id\fR ] \fI<ID>\fR
+ID of the display to capture.
+.TP
+\fB\-m\fR [ \fB\-\-mir\-socket\-file\fR ] \fI<mir-server-socket-file-path>\fR
+Full path to the Mir server socket file.
+.TP
+\fB\-f\fR [ \fB\-\-file\fR ] \fI<output-file>\fR
+Output filename (default: /tmp/mir_screencast_<w>x<h>.<rgba|bgra>).
+.TP
+\fB\-s\fR [ \fB\-\-size\fR ] \fI<width> <height>\fR
+Screencast size.
+.TP
+\fB\-r\fR [ \fB\-\-screen\-region\fR ]  \fI<left> <top> <width> <height>\fR
+Screen region to capture.
+.TP
+\fB\-\-stdout\fR
+Use stdout for output (\fB\-\-file\fR will be ignored if this option is used).
+.TP
+\fB\-\-query\fR
+Only query the colorspace and output size used but don't start an actual screencast.
+.TP
+\fB\-\-cap\-interval\fR \fI<every-Nth-frame>\fR
+Adjusts the capture rate to <every-Nth-frame> display refresh intervals.
+.IP
+1 \-> capture at display rate
+.IP
+2 \-> capture at half the display rate (i.e. every second frame)
+.IP
+3 \-> capture at a third of the display rate (i.e. every second third)
+.IP
+N \-> etc.
+.SH "SEE ALSO"
+miral-screencast(1)
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.

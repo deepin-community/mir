@@ -1,0 +1,6 @@
+# TODO: is this a candidate for autopkg-tests? Needs clarification with upstream
+no-manual-page usr/bin/mir-smoke-test-runner
+
+# TODO: it needs to be clarified with upstream, if these files are required in the bin:pkg at all
+no-manual-page usr/bin/mir_demo_client_wayland
+no-manual-page usr/bin/mir_demo_client_wayland_egl_spinner

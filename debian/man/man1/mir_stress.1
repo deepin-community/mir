@@ -1,0 +1,29 @@
+.TH mir_stress "1" "April 2020" "1.8.0" "Mir Display Server Tool"
+
+.SH NAME
+mir_stress \- stress test application for Mir servers
+
+.SH SYNOPSIS
+.B mir_stress
+[\fI\,<options>\/\fR]
+.SH DESCRIPTION
+Put heavy load on a Mir server for stress testing purposes.
+
+.SH OPTIONS
+.TP
+\fB\-h\fR
+Show this help text and exit.
+.TP
+\fB\-n\fR \fI<seconds>\fR
+Number of seconds to run. Default is 600 (10 minutes).
+.TP
+\fB\-t\fR threads
+Number of threads to create. Default is the number of cores
+on this machine.
+
+.SH AUTHOR
+The Mir Display Server has been written by the Mir Server Team at Canonical
+Ltd.
+.PP
+This man page has been written for the Debian project by Mike
+Gabriel <mike.gabriel@das-netzwerkteam.de> and may be re-used by others.
